@@ -39,3 +39,35 @@ def test_parse_log(tmp_path):
     r = run_llm.parse_log(log)
     assert (r["skills_visible"], r["tool_calls"], r["src_bytes_read"], r["tool_output_bytes"]) == (True, 4, 100, 160)
     assert (r["skill_invoked"], r["answer"], r["output_tokens"]) == (True, "src/a.py", 8)
+
+
+def test_repetitions_and_judge(tmp_path, monkeypatch):
+    import judge
+    assert judge.parse_verdict('ok {"verdict": "Partial", "reason": "r"}') == ("partial", "r")
+    assert judge.parse_verdict("no json")[0] is None
+    assert "atlas" not in judge.redact("ran .atlas/INDEX.md via repo-atlas; the atlas says x.ts").lower()
+    assert score.bootstrap([1, 1, 1], lambda s: sum(s)) == (3, 3)
+    runs = tmp_path / "runs"
+    runs.mkdir()
+    rows, verdicts = [], []
+    for rep in (1, 2):
+        for arm, ans, tok in (("A", "src/b.py", 100), ("H", "src/a.py", 50)):
+            ans = ans if rep == 1 or arm == "H" else "src/a.py"  # A gets it right only in rep 2
+            rows.append({"repo": "r", "arm": arm, "case": 1, "rep": rep, "answer": ans, "input_tokens": tok,
+                         "cache_creation": 0, "cache_read": 0, "output_tokens": 1, "tool_calls": 1,
+                         "src_bytes_read": 0, "skill_invoked": arm == "H", "cost_usd": 0.01})
+            verdicts.append({"repo": "r", "arm": arm, "case": 1, "rep": rep, "answer_sha": judge.answer_hash(ans),
+                             "verdict": "correct" if ans == "src/a.py" else "wrong"})
+    (runs / "rows.jsonl").write_text("\n".join(map(json.dumps, rows)), "utf-8")
+    (runs / "judgments.jsonl").write_text("\n".join(map(json.dumps, verdicts)), "utf-8")
+    evals = tmp_path / "evals"
+    evals.mkdir()
+    (evals / "r.json").write_text(json.dumps({"cases": [{"id": 1, "gold_files": ["src/a.py"], "gold_functions": []}]}))
+    monkeypatch.setattr(score, "HERE", tmp_path)
+    monkeypatch.setattr(sys, "argv", ["score.py", "--runs-dir", "runs", "--out", "rep.md"])
+    score.main()
+    md = (tmp_path / "rep.md").read_text("utf-8")
+    assert "| r | A | 1 | 0, 1 | 1 | 0, 0 | 0 | 0, 1 | 1 | 100, 100 |" in md  # hits per rep | unstable questions
+    assert "| r | H | 0 / 0 (1.00) | 0 / 0 (1.00) | 0 / 0 (1.00) | 0.50 | 1/1 (1.000) | 1.00 |" not in md
+    assert "| r | H | 1 / 0 (1.00) |" in md  # H right in both reps beats A's 1 of 2
+    assert "| r | H | 1 | +50 [+50, +50] | +0 [+0, +0] | +50 [+50, +50] | 0.50 [0.50, 0.50] |" in md

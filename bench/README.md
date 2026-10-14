@@ -11,8 +11,16 @@ same tools and the same CLI version, and the arms are interleaved question by qu
 - **Arms.** A: no skill. S: skill installed with a prebuilt map, no hint anywhere. P: S plus the 2-line
   CLAUDE.md pointer written by `atlas init --claude-md`.
 - **Metrics.** hit@3: a gold file among the first three files the answer names. func_hit: a gold function is
-  named. tokens_in: input + cache creation + cache read, everything the model processed. API-equivalent cost
-  (`total_cost_usd`). Paired exact sign / McNemar tests against A on the same question.
+  named. hit_any: a gold file named anywhere in the answer. tokens_in: input + cache creation + cache read,
+  everything the model processed. API-equivalent cost (`total_cost_usd`). Paired exact sign / McNemar tests
+  against A on the same question.
+- **End result.** hit@3 only reads the first three paths. `judge.py` grades the whole answer: a tool-less
+  `claude -p` session sees the question, the commit that resolved it and the answer (arm hidden, mentions of the
+  map redacted, shuffled order) and says correct, partial or wrong: would following the answer lead to the code
+  the commit changed?
+- **Repetitions.** `--reps N` runs every question N times per arm. The report then shows each metric per
+  repetition, how many questions flip between repetitions of the same arm, and bootstrap 95% intervals (questions
+  resampled) for the difference to A, so a 12 vs 13 out of 20 can be told apart from noise.
 
 ## Reproduce
 
@@ -26,6 +34,7 @@ git clone --depth 400 https://github.com/danny-avila/LibreChat bench/repos/libre
 git clone --depth 400 https://github.com/langgenius/dify bench/repos/dify && git -C bench/repos/dify checkout 5fe7f018764e94aefa06f098a23e28a55d6b4e18
 
 python bench/run_llm.py --repos open-webui --arms A S H --cases $(seq 141 180) --max-usd 10 --runs-dir runs/mine
+python bench/judge.py --runs-dir runs/mine --max-usd 2      # optional: end-result verdicts
 python bench/score.py --runs-dir runs/mine --out report_mine.md
 ```
 
