@@ -1,0 +1,795 @@
+{
+ "repo": "https://github.com/danny-avila/LibreChat",
+ "commit": "e1dfc10449ff713faffacd60273fddcfe2c0a698",
+ "cases": [
+  {
+   "id": 1,
+   "commit": "e1dfc10449",
+   "prompt": "In this repo, where is the code I would change to: \ud83d\udd11 fix: Require Colon in API-Key Header Detection (#16803)? Answer with file paths and function names only.",
+   "gold_files": [
+    "packages/api/src/protection/detectors/pattern.ts"
+   ],
+   "gold_functions": []
+  },
+  {
+   "id": 2,
+   "commit": "abeb255a96",
+   "prompt": "In this repo, where is the code I would change to: \u23f9\ufe0f fix: Reconcile Stopped Generations Before Detaching the Stream (#16788)? Answer with file paths and function names only.",
+   "gold_files": [
+    "client/src/hooks/Chat/useChatHelpers.ts",
+    "e2e/setup/fake-model.js"
+   ],
+   "gold_functions": [
+    "useChatHelpers",
+    "replyResponses"
+   ]
+  },
+  {
+   "id": 3,
+   "commit": "71ad832cfb",
+   "prompt": "In this repo, where is the code I would change to: fix: Keep Running Chat Ring Centered at Any UI Scale (#16810)? Answer with file paths and function names only.",
+   "gold_files": [
+    "client/src/components/Conversations/Convo.tsx"
+   ],
+   "gold_functions": [
+    "Conversation"
+   ]
+  },
+  {
+   "id": 4,
+   "commit": "3f094468b0",
+   "prompt": "In this repo, where is the code I would change to: \ud83e\ude9f fix: Layer Tooltips Above the Popups They Open Inside (#16791)? Answer with file paths and function names only.",
+   "gold_files": [
+    "client/src/components/Chat/Input/TokenUsage/CompactAction.tsx",
+    "client/src/components/Chat/Messages/Content/DialogImage.tsx",
+    "packages/client/src/components/Tooltip.tsx"
+   ],
+   "gold_functions": [
+    "DialogImage",
+    "TooltipAnchorProps",
+    "CompactAction"
+   ]
+  },
+  {
+   "id": 5,
+   "commit": "cac13c42e7",
+   "prompt": "In this repo, where is the code I would change to: \ud83e\uddf7 fix: Finalize Stopped Compactions and Verify Their Anchor (#16551)? Answer with file paths and function names only.",
+   "gold_files": [
+    "api/server/controllers/agents/request.js",
+    "api/server/routes/agents/index.js",
+    "packages/api/src/agents/compaction.ts"
+   ],
+   "gold_functions": [
+    "resolveFinalizedCompactionTurn",
+    "resolveAbortedTurnPersistence",
+    "settleExistingRowsBeforeErrorTurn",
+    "persistFinalizedCompactionTurn",
+    "saveErrorTurn",
+    "resolveAbortedTurnAnchorDecision"
+   ]
+  },
+  {
+   "id": 6,
+   "commit": "cd4ae0f37f",
+   "prompt": "In this repo, where is the code I would change to: \ud83e\udd94 fix: Keep System Messages Stable During Collapse (#16780)? Answer with file paths and function names only.",
+   "gold_files": [
+    "client/src/components/Chat/Messages/Content/Wakeup.tsx"
+   ],
+   "gold_functions": []
+  },
+  {
+   "id": 7,
+   "commit": "c6e5f98552",
+   "prompt": "In this repo, where is the code I would change to: \u2699\ufe0f fix: Default Running Chat Rename to On (#16769)? Answer with file paths and function names only.",
+   "gold_files": [
+    "packages/data-provider/src/config.ts"
+   ],
+   "gold_functions": []
+  },
+  {
+   "id": 8,
+   "commit": "bfbf5278cf",
+   "prompt": "In this repo, where is the code I would change to: \ud83d\udcb6 fix: Price Mistral Large 3 at $0.50 / $1.50 per MTok (#16675)? Answer with file paths and function names only.",
+   "gold_files": [
+    "packages/data-schemas/src/methods/tx.ts"
+   ],
+   "gold_functions": []
+  },
+  {
+   "id": 9,
+   "commit": "d0cbefd9d0",
+   "prompt": "In this repo, where is the code I would change to: \ud83c\udf00 fix: Sync Spinner Rotation Phase Across Instances (#16738)? Answer with file paths and function names only.",
+   "gold_files": [
+    "packages/client/src/svgs/Spinner.tsx"
+   ],
+   "gold_functions": [
+    "Spinner",
+    "pinPending",
+    "observeMediaQuery",
+    "defer",
+    "schedulePin",
+    "handleAnimationStart"
+   ]
+  },
+  {
+   "id": 10,
+   "commit": "4e55d64ceb",
+   "prompt": "In this repo, where is the code I would change to: \ud83d\uddc2\ufe0f fix: Keep Project Chats Out of Chats by Default and Space Project Rows (#16755)? Answer with file paths and function names only.",
+   "gold_files": [
+    "client/src/components/Conversations/ProjectsSection.tsx",
+    "client/src/components/Conversations/chatFilters.ts",
+    "client/src/components/UnifiedSidebar/ConversationsSection.tsx"
+   ],
+   "gold_functions": []
+  },
+  {
+   "id": 11,
+   "commit": "6301b90bf9",
+   "prompt": "In this repo, where is the code I would change to: \ud83d\udccf fix: Truncate Long Titles in the Archived Chats Dialog (#16754)? Answer with file paths and function names only.",
+   "gold_files": [
+    "client/src/components/Nav/SettingsTabs/General/ArchivedChatsTable.tsx"
+   ],
+   "gold_functions": [
+    "ArchivedChatsTable"
+   ]
+  },
+  {
+   "id": 12,
+   "commit": "af35fe5439",
+   "prompt": "In this repo, where is the code I would change to: \ud83e\ude9a chore: Deprecate Agent Chain Authoring (#16745)? Answer with file paths and function names only.",
+   "gold_files": [
+    "client/src/components/SidePanel/Agents/Advanced/AdvancedPanel.tsx",
+    "client/src/components/SidePanel/Agents/Advanced/AgentChain.tsx",
+    "packages/data-provider/src/config.ts"
+   ],
+   "gold_functions": [
+    "AgentChain",
+    "AdvancedPanel",
+    "AgentCapabilities"
+   ]
+  },
+  {
+   "id": 13,
+   "commit": "9ff53ba5b5",
+   "prompt": "In this repo, where is the code I would change to: \u26a1 perf: Cache Package Builds and Make Client Coverage Opt-In (#16709)? Answer with file paths and function names only.",
+   "gold_files": [
+    "client/jest.config.cjs"
+   ],
+   "gold_functions": []
+  },
+  {
+   "id": 14,
+   "commit": "5424837b7b",
+   "prompt": "In this repo, where is the code I would change to: \u267f a11y: Stop Agent API Keys Dialog Opening Its Info Card On Focus (#16735)? Answer with file paths and function names only.",
+   "gold_files": [
+    "client/src/components/Nav/SettingsTabs/ApiKeys/ApiKeys.tsx"
+   ],
+   "gold_functions": [
+    "ApiKeys",
+    "handleOpenAutoFocus"
+   ]
+  },
+  {
+   "id": 15,
+   "commit": "5e4ecbc24c",
+   "prompt": "In this repo, where is the code I would change to: \ud83e\uddf9 fix: Let File Deletes Succeed When the Code API No Longer Serves the Ref's Profile (#16671)? Answer with file paths and function names only.",
+   "gold_files": [
+    "api/server/services/Files/Code/crud.js"
+   ],
+   "gold_functions": [
+    "deleteCodeEnvFile",
+    "isProfileMismatch"
+   ]
+  },
+  {
+   "id": 16,
+   "commit": "8330a584da",
+   "prompt": "In this repo, where is the code I would change to: \u2328\ufe0f fix: Show Project Row Actions on Keyboard Focus (#16731)? Answer with file paths and function names only.",
+   "gold_files": [
+    "client/src/components/Conversations/ProjectsSection.tsx"
+   ],
+   "gold_functions": []
+  },
+  {
+   "id": 17,
+   "commit": "d149c495d1",
+   "prompt": "In this repo, where is the code I would change to: \ud83d\udc26 test: Define PII Policy and Conformance Fixtures (#16726)? Answer with file paths and function names only.",
+   "gold_files": [
+    "packages/data-provider/src/index.ts",
+    "packages/data-provider/src/types/protection.ts"
+   ],
+   "gold_functions": [
+    "OutputProtectionAudit",
+    "OutputProtectionConfig",
+    "OutputProtectionCategoryCount"
+   ]
+  },
+  {
+   "id": 18,
+   "commit": "565976be52",
+   "prompt": "In this repo, where is the code I would change to: perf: Skip Unchanged Skills in GitHub Skill Sync? Answer with file paths and function names only.",
+   "gold_files": [
+    "packages/api/src/skills/sync/github.ts"
+   ],
+   "gold_functions": [
+    "prepareUnchangedRemoteSkill",
+    "prepareRemoteSkill",
+    "syncUnchangedSkill",
+    "hasSameSyncedFiles",
+    "syncSource",
+    "makeSyncIdentity"
+   ]
+  },
+  {
+   "id": 19,
+   "commit": "97bccd2e7d",
+   "prompt": "In this repo, where is the code I would change to: fix: Align Agent Contact Email with Its Label? Answer with file paths and function names only.",
+   "gold_files": [
+    "client/src/components/Agents/AgentContact.tsx"
+   ],
+   "gold_functions": [
+    "AgentContact"
+   ]
+  },
+  {
+   "id": 20,
+   "commit": "18a1ecfde9",
+   "prompt": "In this repo, where is the code I would change to: style: Sort Imports In ChatForm And Queue? Answer with file paths and function names only.",
+   "gold_files": [
+    "client/src/components/Chat/Input/ChatForm.tsx",
+    "client/src/components/Chat/Input/Composer/Queue.tsx"
+   ],
+   "gold_functions": []
+  },
+  {
+   "id": 21,
+   "commit": "d9ec51ba47",
+   "prompt": "In this repo, where is the code I would change to: \ud83e\uddaf fix: Preserve Keyboard Access to BYOM Diagnostics? Answer with file paths and function names only.",
+   "gold_files": [
+    "client/src/components/Chat/Input/CodeWorkspaceMenu.tsx"
+   ],
+   "gold_functions": [
+    "CodeWorkspaceMenu"
+   ]
+  },
+  {
+   "id": 22,
+   "commit": "2b4e5b5acd",
+   "prompt": "In this repo, where is the code I would change to: \ud83c\udf90 perf: Coalesce Ready Background Completions by Default? Answer with file paths and function names only.",
+   "gold_files": [
+    "packages/api/src/agents/triggers/service.ts",
+    "packages/data-provider/src/config.ts"
+   ],
+   "gold_functions": [
+    "createAgentTriggerService"
+   ]
+  },
+  {
+   "id": 23,
+   "commit": "46d73974b8",
+   "prompt": "In this repo, where is the code I would change to: \ud83d\udd0d fix: Warn When interface.webSearch Blocks Native Search (#16708)? Answer with file paths and function names only.",
+   "gold_files": [
+    "packages/api/src/app/permissions.ts"
+   ],
+   "gold_functions": [
+    "warnNativeWebSearchDenied",
+    "updateInterfacePermissions"
+   ]
+  },
+  {
+   "id": 24,
+   "commit": "179ff350ec",
+   "prompt": "In this repo, where is the code I would change to: \ud83d\udefc fix: Keep BYOM Workspace Diagnostics Out of Composer Layout? Answer with file paths and function names only.",
+   "gold_files": [
+    "client/src/components/Chat/Input/CodeWorkspaceMenu.tsx"
+   ],
+   "gold_functions": [
+    "WorkspaceRequirements",
+    "CodeWorkspaceMenu"
+   ]
+  },
+  {
+   "id": 25,
+   "commit": "7a47dfd195",
+   "prompt": "In this repo, where is the code I would change to: \ud83c\udf17 fix: Ink the Artifact Refresh Veil with the Media Text Role (#16716)? Answer with file paths and function names only.",
+   "gold_files": [
+    "client/src/components/Artifacts/Artifacts.tsx"
+   ],
+   "gold_functions": [
+    "Artifacts"
+   ]
+  },
+  {
+   "id": 26,
+   "commit": "2ea44e0d67",
+   "prompt": "In this repo, where is the code I would change to: fix: Layer Settings Dialog Popovers Above Its Panel (#16720)? Answer with file paths and function names only.",
+   "gold_files": [
+    "client/src/components/Nav/Settings/Dialog.tsx",
+    "packages/client/src/components/OriginalDialog.tsx"
+   ],
+   "gold_functions": [
+    "SettingsDialog",
+    "DialogLayer"
+   ]
+  },
+  {
+   "id": 27,
+   "commit": "47b525ebc2",
+   "prompt": "In this repo, where is the code I would change to: \ud83d\udccc test: Re-Pin Click UI Drift Guard to v0.13.0 and Probe the Checkbox- #16706 (#16706)? Answer with file paths and function names only.",
+   "gold_files": [
+    "packages/client/src/theme/themes/clickhouse.ts"
+   ],
+   "gold_functions": []
+  },
+  {
+   "id": 28,
+   "commit": "4e325f184c",
+   "prompt": "In this repo, where is the code I would change to: \ud83c\udf9a\ufe0f refactor: Drop Inline Pointer Styles From Select and Menu Primitives (#16704)? Answer with file paths and function names only.",
+   "gold_files": [
+    "packages/client/src/components/DropdownPopup.tsx",
+    "packages/client/src/components/Select.tsx"
+   ],
+   "gold_functions": [
+    "Menu"
+   ]
+  },
+  {
+   "id": 29,
+   "commit": "a2b184b231",
+   "prompt": "In this repo, where is the code I would change to: \ud83d\udd8d\ufe0f fix: Read Theme Roles for the Last Artifact and Agent Chip Colours (#16705)? Answer with file paths and function names only.",
+   "gold_files": [
+    "client/src/components/Artifacts/Artifacts.tsx",
+    "client/src/components/SidePanel/Agents/AgentConfig.tsx"
+   ],
+   "gold_functions": [
+    "Artifacts",
+    "AgentConfig"
+   ]
+  },
+  {
+   "id": 30,
+   "commit": "ab086a6616",
+   "prompt": "In this repo, where is the code I would change to: \ud83e\udded fix: Explain Missing Workspace Paths to the Model (#16700)? Answer with file paths and function names only.",
+   "gold_files": [
+    "packages/api/src/agents/handlers.ts",
+    "packages/api/src/code/paths.ts"
+   ],
+   "gold_functions": [
+    "getWorkspacePathRejection",
+    "explainWorkspacePathRejection",
+    "describeMissingPath",
+    "handleWorkspaceSearchCall",
+    "handleWorkspaceListCall",
+    "describeUnusablePath"
+   ]
+  },
+  {
+   "id": 31,
+   "commit": "86cf4a16fd",
+   "prompt": "In this repo, where is the code I would change to: \ud83c\udf74 feat: Separate Machine, Workspace, and Git Controls (#16696)? Answer with file paths and function names only.",
+   "gold_files": [
+    "client/src/components/Chat/Input/CodeWorkspaceMenu.tsx"
+   ],
+   "gold_functions": [
+    "CodeWorkspaceMenu",
+    "GitContext",
+    "selectWorkspace",
+    "selectWithoutAttached"
+   ]
+  },
+  {
+   "id": 32,
+   "commit": "6ea0b0eead",
+   "prompt": "In this repo, where is the code I would change to: \ud83e\uded6 fix: Debounce Streaming Tool Code Highlights (#16695)? Answer with file paths and function names only.",
+   "gold_files": [
+    "client/src/components/Chat/Messages/Content/Parts/useLazyHighlight.ts"
+   ],
+   "gold_functions": [
+    "useLazyHighlight",
+    "run"
+   ]
+  },
+  {
+   "id": 33,
+   "commit": "de7755b4ca",
+   "prompt": "In this repo, where is the code I would change to: \ud83d\udd4a\ufe0f fix: Keep Attachment History From Locking Conversations (#16690)? Answer with file paths and function names only.",
+   "gold_files": [
+    "api/server/controllers/agents/client.js",
+    "client/src/components/Messages/Content/Error/ProviderError.tsx",
+    "packages/api/src/agents/attachments.ts"
+   ],
+   "gold_functions": [
+    "rollbackSteerAttachmentHistory",
+    "admitSteerAttachmentHistory",
+    "collectHistoricalAttachmentIds",
+    "UnclassifiedError",
+    "AgentClient.admitSteerAttachments",
+    "collectAgentAttachmentStats"
+   ]
+  },
+  {
+   "id": 34,
+   "commit": "2529b22a66",
+   "prompt": "In this repo, where is the code I would change to: \ud83d\udd15 fix: Log Lost Generation Predecessor Fences as Warnings (#16689)? Answer with file paths and function names only.",
+   "gold_files": [
+    "api/server/controllers/agents/request.js",
+    "packages/api/src/stream/admission.ts",
+    "packages/api/src/stream/index.ts"
+   ],
+   "gold_functions": [
+    "logGenerationStartFailure",
+    "getPredecessorMismatchState",
+    "isJobStatus",
+    "GenerationStartFailureContext",
+    "ResumableAgentController"
+   ]
+  },
+  {
+   "id": 35,
+   "commit": "c5a5fbdaf1",
+   "prompt": "In this repo, where is the code I would change to: \ud83d\udd10 fix: Authenticate Code Session Probes the Way Their Route Expects (#16688)? Answer with file paths and function names only.",
+   "gold_files": [
+    "packages/api/src/agents/initialize.ts",
+    "packages/api/src/agents/resources.ts",
+    "packages/api/src/files/provision/service.ts"
+   ],
+   "gold_functions": [
+    "checkSessionsAlive",
+    "buildSessionProbeHeaders",
+    "computeProvisionState",
+    "primeResources",
+    "createProvisionService",
+    "keepUnverified"
+   ]
+  },
+  {
+   "id": 36,
+   "commit": "0c5e1ce67f",
+   "prompt": "In this repo, where is the code I would change to: \ud83d\udcd5 fix: Explain Native Web Search Permission Denials (#16691)? Answer with file paths and function names only.",
+   "gold_files": [
+    "client/src/components/SidePanel/Agents/ModelPanel.tsx",
+    "packages/api/src/agents/initialize.ts"
+   ],
+   "gold_functions": [
+    "ModelPanel",
+    "initializeAgent"
+   ]
+  },
+  {
+   "id": 37,
+   "commit": "da2bc05cdc",
+   "prompt": "In this repo, where is the code I would change to: \ud83d\udcad fix: Show the Thoughts Floating Bar Only When Its Header Is Off Screen (#16642)? Answer with file paths and function names only.",
+   "gold_files": [
+    "client/src/components/Chat/Messages/Content/Parts/Reasoning.tsx",
+    "client/src/components/Chat/Messages/Content/Parts/Thinking.tsx"
+   ],
+   "gold_functions": [
+    "isRectVisible",
+    "useInViewport"
+   ]
+  },
+  {
+   "id": 38,
+   "commit": "67a5fe247c",
+   "prompt": "In this repo, where is the code I would change to: \ud83d\udddd\ufe0f fix: Resolve Config-Scoped Custom Providers (#16687)? Answer with file paths and function names only.",
+   "gold_files": [
+    "packages/api/src/app/service.ts"
+   ],
+   "gold_functions": [
+    "scopeEndpointList"
+   ]
+  },
+  {
+   "id": 39,
+   "commit": "bc9af0785d",
+   "prompt": "In this repo, where is the code I would change to: \ud83d\udcac fix: Keep Healthy Workspace Detach Available (#16670)? Answer with file paths and function names only.",
+   "gold_files": [
+    "client/src/components/Chat/Input/CodeWorkspaceMenu.tsx",
+    "client/src/hooks/Agents/useCodeWorkspace.ts"
+   ],
+   "gold_functions": [
+    "useCodeWorkspace",
+    "describeTransition",
+    "CodeWorkspaceMenu",
+    "CodeWorkspaceTransition"
+   ]
+  },
+  {
+   "id": 40,
+   "commit": "abab0d3c6d",
+   "prompt": "In this repo, where is the code I would change to: \ud83e\ude9f fix: Read the Static Checks Workflow With CRLF Line Endings (#16669)? Answer with file paths and function names only.",
+   "gold_files": [
+    "scripts/static-checks.mts"
+   ],
+   "gold_functions": [
+    "workflowSelectsWhatItFilters",
+    "workflowFilters",
+    "list"
+   ]
+  },
+  {
+   "commit": "e1dfc10449",
+   "gold_files": [
+    "packages/api/src/protection/detectors/pattern.ts"
+   ],
+   "gold_functions": [],
+   "id": 101,
+   "kind": "symptom",
+   "question": "Can you fix how the system decides a request carries a secret access key, so it only counts when the header has the proper separator?",
+   "prompt": "In this repo, where is the code I would change for this request: Can you fix how the system decides a request carries a secret access key, so it only counts when the header has the proper separator? Answer with file paths and function names only."
+  },
+  {
+   "commit": "abeb255a96",
+   "gold_files": [
+    "client/src/hooks/Chat/useChatHelpers.ts",
+    "e2e/setup/fake-model.js"
+   ],
+   "gold_functions": [
+    "useChatHelpers",
+    "replyResponses"
+   ],
+   "id": 102,
+   "kind": "symptom",
+   "question": "When I stop a response mid-way, can you make sure the chat's state is properly updated before the live view disconnects from it?",
+   "prompt": "In this repo, where is the code I would change for this request: When I stop a response mid-way, can you make sure the chat's state is properly updated before the live view disconnects from it? Answer with file paths and function names only."
+  },
+  {
+   "commit": "71ad832cfb",
+   "gold_files": [
+    "client/src/components/Conversations/Convo.tsx"
+   ],
+   "gold_functions": [
+    "Conversation"
+   ],
+   "id": 103,
+   "kind": "symptom",
+   "question": "Can you make the circle shown around a running chat stay properly centered no matter what size the interface is scaled to?",
+   "prompt": "In this repo, where is the code I would change for this request: Can you make the circle shown around a running chat stay properly centered no matter what size the interface is scaled to? Answer with file paths and function names only."
+  },
+  {
+   "commit": "3f094468b0",
+   "gold_files": [
+    "client/src/components/Chat/Input/TokenUsage/CompactAction.tsx",
+    "client/src/components/Chat/Messages/Content/DialogImage.tsx",
+    "packages/client/src/components/Tooltip.tsx"
+   ],
+   "gold_functions": [
+    "DialogImage",
+    "TooltipAnchorProps",
+    "CompactAction"
+   ],
+   "id": 104,
+   "kind": "symptom",
+   "question": "Can you make small hint bubbles appear on top of the pop-up windows they are opened from, instead of hiding behind them?",
+   "prompt": "In this repo, where is the code I would change for this request: Can you make small hint bubbles appear on top of the pop-up windows they are opened from, instead of hiding behind them? Answer with file paths and function names only."
+  },
+  {
+   "commit": "cac13c42e7",
+   "gold_files": [
+    "api/server/controllers/agents/request.js",
+    "api/server/routes/agents/index.js",
+    "packages/api/src/agents/compaction.ts"
+   ],
+   "gold_functions": [
+    "resolveFinalizedCompactionTurn",
+    "resolveAbortedTurnPersistence",
+    "settleExistingRowsBeforeErrorTurn",
+    "persistFinalizedCompactionTurn",
+    "saveErrorTurn",
+    "resolveAbortedTurnAnchorDecision"
+   ],
+   "id": 105,
+   "kind": "symptom",
+   "question": "When a conversation summarization is stopped partway, can you make sure it is properly wrapped up and that it still points to the right place?",
+   "prompt": "In this repo, where is the code I would change for this request: When a conversation summarization is stopped partway, can you make sure it is properly wrapped up and that it still points to the right place? Answer with file paths and function names only."
+  },
+  {
+   "commit": "cd4ae0f37f",
+   "gold_files": [
+    "client/src/components/Chat/Messages/Content/Wakeup.tsx"
+   ],
+   "gold_functions": [],
+   "id": 106,
+   "kind": "symptom",
+   "question": "Can you stop the system messages from shifting or changing around when a group of messages is collapsed?",
+   "prompt": "In this repo, where is the code I would change for this request: Can you stop the system messages from shifting or changing around when a group of messages is collapsed? Answer with file paths and function names only."
+  },
+  {
+   "commit": "c6e5f98552",
+   "gold_files": [
+    "packages/data-provider/src/config.ts"
+   ],
+   "gold_functions": [],
+   "id": 107,
+   "kind": "symptom",
+   "question": "Can you make the option to rename a chat while it is still running turned on by default?",
+   "prompt": "In this repo, where is the code I would change for this request: Can you make the option to rename a chat while it is still running turned on by default? Answer with file paths and function names only."
+  },
+  {
+   "commit": "bfbf5278cf",
+   "gold_files": [
+    "packages/data-schemas/src/methods/tx.ts"
+   ],
+   "gold_functions": [],
+   "id": 108,
+   "kind": "symptom",
+   "question": "Can you update the pricing for the Mistral Large 3 model to fifty cents for input and a dollar fifty for output per million tokens?",
+   "prompt": "In this repo, where is the code I would change for this request: Can you update the pricing for the Mistral Large 3 model to fifty cents for input and a dollar fifty for output per million tokens? Answer with file paths and function names only."
+  },
+  {
+   "commit": "d0cbefd9d0",
+   "gold_files": [
+    "packages/client/src/svgs/Spinner.tsx"
+   ],
+   "gold_functions": [
+    "Spinner",
+    "pinPending",
+    "observeMediaQuery",
+    "defer",
+    "schedulePin",
+    "handleAnimationStart"
+   ],
+   "id": 109,
+   "kind": "symptom",
+   "question": "Can you make all the loading spinners on screen turn in sync, so they don't look out of step with each other?",
+   "prompt": "In this repo, where is the code I would change for this request: Can you make all the loading spinners on screen turn in sync, so they don't look out of step with each other? Answer with file paths and function names only."
+  },
+  {
+   "commit": "4e55d64ceb",
+   "gold_files": [
+    "client/src/components/Conversations/ProjectsSection.tsx",
+    "client/src/components/Conversations/chatFilters.ts",
+    "client/src/components/UnifiedSidebar/ConversationsSection.tsx"
+   ],
+   "gold_functions": [],
+   "id": 110,
+   "kind": "symptom",
+   "question": "Can you hide project conversations from the general chat list by default, and add more spacing between rows in the project list?",
+   "prompt": "In this repo, where is the code I would change for this request: Can you hide project conversations from the general chat list by default, and add more spacing between rows in the project list? Answer with file paths and function names only."
+  },
+  {
+   "commit": "6301b90bf9",
+   "gold_files": [
+    "client/src/components/Nav/SettingsTabs/General/ArchivedChatsTable.tsx"
+   ],
+   "gold_functions": [
+    "ArchivedChatsTable"
+   ],
+   "id": 111,
+   "kind": "symptom",
+   "question": "Can you cut off very long titles with an ellipsis in the window listing archived chats, so they don't break the layout?",
+   "prompt": "In this repo, where is the code I would change for this request: Can you cut off very long titles with an ellipsis in the window listing archived chats, so they don't break the layout? Answer with file paths and function names only."
+  },
+  {
+   "commit": "af35fe5439",
+   "gold_files": [
+    "client/src/components/SidePanel/Agents/Advanced/AdvancedPanel.tsx",
+    "client/src/components/SidePanel/Agents/Advanced/AgentChain.tsx",
+    "packages/data-provider/src/config.ts"
+   ],
+   "gold_functions": [
+    "AgentChain",
+    "AdvancedPanel",
+    "AgentCapabilities"
+   ],
+   "id": 112,
+   "kind": "symptom",
+   "question": "Can you mark the ability to build linked chains of assistants as outdated so people are discouraged from creating new ones?",
+   "prompt": "In this repo, where is the code I would change for this request: Can you mark the ability to build linked chains of assistants as outdated so people are discouraged from creating new ones? Answer with file paths and function names only."
+  },
+  {
+   "commit": "9ff53ba5b5",
+   "gold_files": [
+    "client/jest.config.cjs"
+   ],
+   "gold_functions": [],
+   "id": 113,
+   "kind": "symptom",
+   "question": "Can you speed up our build process by reusing earlier results, and make test coverage reports for the front end something people turn on only when needed?",
+   "prompt": "In this repo, where is the code I would change for this request: Can you speed up our build process by reusing earlier results, and make test coverage reports for the front end something people turn on only when needed? Answer with file paths and function names only."
+  },
+  {
+   "commit": "5424837b7b",
+   "gold_files": [
+    "client/src/components/Nav/SettingsTabs/ApiKeys/ApiKeys.tsx"
+   ],
+   "gold_functions": [
+    "ApiKeys",
+    "handleOpenAutoFocus"
+   ],
+   "id": 114,
+   "kind": "symptom",
+   "question": "Can you stop the information card in the assistant access keys window from popping open just because someone tabs onto it?",
+   "prompt": "In this repo, where is the code I would change for this request: Can you stop the information card in the assistant access keys window from popping open just because someone tabs onto it? Answer with file paths and function names only."
+  },
+  {
+   "commit": "5e4ecbc24c",
+   "gold_files": [
+    "api/server/services/Files/Code/crud.js"
+   ],
+   "gold_functions": [
+    "deleteCodeEnvFile",
+    "isProfileMismatch"
+   ],
+   "id": 115,
+   "kind": "symptom",
+   "question": "Can you let people delete files successfully even when the code service no longer supports the setup the file was created under?",
+   "prompt": "In this repo, where is the code I would change for this request: Can you let people delete files successfully even when the code service no longer supports the setup the file was created under? Answer with file paths and function names only."
+  },
+  {
+   "commit": "8330a584da",
+   "gold_files": [
+    "client/src/components/Conversations/ProjectsSection.tsx"
+   ],
+   "gold_functions": [],
+   "id": 116,
+   "kind": "symptom",
+   "question": "Can you make the action buttons on each project row appear when someone navigates there using the keyboard?",
+   "prompt": "In this repo, where is the code I would change for this request: Can you make the action buttons on each project row appear when someone navigates there using the keyboard? Answer with file paths and function names only."
+  },
+  {
+   "commit": "565976be52",
+   "gold_files": [
+    "packages/api/src/skills/sync/github.ts"
+   ],
+   "gold_functions": [
+    "prepareUnchangedRemoteSkill",
+    "prepareRemoteSkill",
+    "syncUnchangedSkill",
+    "hasSameSyncedFiles",
+    "syncSource",
+    "makeSyncIdentity"
+   ],
+   "id": 118,
+   "kind": "symptom",
+   "question": "Can you make the skills import from our code hosting site faster by leaving out the skills that haven't changed since last time?",
+   "prompt": "In this repo, where is the code I would change for this request: Can you make the skills import from our code hosting site faster by leaving out the skills that haven't changed since last time? Answer with file paths and function names only."
+  },
+  {
+   "commit": "97bccd2e7d",
+   "gold_files": [
+    "client/src/components/Agents/AgentContact.tsx"
+   ],
+   "gold_functions": [
+    "AgentContact"
+   ],
+   "id": 119,
+   "kind": "symptom",
+   "question": "Can you make the contact email shown for an assistant line up properly with its label on the screen?",
+   "prompt": "In this repo, where is the code I would change for this request: Can you make the contact email shown for an assistant line up properly with its label on the screen? Answer with file paths and function names only."
+  },
+  {
+   "commit": "d9ec51ba47",
+   "gold_files": [
+    "client/src/components/Chat/Input/CodeWorkspaceMenu.tsx"
+   ],
+   "gold_functions": [
+    "CodeWorkspaceMenu"
+   ],
+   "id": 121,
+   "kind": "symptom",
+   "question": "Can you make sure people using only the keyboard can still reach the diagnostics information for bring-your-own-model setups?",
+   "prompt": "In this repo, where is the code I would change for this request: Can you make sure people using only the keyboard can still reach the diagnostics information for bring-your-own-model setups? Answer with file paths and function names only."
+  },
+  {
+   "commit": "2b4e5b5acd",
+   "gold_files": [
+    "packages/api/src/agents/triggers/service.ts",
+    "packages/data-provider/src/config.ts"
+   ],
+   "gold_functions": [
+    "createAgentTriggerService"
+   ],
+   "id": 122,
+   "kind": "symptom",
+   "question": "Can you make finished background tasks get grouped together and reported in one go by default, so things run more efficiently?",
+   "prompt": "In this repo, where is the code I would change for this request: Can you make finished background tasks get grouped together and reported in one go by default, so things run more efficiently? Answer with file paths and function names only."
+  }
+ ],
+ "symptom_generation": {
+  "model": "sonnet",
+  "cost_usd": 0.04975600000000001,
+  "kept": 20,
+  "dropped_leaky": []
+ }
+}

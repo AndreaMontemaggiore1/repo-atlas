@@ -1,0 +1,1584 @@
+{
+ "repo": "https://github.com/baptisteArno/typebot.io",
+ "commit": "b19de808de32d5f4f376b3c5750676b5f4a656aa",
+ "cases": [
+  {
+   "id": 1,
+   "commit": "b19de808de",
+   "prompt": "In this repo, where is the code I would change to: \ud83d\udc1b Keep daily cleanup below transaction timeouts? Answer with file paths and function names only.",
+   "gold_files": [
+    "packages/scripts/src/cleanExpiredData.ts",
+    "packages/scripts/src/helpers/cleanExpiredData.ts",
+    "packages/scripts/src/helpers/deleteRecordsInBatches.ts"
+   ],
+   "gold_functions": [
+    "cleanExpiredData",
+    "deleteExpiredAppSessions",
+    "deleteExpiredVerificationTokens",
+    "deleteOldChatSessions",
+    "isRetryableCleanupError",
+    "getExpirationCutoff"
+   ]
+  },
+  {
+   "id": 2,
+   "commit": "3f2870121b",
+   "prompt": "In this repo, where is the code I would change to: \ud83d\udd27 Ignore personal skills and update worktree setup? Answer with file paths and function names only.",
+   "gold_files": [
+    ".gitignore"
+   ],
+   "gold_functions": [
+    "content-collections.d.ts"
+   ]
+  },
+  {
+   "id": 3,
+   "commit": "61056ff9a9",
+   "prompt": "In this repo, where is the code I would change to: \ud83d\udc1b Restore release builds on Debian Bookworm? Answer with file paths and function names only.",
+   "gold_files": [
+    "Dockerfile"
+   ],
+   "gold_functions": []
+  },
+  {
+   "id": 4,
+   "commit": "0e1cb0500f",
+   "prompt": "In this repo, where is the code I would change to: \ud83d\udc1b Prevent SSRF in SMTP configuration tests? Answer with file paths and function names only.",
+   "gold_files": [
+    "apps/builder/src/features/blocks/integrations/sendEmail/api/handleTestSmtpConfig.ts",
+    "apps/builder/src/features/blocks/integrations/sendEmail/api/resolveSmtpHost.ts"
+   ],
+   "gold_functions": [
+    "resolveSmtpHost",
+    "handleTestSmtpConfig"
+   ]
+  },
+  {
+   "id": 5,
+   "commit": "37646c69b4",
+   "prompt": "In this repo, where is the code I would change to: \ud83d\udc1b Block special-use IP ranges in SSRF validation (#2599)? Answer with file paths and function names only.",
+   "gold_files": [
+    "packages/lib/src/ssrf/fixtures/connectionProbe.ts",
+    "packages/lib/src/ssrf/validateHttpReqUrl.ts"
+   ],
+   "gold_functions": [
+    "validateIPAddress",
+    "checkConnections",
+    "parseIPAddress"
+   ]
+  },
+  {
+   "id": 6,
+   "commit": "75589d9160",
+   "prompt": "In this repo, where is the code I would change to: \ud83d\udc1b Prevent read-only typebot migration writes (#2594)? Answer with file paths and function names only.",
+   "gold_files": [
+    "apps/builder/src/features/typebot/api/handleGetTypebot.ts",
+    "apps/builder/src/features/typebot/helpers/isWriteTypebotForbidden.ts"
+   ],
+   "gold_functions": [
+    "handleGetTypebot",
+    "isWriteTypebotForbidden"
+   ]
+  },
+  {
+   "id": 7,
+   "commit": "b4eaf55ae0",
+   "prompt": "In this repo, where is the code I would change to: \ud83d\udc1b Serialize concurrent email verification attempts (#2596)? Answer with file paths and function names only.",
+   "gold_files": [
+    "packages/auth/src/helpers/createAuthPrismaAdapter.ts"
+   ],
+   "gold_functions": [
+    "createAuthPrismaAdapter"
+   ]
+  },
+  {
+   "id": 8,
+   "commit": "22978e4ef8",
+   "prompt": "In this repo, where is the code I would change to: \ud83d\udc1b Require write access to resume webhook flows (#2595)? Answer with file paths and function names only.",
+   "gold_files": [
+    "packages/blocks/webhook/src/api/handleExecuteWebhook.ts",
+    "packages/blocks/webhook/vitest.config.ts"
+   ],
+   "gold_functions": [
+    "handleExecuteWebhook"
+   ]
+  },
+  {
+   "id": 9,
+   "commit": "4bc37a4b5b",
+   "prompt": "In this repo, where is the code I would change to: \ud83d\udc1b Resolve variables in Forge option arrays? Answer with file paths and function names only.",
+   "gold_files": [
+    "packages/variables/src/deepParseVariables.ts",
+    "packages/variables/src/test-preload.ts"
+   ],
+   "gold_functions": [
+    "deepParseVariables"
+   ]
+  },
+  {
+   "id": 10,
+   "commit": "1054760186",
+   "prompt": "In this repo, where is the code I would change to: \ud83d\udc1b Upgrade Nx to address security alerts? Answer with file paths and function names only.",
+   "gold_files": [
+    ".gitignore"
+   ],
+   "gold_functions": [
+    "content-collections.d.ts"
+   ]
+  },
+  {
+   "id": 11,
+   "commit": "903fc41b3d",
+   "prompt": "In this repo, where is the code I would change to: \ud83d\udc1b Prevent public ID validation backtracking? Answer with file paths and function names only.",
+   "gold_files": [
+    "apps/builder/src/features/typebot/api/handleUpdateTypebot.ts",
+    "apps/builder/src/features/typebot/helpers/isPublicIdValid.ts"
+   ],
+   "gold_functions": [
+    "isPublicIdValid"
+   ]
+  },
+  {
+   "id": 12,
+   "commit": "eec8ac449c",
+   "prompt": "In this repo, where is the code I would change to: \ud83d\udc1b Prevent workspace seat limit races? Answer with file paths and function names only.",
+   "gold_files": [
+    "apps/builder/src/features/workspace/api/handleCreateWorkspaceInvitation.ts"
+   ],
+   "gold_functions": [
+    "handleCreateWorkspaceInvitation"
+   ]
+  },
+  {
+   "id": 13,
+   "commit": "63b1e2fe17",
+   "prompt": "In this repo, where is the code I would change to: \ud83d\udc1b Secure HTTP proxy destinations? Answer with file paths and function names only.",
+   "gold_files": [
+    "packages/bot-engine/src/blocks/integrations/httpRequest/executeHttpRequestBlock.ts",
+    "packages/lib/src/ssrf/createSafeDispatcher.ts",
+    "packages/lib/src/ssrf/createSafeProxyAgent.ts"
+   ],
+   "gold_functions": [
+    "createValidatingLookup",
+    "createSafeProxyAgent",
+    "createSafeProxyRequest",
+    "executeHttpRequest"
+   ]
+  },
+  {
+   "id": 14,
+   "commit": "a6bed8b48c",
+   "prompt": "In this repo, where is the code I would change to: \ud83d\udc1b Fix free workspace creation race? Answer with file paths and function names only.",
+   "gold_files": [
+    "apps/builder/src/features/workspace/api/handleCreateWorkspace.ts"
+   ],
+   "gold_functions": [
+    "createWorkspace",
+    "handleCreateWorkspace",
+    "lockUserForWorkspaceCreation",
+    "enforceFreeTierLimits"
+   ]
+  },
+  {
+   "id": 15,
+   "commit": "6e9ab23439",
+   "prompt": "In this repo, where is the code I would change to: \ud83d\udcdd Fix chatbot guide links? Answer with file paths and function names only.",
+   "gold_files": [
+    "apps/landing-page/content/faq/what-are-the-four-types-of-chatbots.mdx"
+   ],
+   "gold_functions": []
+  },
+  {
+   "id": 16,
+   "commit": "aac5819c2f",
+   "prompt": "In this repo, where is the code I would change to: \u267b\ufe0f Format in-depth analytics handler? Answer with file paths and function names only.",
+   "gold_files": [
+    "apps/builder/src/features/analytics/api/handleGetInDepthAnalyticsData.ts"
+   ],
+   "gold_functions": [
+    "handleGetInDepthAnalyticsData"
+   ]
+  },
+  {
+   "id": 17,
+   "commit": "cc195532aa",
+   "prompt": "In this repo, where is the code I would change to: \ud83d\udc1b Sanitize embed bubble URLs? Answer with file paths and function names only.",
+   "gold_files": [
+    "packages/embeds/js/src/features/blocks/bubbles/embed/components/EmbedBubble.tsx",
+    "packages/embeds/js/src/lib/sanitizeUrl.ts"
+   ],
+   "gold_functions": [
+    "sanitizeUrl",
+    "EmbedBubble"
+   ]
+  },
+  {
+   "id": 18,
+   "commit": "9b9d52d2f6",
+   "prompt": "In this repo, where is the code I would change to: \ud83d\udc1b Protect Typebot collaborator identities? Answer with file paths and function names only.",
+   "gold_files": [
+    "apps/builder/src/features/collaboration/api/handleGetCollaborators.ts"
+   ],
+   "gold_functions": [
+    "handleGetCollaborators"
+   ]
+  },
+  {
+   "id": 19,
+   "commit": "53f646142e",
+   "prompt": "In this repo, where is the code I would change to: \ud83d\udc1b Prevent webhook credential leaks in logs? Answer with file paths and function names only.",
+   "gold_files": [
+    "packages/bot-engine/src/blocks/integrations/httpRequest/executeHttpRequestBlock.ts"
+   ],
+   "gold_functions": [
+    "executeHttpRequest"
+   ]
+  },
+  {
+   "id": 20,
+   "commit": "7ad9ec1dba",
+   "prompt": "In this repo, where is the code I would change to: \ud83d\udc1b Prevent cross-workspace invitation takeover? Answer with file paths and function names only.",
+   "gold_files": [
+    "apps/builder/src/features/workspace/api/handleUpdateWorkspaceInvitation.ts"
+   ],
+   "gold_functions": [
+    "handleUpdateWorkspaceInvitation"
+   ]
+  },
+  {
+   "id": 21,
+   "commit": "f795644eec",
+   "prompt": "In this repo, where is the code I would change to: \ud83d\udd27 Add T3 worktree setup? Answer with file paths and function names only.",
+   "gold_files": [
+    "scripts/setup-worktree.sh"
+   ],
+   "gold_functions": []
+  },
+  {
+   "id": 22,
+   "commit": "b14f756d06",
+   "prompt": "In this repo, where is the code I would change to: \ud83d\udc1b Fix production workspace suspension? Answer with file paths and function names only.",
+   "gold_files": [
+    "packages/scripts/src/suspendWorkspace.ts"
+   ],
+   "gold_functions": [
+    "suspendWorkspace"
+   ]
+  },
+  {
+   "id": 23,
+   "commit": "7fa9ab423a",
+   "prompt": "In this repo, where is the code I would change to: \ud83d\udd27 Run in-depth analytics aggregations concurrently (#2572)? Answer with file paths and function names only.",
+   "gold_files": [
+    "apps/builder/src/features/analytics/api/handleGetInDepthAnalyticsData.ts"
+   ],
+   "gold_functions": [
+    "handleGetInDepthAnalyticsData"
+   ]
+  },
+  {
+   "id": 24,
+   "commit": "f9a57c449d",
+   "prompt": "In this repo, where is the code I would change to: fix(prisma): honor the DATABASE_URL schema param in the pg driver adapter (#2582)? Answer with file paths and function names only.",
+   "gold_files": [
+    "packages/prisma/src/createPrismaAdapter.ts"
+   ],
+   "gold_functions": [
+    "createPrismaAdapter",
+    "getSchemaFromUrl"
+   ]
+  },
+  {
+   "id": 25,
+   "commit": "cf83dd3c8e",
+   "prompt": "In this repo, where is the code I would change to: \ud83d\udd27 Revert guest invitation abuse telemetry? Answer with file paths and function names only.",
+   "gold_files": [
+    "apps/builder/src/features/blocks/integrations/sendEmail/api/handleResendWebhook.ts",
+    "apps/builder/src/features/collaboration/api/handleCreateInvitation.ts",
+    "packages/emails/transactional/GuestInvitationEmail.tsx"
+   ],
+   "gold_functions": [
+    "handleCreateInvitation",
+    "handleResendWebhook",
+    "sendGuestInvitationEmail"
+   ]
+  },
+  {
+   "id": 26,
+   "commit": "6ab5211de3",
+   "prompt": "In this repo, where is the code I would change to: \ud83d\udd27 Add guest invitation abuse telemetry? Answer with file paths and function names only.",
+   "gold_files": [
+    "apps/builder/src/features/blocks/integrations/sendEmail/api/handleResendWebhook.ts",
+    "apps/builder/src/features/collaboration/api/handleCreateInvitation.ts",
+    "packages/emails/transactional/GuestInvitationEmail.tsx"
+   ],
+   "gold_functions": [
+    "handleCreateInvitation",
+    "handleResendWebhook",
+    "sendGuestInvitationEmail"
+   ]
+  },
+  {
+   "id": 27,
+   "commit": "390dddd4cc",
+   "prompt": "In this repo, where is the code I would change to: \ud83d\udc1b Stop guest invitation email abuse? Answer with file paths and function names only.",
+   "gold_files": [
+    "apps/builder/src/features/collaboration/api/handleCreateInvitation.ts",
+    "packages/auth/src/lib/dailyGuestInvitationRateLimiter.ts"
+   ],
+   "gold_functions": [
+    "handleCreateInvitation"
+   ]
+  },
+  {
+   "id": 28,
+   "commit": "248433dd8d",
+   "prompt": "In this repo, where is the code I would change to: \ud83d\udc1b Fix transcripts with removed input answers? Answer with file paths and function names only.",
+   "gold_files": [
+    "packages/bot-engine/src/computeResultTranscript.ts"
+   ],
+   "gold_functions": [
+    "computeResultTranscript"
+   ]
+  },
+  {
+   "id": 29,
+   "commit": "e791f1a178",
+   "prompt": "In this repo, where is the code I would change to: \ud83d\udd27 Add Typebot suspension tooling? Answer with file paths and function names only.",
+   "gold_files": [
+    ".gitignore",
+    "packages/scripts/src/blockTypebot.ts",
+    "packages/scripts/src/suspendWorkspace.ts"
+   ],
+   "gold_functions": [
+    "blockTypebot",
+    "suspendWorkspace"
+   ]
+  },
+  {
+   "id": 30,
+   "commit": "e7be877bc1",
+   "prompt": "In this repo, where is the code I would change to: \ud83d\udc1b Fix Android camera for image extension uploads (#2558)? Answer with file paths and function names only.",
+   "gold_files": [
+    ".gitignore",
+    "packages/embeds/js/src/features/blocks/inputs/fileUpload/helpers/injectAndroidCameraCaptureToMimeTypes.ts"
+   ],
+   "gold_functions": [
+    "injectAndroidCameraCaptureToMimeTypes",
+    "normalizeFileType"
+   ]
+  },
+  {
+   "id": 31,
+   "commit": "ef1b4c67c5",
+   "prompt": "In this repo, where is the code I would change to: \ud83d\udd27 Prepare Ask Assistant migration campaign? Answer with file paths and function names only.",
+   "gold_files": [
+    "packages/forge/blocks/openai/src/handlers/askAssistantHandler.ts",
+    "packages/scripts/src/main.ts",
+    "packages/scripts/src/sendEmailCampaign.ts"
+   ],
+   "gold_functions": [
+    "makeEnglishBody",
+    "makeFrenchBody",
+    "sendEmailCampaign",
+    "parseCsv",
+    "formatAffectedBots",
+    "formatPreview"
+   ]
+  },
+  {
+   "id": 32,
+   "commit": "fa2e2e92f4",
+   "prompt": "In this repo, where is the code I would change to: Disable daily churn analysis cron? Answer with file paths and function names only.",
+   "gold_files": [
+    "packages/scripts/src/cronJobs/daily.tsx"
+   ],
+   "gold_functions": [
+    "main"
+   ]
+  },
+  {
+   "id": 33,
+   "commit": "d039794797",
+   "prompt": "In this repo, where is the code I would change to: \ud83d\udd12\ufe0f Fix TAC scan header findings (#2549)? Answer with file paths and function names only.",
+   "gold_files": [
+    "apps/builder/next.config.mjs",
+    "apps/builder/src/proxy.ts"
+   ],
+   "gold_functions": [
+    "proxy"
+   ]
+  },
+  {
+   "id": 34,
+   "commit": "17fb6960d0",
+   "prompt": "In this repo, where is the code I would change to: Fix blog canonical URLs? Answer with file paths and function names only.",
+   "gold_files": [
+    "apps/landing-page/src/routes/_layout/$slug.tsx",
+    "apps/landing-page/src/routes/_layout/blog/$slug.tsx",
+    "apps/landing-page/src/routes/_layout/blog/index.tsx"
+   ],
+   "gold_functions": []
+  },
+  {
+   "id": 35,
+   "commit": "ab729561d4",
+   "prompt": "In this repo, where is the code I would change to: \ud83d\udc1b Fix file upload advisory (#2544)? Answer with file paths and function names only.",
+   "gold_files": [
+    "packages/blocks/fileInput/src/api/handleGenerateUploadUrl.ts",
+    "packages/blocks/fileInput/src/api/router.ts"
+   ],
+   "gold_functions": [
+    "handleGenerateUploadUrl"
+   ]
+  },
+  {
+   "id": 36,
+   "commit": "9c81300e5a",
+   "prompt": "In this repo, where is the code I would change to: \ud83d\udc1b Fix Send Email attachment handling (#2543)? Answer with file paths and function names only.",
+   "gold_files": [
+    "packages/bot-engine/src/blocks/integrations/sendEmail/executeSendEmailBlock.tsx",
+    "packages/bot-engine/src/blocks/integrations/sendEmail/parseEmailAttachments.ts",
+    "packages/whatsapp/src/convertWhatsAppMessageToTypebotMessage.ts"
+   ],
+   "gold_functions": [
+    "isPublicTypebotUploadUrl",
+    "parsePrivateTypebotUploadUrl",
+    "parseEmailAttachment",
+    "parseEmailAttachments",
+    "parseHttpUrl",
+    "sendEmail"
+   ]
+  },
+  {
+   "id": 37,
+   "commit": "06575dfcd4",
+   "prompt": "In this repo, where is the code I would change to: \ud83d\udc1b Fix custom domain deletion ownership check (#2541)? Answer with file paths and function names only.",
+   "gold_files": [
+    "apps/builder/src/features/customDomains/api/handleDeleteCustomDomain.ts"
+   ],
+   "gold_functions": [
+    "handleDeleteCustomDomain"
+   ]
+  },
+  {
+   "id": 38,
+   "commit": "54e1fa1a0f",
+   "prompt": "In this repo, where is the code I would change to: \ud83d\udc1b Fix WhatsApp audio file upload URLs (#2539)? Answer with file paths and function names only.",
+   "gold_files": [
+    "packages/whatsapp/src/convertWhatsAppMessageToTypebotMessage.ts",
+    "packages/whatsapp/src/resumeWhatsAppFlow.ts"
+   ],
+   "gold_functions": [
+    "convertWhatsAppMessageToTypebotMessage",
+    "getExtensionFromMimeType",
+    "append",
+    "resumeWhatsAppFlow"
+   ]
+  },
+  {
+   "id": 39,
+   "commit": "b86864ca60",
+   "prompt": "In this repo, where is the code I would change to: \ud83d\udc1b Improve expired data cleanup reliability (#2536)? Answer with file paths and function names only.",
+   "gold_files": [
+    "packages/scripts/src/helpers/cleanExpiredData.ts"
+   ],
+   "gold_functions": [
+    "deleteOldChatSessions",
+    "deleteExpiredVerificationTokens",
+    "deleteExpiredAppSessions",
+    "logCleanupError",
+    "cleanExpiredData",
+    "formatElapsedTime"
+   ]
+  },
+  {
+   "id": 40,
+   "commit": "9224f4f770",
+   "prompt": "In this repo, where is the code I would change to: \ud83d\udc1b Fix embed video overlay in preview (#2532)? Answer with file paths and function names only.",
+   "gold_files": [
+    "packages/embeds/js/src/features/blocks/bubbles/video/components/VideoBubble.tsx"
+   ],
+   "gold_functions": [
+    "VideoBubble"
+   ]
+  },
+  {
+   "commit": "b19de808de",
+   "gold_files": [
+    "packages/scripts/src/cleanExpiredData.ts",
+    "packages/scripts/src/helpers/cleanExpiredData.ts",
+    "packages/scripts/src/helpers/deleteRecordsInBatches.ts"
+   ],
+   "gold_functions": [
+    "cleanExpiredData",
+    "deleteExpiredAppSessions",
+    "deleteExpiredVerificationTokens",
+    "deleteOldChatSessions",
+    "isRetryableCleanupError",
+    "getExpirationCutoff"
+   ],
+   "id": 101,
+   "kind": "symptom",
+   "question": "Can you make the nightly cleanup job process data in smaller portions so it stops failing by running too long?",
+   "prompt": "In this repo, where is the code I would change for this request: Can you make the nightly cleanup job process data in smaller portions so it stops failing by running too long? Answer with file paths and function names only."
+  },
+  {
+   "commit": "0e1cb0500f",
+   "gold_files": [
+    "apps/builder/src/features/blocks/integrations/sendEmail/api/handleTestSmtpConfig.ts",
+    "apps/builder/src/features/blocks/integrations/sendEmail/api/resolveSmtpHost.ts"
+   ],
+   "gold_functions": [
+    "resolveSmtpHost",
+    "handleTestSmtpConfig"
+   ],
+   "id": 104,
+   "kind": "symptom",
+   "question": "Can you stop the email server connection test from being misused to reach internal or private network addresses?",
+   "prompt": "In this repo, where is the code I would change for this request: Can you stop the email server connection test from being misused to reach internal or private network addresses? Answer with file paths and function names only."
+  },
+  {
+   "commit": "37646c69b4",
+   "gold_files": [
+    "packages/lib/src/ssrf/fixtures/connectionProbe.ts",
+    "packages/lib/src/ssrf/validateHttpReqUrl.ts"
+   ],
+   "gold_functions": [
+    "validateIPAddress",
+    "checkConnections",
+    "parseIPAddress"
+   ],
+   "id": 105,
+   "kind": "symptom",
+   "question": "Can you block more kinds of reserved or internal network addresses so people can't trick the app into reaching private systems?",
+   "prompt": "In this repo, where is the code I would change for this request: Can you block more kinds of reserved or internal network addresses so people can't trick the app into reaching private systems? Answer with file paths and function names only."
+  },
+  {
+   "commit": "75589d9160",
+   "gold_files": [
+    "apps/builder/src/features/typebot/api/handleGetTypebot.ts",
+    "apps/builder/src/features/typebot/helpers/isWriteTypebotForbidden.ts"
+   ],
+   "gold_functions": [
+    "handleGetTypebot",
+    "isWriteTypebotForbidden"
+   ],
+   "id": 106,
+   "kind": "symptom",
+   "question": "Can you make sure that opening an old read-only bot doesn't try to save upgraded changes to it?",
+   "prompt": "In this repo, where is the code I would change for this request: Can you make sure that opening an old read-only bot doesn't try to save upgraded changes to it? Answer with file paths and function names only."
+  },
+  {
+   "commit": "b4eaf55ae0",
+   "gold_files": [
+    "packages/auth/src/helpers/createAuthPrismaAdapter.ts"
+   ],
+   "gold_functions": [
+    "createAuthPrismaAdapter"
+   ],
+   "id": 107,
+   "kind": "symptom",
+   "question": "Can you make sure that when someone tries to verify their email several times at once, the attempts are handled one at a time?",
+   "prompt": "In this repo, where is the code I would change for this request: Can you make sure that when someone tries to verify their email several times at once, the attempts are handled one at a time? Answer with file paths and function names only."
+  },
+  {
+   "commit": "22978e4ef8",
+   "gold_files": [
+    "packages/blocks/webhook/src/api/handleExecuteWebhook.ts",
+    "packages/blocks/webhook/vitest.config.ts"
+   ],
+   "gold_functions": [
+    "handleExecuteWebhook"
+   ],
+   "id": 108,
+   "kind": "symptom",
+   "question": "Can you require people to have edit permission before they can resume a bot conversation that waits on an outside web call?",
+   "prompt": "In this repo, where is the code I would change for this request: Can you require people to have edit permission before they can resume a bot conversation that waits on an outside web call? Answer with file paths and function names only."
+  },
+  {
+   "commit": "4bc37a4b5b",
+   "gold_files": [
+    "packages/variables/src/deepParseVariables.ts",
+    "packages/variables/src/test-preload.ts"
+   ],
+   "gold_functions": [
+    "deepParseVariables"
+   ],
+   "id": 109,
+   "kind": "symptom",
+   "question": "Can you make sure placeholders in lists of settings for integration blocks get replaced with their actual values?",
+   "prompt": "In this repo, where is the code I would change for this request: Can you make sure placeholders in lists of settings for integration blocks get replaced with their actual values? Answer with file paths and function names only."
+  },
+  {
+   "commit": "903fc41b3d",
+   "gold_files": [
+    "apps/builder/src/features/typebot/api/handleUpdateTypebot.ts",
+    "apps/builder/src/features/typebot/helpers/isPublicIdValid.ts"
+   ],
+   "gold_functions": [
+    "isPublicIdValid"
+   ],
+   "id": 111,
+   "kind": "symptom",
+   "question": "Can you fix the check on public bot addresses so unusual input can't make it freeze or slow down?",
+   "prompt": "In this repo, where is the code I would change for this request: Can you fix the check on public bot addresses so unusual input can't make it freeze or slow down? Answer with file paths and function names only."
+  },
+  {
+   "commit": "eec8ac449c",
+   "gold_files": [
+    "apps/builder/src/features/workspace/api/handleCreateWorkspaceInvitation.ts"
+   ],
+   "gold_functions": [
+    "handleCreateWorkspaceInvitation"
+   ],
+   "id": 112,
+   "kind": "symptom",
+   "question": "Can you stop people from exceeding the allowed number of team members in a workspace when several are added at the same time?",
+   "prompt": "In this repo, where is the code I would change for this request: Can you stop people from exceeding the allowed number of team members in a workspace when several are added at the same time? Answer with file paths and function names only."
+  },
+  {
+   "commit": "63b1e2fe17",
+   "gold_files": [
+    "packages/bot-engine/src/blocks/integrations/httpRequest/executeHttpRequestBlock.ts",
+    "packages/lib/src/ssrf/createSafeDispatcher.ts",
+    "packages/lib/src/ssrf/createSafeProxyAgent.ts"
+   ],
+   "gold_functions": [
+    "createValidatingLookup",
+    "createSafeProxyAgent",
+    "createSafeProxyRequest",
+    "executeHttpRequest"
+   ],
+   "id": 113,
+   "kind": "symptom",
+   "question": "Can you make the proxy for web requests safer so it can't be used to reach forbidden destinations?",
+   "prompt": "In this repo, where is the code I would change for this request: Can you make the proxy for web requests safer so it can't be used to reach forbidden destinations? Answer with file paths and function names only."
+  },
+  {
+   "commit": "a6bed8b48c",
+   "gold_files": [
+    "apps/builder/src/features/workspace/api/handleCreateWorkspace.ts"
+   ],
+   "gold_functions": [
+    "createWorkspace",
+    "handleCreateWorkspace",
+    "lockUserForWorkspaceCreation",
+    "enforceFreeTierLimits"
+   ],
+   "id": 114,
+   "kind": "symptom",
+   "question": "Can you fix the problem where creating a free workspace several times at once allows more than the permitted number?",
+   "prompt": "In this repo, where is the code I would change for this request: Can you fix the problem where creating a free workspace several times at once allows more than the permitted number? Answer with file paths and function names only."
+  },
+  {
+   "commit": "6e9ab23439",
+   "gold_files": [
+    "apps/landing-page/content/faq/what-are-the-four-types-of-chatbots.mdx"
+   ],
+   "gold_functions": [],
+   "id": 115,
+   "kind": "symptom",
+   "question": "Can you fix the broken links in the chatbot guides so they lead to the right pages?",
+   "prompt": "In this repo, where is the code I would change for this request: Can you fix the broken links in the chatbot guides so they lead to the right pages? Answer with file paths and function names only."
+  },
+  {
+   "commit": "cc195532aa",
+   "gold_files": [
+    "packages/embeds/js/src/features/blocks/bubbles/embed/components/EmbedBubble.tsx",
+    "packages/embeds/js/src/lib/sanitizeUrl.ts"
+   ],
+   "gold_functions": [
+    "sanitizeUrl",
+    "EmbedBubble"
+   ],
+   "id": 117,
+   "kind": "symptom",
+   "question": "Can you clean up the web addresses used in embedded chat bubbles so unsafe links can't be inserted?",
+   "prompt": "In this repo, where is the code I would change for this request: Can you clean up the web addresses used in embedded chat bubbles so unsafe links can't be inserted? Answer with file paths and function names only."
+  },
+  {
+   "commit": "9b9d52d2f6",
+   "gold_files": [
+    "apps/builder/src/features/collaboration/api/handleGetCollaborators.ts"
+   ],
+   "gold_functions": [
+    "handleGetCollaborators"
+   ],
+   "id": 118,
+   "kind": "symptom",
+   "question": "Can you protect the identities of people collaborating on a bot so their details aren't exposed to others?",
+   "prompt": "In this repo, where is the code I would change for this request: Can you protect the identities of people collaborating on a bot so their details aren't exposed to others? Answer with file paths and function names only."
+  },
+  {
+   "commit": "53f646142e",
+   "gold_files": [
+    "packages/bot-engine/src/blocks/integrations/httpRequest/executeHttpRequestBlock.ts"
+   ],
+   "gold_functions": [
+    "executeHttpRequest"
+   ],
+   "id": 119,
+   "kind": "symptom",
+   "question": "Can you stop passwords and secret keys used by outside web calls from showing up in the activity logs?",
+   "prompt": "In this repo, where is the code I would change for this request: Can you stop passwords and secret keys used by outside web calls from showing up in the activity logs? Answer with file paths and function names only."
+  },
+  {
+   "commit": "7ad9ec1dba",
+   "gold_files": [
+    "apps/builder/src/features/workspace/api/handleUpdateWorkspaceInvitation.ts"
+   ],
+   "gold_functions": [
+    "handleUpdateWorkspaceInvitation"
+   ],
+   "id": 120,
+   "kind": "symptom",
+   "question": "Can you stop someone from taking over a workspace invitation meant for a different workspace or person?",
+   "prompt": "In this repo, where is the code I would change for this request: Can you stop someone from taking over a workspace invitation meant for a different workspace or person? Answer with file paths and function names only."
+  },
+  {
+   "commit": "b14f756d06",
+   "gold_files": [
+    "packages/scripts/src/suspendWorkspace.ts"
+   ],
+   "gold_functions": [
+    "suspendWorkspace"
+   ],
+   "id": 122,
+   "kind": "symptom",
+   "question": "Can you fix the problem where workspaces in the live product are wrongly suspended?",
+   "prompt": "In this repo, where is the code I would change for this request: Can you fix the problem where workspaces in the live product are wrongly suspended? Answer with file paths and function names only."
+  },
+  {
+   "commit": "7fa9ab423a",
+   "gold_files": [
+    "apps/builder/src/features/analytics/api/handleGetInDepthAnalyticsData.ts"
+   ],
+   "gold_functions": [
+    "handleGetInDepthAnalyticsData"
+   ],
+   "id": 123,
+   "kind": "symptom",
+   "question": "Can you make the detailed analytics figures load faster by calculating the different numbers at the same time?",
+   "prompt": "In this repo, where is the code I would change for this request: Can you make the detailed analytics figures load faster by calculating the different numbers at the same time? Answer with file paths and function names only."
+  },
+  {
+   "commit": "f9a57c449d",
+   "gold_files": [
+    "packages/prisma/src/createPrismaAdapter.ts"
+   ],
+   "gold_functions": [
+    "createPrismaAdapter",
+    "getSchemaFromUrl"
+   ],
+   "id": 124,
+   "kind": "symptom",
+   "question": "Can you make the app respect the database section setting in the connection address so it uses the right data area?",
+   "prompt": "In this repo, where is the code I would change for this request: Can you make the app respect the database section setting in the connection address so it uses the right data area? Answer with file paths and function names only."
+  },
+  {
+   "commit": "390dddd4cc",
+   "gold_files": [
+    "apps/builder/src/features/collaboration/api/handleCreateInvitation.ts",
+    "packages/auth/src/lib/dailyGuestInvitationRateLimiter.ts"
+   ],
+   "gold_functions": [
+    "handleCreateInvitation"
+   ],
+   "id": 127,
+   "kind": "symptom",
+   "question": "Can you stop people from abusing the guest invitation feature to send unwanted emails?",
+   "prompt": "In this repo, where is the code I would change for this request: Can you stop people from abusing the guest invitation feature to send unwanted emails? Answer with file paths and function names only."
+  },
+  {
+   "id": 41,
+   "commit": "f00ccba8ed",
+   "prompt": "In this repo, where is the code I would change to: \ud83d\udc1b Fix stored WhatsApp phone lookup fallback (#2531)? Answer with file paths and function names only.",
+   "gold_files": [
+    "packages/whatsapp/src/api/handleGetPhoneNumber.ts"
+   ],
+   "gold_functions": [
+    "getCredentials",
+    "handleGetPhoneNumber"
+   ]
+  },
+  {
+   "id": 42,
+   "commit": "3b321f4ba1",
+   "prompt": "In this repo, where is the code I would change to: \ud83d\udc1b Ignore expected WhatsApp webhook errors (#2527)? Answer with file paths and function names only.",
+   "gold_files": [
+    "packages/config/src/orpc/viewer/middlewares.ts"
+   ],
+   "gold_functions": [
+    "isExpectedWhatsAppWebhookValidationError",
+    "isUnknownError"
+   ]
+  },
+  {
+   "id": 43,
+   "commit": "b252a9c996",
+   "prompt": "In this repo, where is the code I would change to: \ud83d\udc1b Fix OpenAI chat completions endpoint (#2522)? Answer with file paths and function names only.",
+   "gold_files": [
+    "packages/forge/blocks/openai/src/handlers/createChatCompletionHandler.ts",
+    "packages/forge/blocks/openai/src/handlers/createOpenAIChatLanguageModel.ts"
+   ],
+   "gold_functions": [
+    "createOpenAIChatLanguageModel"
+   ]
+  },
+  {
+   "id": 44,
+   "commit": "2fd5510641",
+   "prompt": "In this repo, where is the code I would change to: \ud83d\udc1b Fix OpenAI audio transcription uploads (#2521)? Answer with file paths and function names only.",
+   "gold_files": [
+    "packages/forge/blocks/openai/src/handlers/createTranscriptionHandler.ts",
+    "packages/lib/src/extensionFromMimeType.ts"
+   ],
+   "gold_functions": [
+    "parseOpenAITranscriptionFileExtension",
+    "createOpenAITranscriptionFileName",
+    "parseUrlExtension",
+    "parseUrlPathname",
+    "parseContentType"
+   ]
+  },
+  {
+   "id": 45,
+   "commit": "f420be5166",
+   "prompt": "In this repo, where is the code I would change to: \ud83d\udcdd Add blog partner links (#2506)? Answer with file paths and function names only.",
+   "gold_files": [
+    "apps/landing-page/content/blog/best-shopify-chatbot.mdx",
+    "apps/landing-page/content/blog/best-whatsapp-automation-tool.mdx",
+    "apps/landing-page/content/blog/typeform-vs-google-form.mdx"
+   ],
+   "gold_functions": []
+  },
+  {
+   "id": 46,
+   "commit": "08cb6ea10f",
+   "prompt": "In this repo, where is the code I would change to: \ud83d\udc1b Fix missing result columns in CSV export (#2513)? Answer with file paths and function names only.",
+   "gold_files": [
+    "apps/builder/src/features/results/components/table/SelectionToolbar.tsx",
+    "packages/results/src/parseColumnsOrder.ts"
+   ],
+   "gold_functions": [
+    "parseColumnsOrder",
+    "exportResultsToCSV"
+   ]
+  },
+  {
+   "id": 47,
+   "commit": "b4a7aab16d",
+   "prompt": "In this repo, where is the code I would change to: \ud83d\udc1b Fix landing page Discord URL (#2512)? Answer with file paths and function names only.",
+   "gold_files": [
+    ".gitignore",
+    "apps/landing-page/src/constants.ts"
+   ],
+   "gold_functions": [
+    "content-collections.d.ts"
+   ]
+  },
+  {
+   "id": 48,
+   "commit": "f56c3c3f77",
+   "prompt": "In this repo, where is the code I would change to: \ud83d\udc1b Block IPv6 unspecified SSRF targets (#2511)? Answer with file paths and function names only.",
+   "gold_files": [
+    "packages/lib/src/ssrf/validateHttpReqUrl.ts"
+   ],
+   "gold_functions": [
+    "isIPv6UnspecifiedAddress",
+    "validateIPAddress",
+    "isIPv6ZeroGroup"
+   ]
+  },
+  {
+   "id": 49,
+   "commit": "9d6708bbee",
+   "prompt": "In this repo, where is the code I would change to: \ud83d\udc1b Fix upload proxy public URL (#2508)? Answer with file paths and function names only.",
+   "gold_files": [
+    "apps/builder/src/features/upload/api/generateUploadUrl.ts",
+    "packages/blocks/fileInput/src/api/getUploadProxyBaseUrl.ts",
+    "packages/lib/src/s3/resolveUploadProxyBaseUrl.ts"
+   ],
+   "gold_functions": [
+    "resolveUploadProxyBaseUrl",
+    "parseOrigin",
+    "getUploadProxyBaseUrl"
+   ]
+  },
+  {
+   "id": 50,
+   "commit": "36a6186101",
+   "prompt": "In this repo, where is the code I would change to: \ud83d\udc1b Fix WhatsApp preview webhook authorization (#2499)? Answer with file paths and function names only.",
+   "gold_files": [
+    "packages/blocks/webhook/src/api/handleExecuteTestWebhookWhatsApp.ts",
+    "packages/whatsapp/src/api/handleStartWhatsAppPreview.ts",
+    "packages/whatsapp/src/normalizeWhatsAppPreviewPhoneNumber.ts"
+   ],
+   "gold_functions": [
+    "handleExecuteTestWebhookWhatsApp",
+    "normalizeWhatsAppPreviewPhoneNumber",
+    "handleStartWhatsAppPreview"
+   ]
+  },
+  {
+   "id": 51,
+   "commit": "5861031f72",
+   "prompt": "In this repo, where is the code I would change to: \ud83d\udd27 Add WhatsApp status forward URL update script (#2496)? Answer with file paths and function names only.",
+   "gold_files": [
+    ".gitignore",
+    "packages/scripts/src/updateWhatsAppStatusForwardUrl.ts"
+   ],
+   "gold_functions": [
+    "updateWhatsAppStatusForwardUrl"
+   ]
+  },
+  {
+   "id": 52,
+   "commit": "b72a37438f",
+   "prompt": "In this repo, where is the code I would change to: \ud83d\udc1b Fix Pexels video picker infinite loading loop (#2479)? Answer with file paths and function names only.",
+   "gold_files": [
+    "apps/builder/src/components/VideoUploadContent/PexelsPicker.tsx"
+   ],
+   "gold_functions": [
+    "PexelsPicker",
+    "updateOrientation",
+    "updateSize",
+    "PexelsVideo",
+    "deduplicateVideosById"
+   ]
+  },
+  {
+   "id": 53,
+   "commit": "6f915c3096",
+   "prompt": "In this repo, where is the code I would change to: \ud83d\udc1b Prevent cross-typebot webhook resume IDOR (#2494)? Answer with file paths and function names only.",
+   "gold_files": [
+    "packages/blocks/webhook/src/api/handleExecuteWebhook.ts"
+   ],
+   "gold_functions": [
+    "handleExecuteWebhook"
+   ]
+  },
+  {
+   "id": 54,
+   "commit": "060033b8cf",
+   "prompt": "In this repo, where is the code I would change to: \ud83d\udcdd Update commit skill and ignore .pi? Answer with file paths and function names only.",
+   "gold_files": [
+    ".gitignore"
+   ],
+   "gold_functions": [
+    "content-collections.d.ts"
+   ]
+  },
+  {
+   "id": 55,
+   "commit": "5b5f82d6c0",
+   "prompt": "In this repo, where is the code I would change to: \ud83d\udd12\ufe0f Add SSRF_ALLOWED_HOSTS env for self-hosted internal APIs (#2474)? Answer with file paths and function names only.",
+   "gold_files": [
+    "packages/env/src/index.ts",
+    "packages/lib/src/ssrf/validateHttpReqUrl.ts"
+   ],
+   "gold_functions": [
+    "validateIPAddress",
+    "validateHttpReqUrl"
+   ]
+  },
+  {
+   "id": 56,
+   "commit": "67c7c86b1a",
+   "prompt": "In this repo, where is the code I would change to: \u23ea Revert Google Sheets picker fixes (#2486, #2487) (#2488)? Answer with file paths and function names only.",
+   "gold_files": [
+    "apps/builder/src/features/blocks/integrations/googleSheets/api/handleGetConsentUrl.ts",
+    "apps/builder/src/features/blocks/integrations/googleSheets/components/GoogleSpreadsheetPicker.tsx",
+    "packages/env/src/index.ts"
+   ],
+   "gold_functions": [
+    "createPicker",
+    "handleGetConsentUrl"
+   ]
+  },
+  {
+   "id": 57,
+   "commit": "babe333c0e",
+   "prompt": "In this repo, where is the code I would change to: \ud83d\udc1b Add trigger_onepick OAuth param for Google Sheets picker (#2487)? Answer with file paths and function names only.",
+   "gold_files": [
+    "apps/builder/src/features/blocks/integrations/googleSheets/api/handleGetConsentUrl.ts"
+   ],
+   "gold_functions": [
+    "handleGetConsentUrl"
+   ]
+  },
+  {
+   "id": 58,
+   "commit": "8e67415766",
+   "prompt": "In this repo, where is the code I would change to: \ud83d\udc1b Fix Google Sheets picker 401 by setting Cloud Project AppId (#2486)? Answer with file paths and function names only.",
+   "gold_files": [
+    "apps/builder/src/features/blocks/integrations/googleSheets/components/GoogleSpreadsheetPicker.tsx",
+    "packages/env/src/index.ts"
+   ],
+   "gold_functions": [
+    "createPicker"
+   ]
+  },
+  {
+   "id": 59,
+   "commit": "85eb843c42",
+   "prompt": "In this repo, where is the code I would change to: \ud83d\udc1b Fix monthly cron tx timeout when deleting archived typebots (#2481)? Answer with file paths and function names only.",
+   "gold_files": [
+    "packages/scripts/src/helpers/cleanArchivedData.ts"
+   ],
+   "gold_functions": [
+    "deleteResultsFromArchivedTypebotsIfAny"
+   ]
+  },
+  {
+   "id": 60,
+   "commit": "53e90c497d",
+   "prompt": "In this repo, where is the code I would change to: fix the button position close in modal (#2476)? Answer with file paths and function names only.",
+   "gold_files": [
+    "packages/embeds/js/src/components/Modal.tsx"
+   ],
+   "gold_functions": [
+    "Modal"
+   ]
+  },
+  {
+   "id": 61,
+   "commit": "91d2a986d9",
+   "prompt": "In this repo, where is the code I would change to: \ud83d\udc1b Fix missing workspace membership check in getSheets endpoint (#2467)? Answer with file paths and function names only.",
+   "gold_files": [
+    "apps/builder/src/features/blocks/integrations/googleSheets/api/handleGetSheets.ts"
+   ],
+   "gold_functions": [
+    "handleGetSheets"
+   ]
+  },
+  {
+   "id": 62,
+   "commit": "892870ff86",
+   "prompt": "In this repo, where is the code I would change to: \ud83d\udc1b Fix SSRF safe dispatcher DNS lookup handling (#2462)? Answer with file paths and function names only.",
+   "gold_files": [
+    "packages/lib/src/ssrf/createSafeDispatcher.ts"
+   ],
+   "gold_functions": [
+    "validatingLookup"
+   ]
+  },
+  {
+   "id": 63,
+   "commit": "f9d2a75127",
+   "prompt": "In this repo, where is the code I would change to: \ud83d\udcdd Update blog posts links (#2445)? Answer with file paths and function names only.",
+   "gold_files": [
+    "apps/landing-page/content/blog/best-ai-productivity-tools-2026.mdx",
+    "apps/landing-page/content/blog/collecting-customer-feedback-methods.mdx"
+   ],
+   "gold_functions": []
+  },
+  {
+   "id": 64,
+   "commit": "55b290043b",
+   "prompt": "In this repo, where is the code I would change to: \ud83d\udc1b Fix PostHog tracking by updating cookie domain to typebot.com (#2447)? Answer with file paths and function names only.",
+   "gold_files": [
+    "packages/telemetry/src/cookies/constants.ts"
+   ],
+   "gold_functions": []
+  },
+  {
+   "id": 65,
+   "commit": "d3c15f32c8",
+   "prompt": "In this repo, where is the code I would change to: \ud83d\udc1b Handle GA script load failure to prevent bot from hanging (#2446)? Answer with file paths and function names only.",
+   "gold_files": [
+    "packages/embeds/js/src/lib/gtag.ts"
+   ],
+   "gold_functions": [
+    "initGoogleAnalytics"
+   ]
+  },
+  {
+   "id": 66,
+   "commit": "c5a8c85026",
+   "prompt": "In this repo, where is the code I would change to: \ud83d\udc1b Add prisma.config.ts to Dockerfile (#2442)? Answer with file paths and function names only.",
+   "gold_files": [
+    "Dockerfile",
+    "scripts/builder-entrypoint.sh"
+   ],
+   "gold_functions": []
+  },
+  {
+   "id": 67,
+   "commit": "7bc1a6f856",
+   "prompt": "In this repo, where is the code I would change to: \ud83d\udd27 Prepare v3.16.0 release (#2439)? Answer with file paths and function names only.",
+   "gold_files": [
+    "Dockerfile",
+    "apps/landing-page/content/blog/whatsapp-lead-generation.mdx"
+   ],
+   "gold_functions": []
+  },
+  {
+   "id": 68,
+   "commit": "b9530a089b",
+   "prompt": "In this repo, where is the code I would change to: \ud83d\udc1b Fix authorization bypass in getLinkedTypebots (GHSA-3fr5-999r-84qj) (#2434)? Answer with file paths and function names only.",
+   "gold_files": [
+    "apps/builder/src/features/blocks/logic/typebotLink/api/getLinkedTypebots.ts"
+   ],
+   "gold_functions": []
+  },
+  {
+   "id": 69,
+   "commit": "23818bb0e5",
+   "prompt": "In this repo, where is the code I would change to: \ud83d\udc1b Fix SSRF redirect bypass in HTTP Request and Code blocks (#2432)? Answer with file paths and function names only.",
+   "gold_files": [
+    "commands/nx-ignore",
+    "packages/bot-engine/src/blocks/integrations/httpRequest/executeHttpRequestBlock.ts",
+    "packages/variables/src/executeFunction.ts"
+   ],
+   "gold_functions": [
+    "executeFunction",
+    "executeHttpRequest"
+   ]
+  },
+  {
+   "id": 70,
+   "commit": "73162634e6",
+   "prompt": "In this repo, where is the code I would change to: \ud83d\udc1b Fix cross-typebot result data access (GHSA-f475-7m4x-m6mx) (#2431)? Answer with file paths and function names only.",
+   "gold_files": [
+    "packages/bot-engine/src/queries/findResult.ts",
+    "packages/bot-engine/src/startSession.ts"
+   ],
+   "gold_functions": [
+    "getOrInitResult",
+    "findResult",
+    "startSession"
+   ]
+  },
+  {
+   "id": 71,
+   "commit": "aa3b619979",
+   "prompt": "In this repo, where is the code I would change to: \ud83d\udc1b Fix file upload in builder preview mode (#2427)? Answer with file paths and function names only.",
+   "gold_files": [
+    "packages/blocks/fileInput/src/api/router.ts"
+   ],
+   "gold_functions": []
+  },
+  {
+   "id": 72,
+   "commit": "30e071da71",
+   "prompt": "In this repo, where is the code I would change to: \ud83d\udd27 Fix cleanArchivedData script performance? Answer with file paths and function names only.",
+   "gold_files": [
+    "packages/scripts/src/helpers/cleanArchivedData.ts"
+   ],
+   "gold_functions": [
+    "deleteArchivedTypebots",
+    "deleteResultsFromArchivedTypebotsIfAny",
+    "deleteDuplicatePublicTypebots",
+    "cleanArchivedData"
+   ]
+  },
+  {
+   "id": 73,
+   "commit": "a56dc49b2a",
+   "prompt": "In this repo, where is the code I would change to: \ud83d\udc1b Fix import typebots? Answer with file paths and function names only.",
+   "gold_files": [
+    "apps/builder/src/features/typebot/api/handleImportTypebot.ts"
+   ],
+   "gold_functions": [
+    "migrateImportingTypebot"
+   ]
+  },
+  {
+   "id": 74,
+   "commit": "4eff08df9c",
+   "prompt": "In this repo, where is the code I would change to: \ud83d\udc1b Fix IconPicker loading state? Answer with file paths and function names only.",
+   "gold_files": [
+    "packages/ui/src/components/IconPicker.tsx"
+   ],
+   "gold_functions": [
+    "List"
+   ]
+  },
+  {
+   "id": 75,
+   "commit": "ca41bf7238",
+   "prompt": "In this repo, where is the code I would change to: \ud83d\udd27 Improve frontend skills? Answer with file paths and function names only.",
+   "gold_files": [
+    ".claude/skills/web-animation-design"
+   ],
+   "gold_functions": [
+    "+../../.agents/skills/web-animation-design"
+   ]
+  },
+  {
+   "id": 76,
+   "commit": "a0be7a4a39",
+   "prompt": "In this repo, where is the code I would change to: \ud83d\udc85 Improve IconPicker loading? Answer with file paths and function names only.",
+   "gold_files": [
+    "packages/ui/src/components/IconPicker.tsx",
+    "packages/ui/src/components/TypebotLoader.tsx"
+   ],
+   "gold_functions": [
+    "TypebotLoader",
+    "List",
+    "Root",
+    "getIconsBundle",
+    "IconPreview"
+   ]
+  },
+  {
+   "id": 77,
+   "commit": "e7ae260aaf",
+   "prompt": "In this repo, where is the code I would change to: \ud83d\udd27 Improve default image compression? Answer with file paths and function names only.",
+   "gold_files": [
+    "apps/builder/src/components/ImageUploadContent/UploadButton.tsx",
+    "apps/builder/src/helpers/compressFile.ts"
+   ],
+   "gold_functions": [
+    "compressFile",
+    "UploadButton",
+    "handleFileUploadRequest"
+   ]
+  },
+  {
+   "id": 78,
+   "commit": "d6b010eb84",
+   "prompt": "In this repo, where is the code I would change to: \u267b\ufe0f Add UploadButton component? Answer with file paths and function names only.",
+   "gold_files": [
+    "apps/builder/src/components/ImageUploadContent/UploadButton.tsx",
+    "packages/ui/src/components/UploadButton.tsx"
+   ],
+   "gold_functions": [
+    "UploadButton",
+    "handleFileUploadRequest",
+    "handleInputChange"
+   ]
+  },
+  {
+   "id": 79,
+   "commit": "2e34c7c1e7",
+   "prompt": "In this repo, where is the code I would change to: \ud83d\udc85 Fix dots icons, bolder? Answer with file paths and function names only.",
+   "gold_files": [
+    "packages/ui/src/components/EmojiOrImageIcon.tsx",
+    "packages/ui/src/icons/DragDropHorizontalIcon.tsx",
+    "packages/ui/src/icons/MoreVerticalIcon.tsx"
+   ],
+   "gold_functions": [
+    "DragDropHorizontalIcon",
+    "MoreVerticalIcon",
+    "EmojiOrImageIcon"
+   ]
+  },
+  {
+   "id": 80,
+   "commit": "c67548cd62",
+   "prompt": "In this repo, where is the code I would change to: \u267b\ufe0f Improve EmojiOrImageIcon structure? Answer with file paths and function names only.",
+   "gold_files": [
+    "packages/ui/src/components/EmojiOrImageIcon.tsx"
+   ],
+   "gold_functions": [
+    "EmojiOrImageIcon",
+    "isSvgSource"
+   ]
+  },
+  {
+   "commit": "b252a9c996",
+   "gold_files": [
+    "packages/forge/blocks/openai/src/handlers/createChatCompletionHandler.ts",
+    "packages/forge/blocks/openai/src/handlers/createOpenAIChatLanguageModel.ts"
+   ],
+   "gold_functions": [
+    "createOpenAIChatLanguageModel"
+   ],
+   "id": 143,
+   "kind": "symptom",
+   "question": "Why is the connection to the AI chat service not working correctly, and can it be fixed so replies come back properly?",
+   "prompt": "In this repo, where is the code I would change for this request: Why is the connection to the AI chat service not working correctly, and can it be fixed so replies come back properly? Answer with file paths and function names only."
+  },
+  {
+   "commit": "2fd5510641",
+   "gold_files": [
+    "packages/forge/blocks/openai/src/handlers/createTranscriptionHandler.ts",
+    "packages/lib/src/extensionFromMimeType.ts"
+   ],
+   "gold_functions": [
+    "parseOpenAITranscriptionFileExtension",
+    "createOpenAITranscriptionFileName",
+    "parseUrlExtension",
+    "parseUrlPathname",
+    "parseContentType"
+   ],
+   "id": 144,
+   "kind": "symptom",
+   "question": "Why do audio files sent to the AI service for turning speech into text fail to upload, and can that be fixed?",
+   "prompt": "In this repo, where is the code I would change for this request: Why do audio files sent to the AI service for turning speech into text fail to upload, and can that be fixed? Answer with file paths and function names only."
+  },
+  {
+   "commit": "f420be5166",
+   "gold_files": [
+    "apps/landing-page/content/blog/best-shopify-chatbot.mdx",
+    "apps/landing-page/content/blog/best-whatsapp-automation-tool.mdx",
+    "apps/landing-page/content/blog/typeform-vs-google-form.mdx"
+   ],
+   "gold_functions": [],
+   "id": 145,
+   "kind": "symptom",
+   "question": "Can we add links to our partners on the blog pages?",
+   "prompt": "In this repo, where is the code I would change for this request: Can we add links to our partners on the blog pages? Answer with file paths and function names only."
+  },
+  {
+   "commit": "08cb6ea10f",
+   "gold_files": [
+    "apps/builder/src/features/results/components/table/SelectionToolbar.tsx",
+    "packages/results/src/parseColumnsOrder.ts"
+   ],
+   "gold_functions": [
+    "parseColumnsOrder",
+    "exportResultsToCSV"
+   ],
+   "id": 146,
+   "kind": "symptom",
+   "question": "Why are some result columns missing when I download my bot's results as a spreadsheet file, and can that be fixed?",
+   "prompt": "In this repo, where is the code I would change for this request: Why are some result columns missing when I download my bot's results as a spreadsheet file, and can that be fixed? Answer with file paths and function names only."
+  },
+  {
+   "commit": "b4a7aab16d",
+   "gold_files": [
+    ".gitignore",
+    "apps/landing-page/src/constants.ts"
+   ],
+   "gold_functions": [
+    "content-collections.d.ts"
+   ],
+   "id": 147,
+   "kind": "symptom",
+   "question": "Why does the community chat link on the landing page go to the wrong place, and can it be corrected?",
+   "prompt": "In this repo, where is the code I would change for this request: Why does the community chat link on the landing page go to the wrong place, and can it be corrected? Answer with file paths and function names only."
+  },
+  {
+   "commit": "f56c3c3f77",
+   "gold_files": [
+    "packages/lib/src/ssrf/validateHttpReqUrl.ts"
+   ],
+   "gold_functions": [
+    "isIPv6UnspecifiedAddress",
+    "validateIPAddress",
+    "isIPv6ZeroGroup"
+   ],
+   "id": 148,
+   "kind": "symptom",
+   "question": "Can we stop the system from being tricked into reaching private internal addresses through a special empty network address format?",
+   "prompt": "In this repo, where is the code I would change for this request: Can we stop the system from being tricked into reaching private internal addresses through a special empty network address format? Answer with file paths and function names only."
+  },
+  {
+   "commit": "9d6708bbee",
+   "gold_files": [
+    "apps/builder/src/features/upload/api/generateUploadUrl.ts",
+    "packages/blocks/fileInput/src/api/getUploadProxyBaseUrl.ts",
+    "packages/lib/src/s3/resolveUploadProxyBaseUrl.ts"
+   ],
+   "gold_functions": [
+    "resolveUploadProxyBaseUrl",
+    "parseOrigin",
+    "getUploadProxyBaseUrl"
+   ],
+   "id": 149,
+   "kind": "symptom",
+   "question": "Why does the public link for uploaded files come out wrong, and can it be fixed so people can open them?",
+   "prompt": "In this repo, where is the code I would change for this request: Why does the public link for uploaded files come out wrong, and can it be fixed so people can open them? Answer with file paths and function names only."
+  },
+  {
+   "commit": "b72a37438f",
+   "gold_files": [
+    "apps/builder/src/components/VideoUploadContent/PexelsPicker.tsx"
+   ],
+   "gold_functions": [
+    "PexelsPicker",
+    "updateOrientation",
+    "updateSize",
+    "PexelsVideo",
+    "deduplicateVideosById"
+   ],
+   "id": 152,
+   "kind": "symptom",
+   "question": "Why does the stock video picker keep loading forever when I browse for videos, and can that be fixed?",
+   "prompt": "In this repo, where is the code I would change for this request: Why does the stock video picker keep loading forever when I browse for videos, and can that be fixed? Answer with file paths and function names only."
+  },
+  {
+   "commit": "6f915c3096",
+   "gold_files": [
+    "packages/blocks/webhook/src/api/handleExecuteWebhook.ts"
+   ],
+   "gold_functions": [
+    "handleExecuteWebhook"
+   ],
+   "id": 153,
+   "kind": "symptom",
+   "question": "Can we stop someone from resuming a conversation in another person's bot by guessing identifiers, so bots stay separate and secure?",
+   "prompt": "In this repo, where is the code I would change for this request: Can we stop someone from resuming a conversation in another person's bot by guessing identifiers, so bots stay separate and secure? Answer with file paths and function names only."
+  },
+  {
+   "commit": "5b5f82d6c0",
+   "gold_files": [
+    "packages/env/src/index.ts",
+    "packages/lib/src/ssrf/validateHttpReqUrl.ts"
+   ],
+   "gold_functions": [
+    "validateIPAddress",
+    "validateHttpReqUrl"
+   ],
+   "id": 155,
+   "kind": "symptom",
+   "question": "Can administrators of self-hosted installations list trusted internal addresses that the safety blocking should allow, so their private services still work?",
+   "prompt": "In this repo, where is the code I would change for this request: Can administrators of self-hosted installations list trusted internal addresses that the safety blocking should allow, so their private services still work? Answer with file paths and function names only."
+  },
+  {
+   "commit": "67c7c86b1a",
+   "gold_files": [
+    "apps/builder/src/features/blocks/integrations/googleSheets/api/handleGetConsentUrl.ts",
+    "apps/builder/src/features/blocks/integrations/googleSheets/components/GoogleSpreadsheetPicker.tsx",
+    "packages/env/src/index.ts"
+   ],
+   "gold_functions": [
+    "createPicker",
+    "handleGetConsentUrl"
+   ],
+   "id": 156,
+   "kind": "symptom",
+   "question": "Can we undo the recent changes to the Google spreadsheet file picker, because they caused new problems?",
+   "prompt": "In this repo, where is the code I would change for this request: Can we undo the recent changes to the Google spreadsheet file picker, because they caused new problems? Answer with file paths and function names only."
+  },
+  {
+   "commit": "babe333c0e",
+   "gold_files": [
+    "apps/builder/src/features/blocks/integrations/googleSheets/api/handleGetConsentUrl.ts"
+   ],
+   "gold_functions": [
+    "handleGetConsentUrl"
+   ],
+   "id": 157,
+   "kind": "symptom",
+   "question": "Can the Google spreadsheet file picker be set up with an extra sign-in setting so users can pick their files?",
+   "prompt": "In this repo, where is the code I would change for this request: Can the Google spreadsheet file picker be set up with an extra sign-in setting so users can pick their files? Answer with file paths and function names only."
+  },
+  {
+   "commit": "8e67415766",
+   "gold_files": [
+    "apps/builder/src/features/blocks/integrations/googleSheets/components/GoogleSpreadsheetPicker.tsx",
+    "packages/env/src/index.ts"
+   ],
+   "gold_functions": [
+    "createPicker"
+   ],
+   "id": 158,
+   "kind": "symptom",
+   "question": "Why does the Google spreadsheet file picker show an unauthorized error, and can it be fixed so people can select files?",
+   "prompt": "In this repo, where is the code I would change for this request: Why does the Google spreadsheet file picker show an unauthorized error, and can it be fixed so people can select files? Answer with file paths and function names only."
+  },
+  {
+   "commit": "85eb843c42",
+   "gold_files": [
+    "packages/scripts/src/helpers/cleanArchivedData.ts"
+   ],
+   "gold_functions": [
+    "deleteResultsFromArchivedTypebotsIfAny"
+   ],
+   "id": 159,
+   "kind": "symptom",
+   "question": "Why does the monthly cleanup that removes archived bots time out, and can it be fixed so it completes?",
+   "prompt": "In this repo, where is the code I would change for this request: Why does the monthly cleanup that removes archived bots time out, and can it be fixed so it completes? Answer with file paths and function names only."
+  },
+  {
+   "commit": "53e90c497d",
+   "gold_files": [
+    "packages/embeds/js/src/components/Modal.tsx"
+   ],
+   "gold_functions": [
+    "Modal"
+   ],
+   "id": 160,
+   "kind": "symptom",
+   "question": "Can the button inside the popup window be moved, since it sits too close to the edge or other content?",
+   "prompt": "In this repo, where is the code I would change for this request: Can the button inside the popup window be moved, since it sits too close to the edge or other content? Answer with file paths and function names only."
+  },
+  {
+   "commit": "91d2a986d9",
+   "gold_files": [
+    "apps/builder/src/features/blocks/integrations/googleSheets/api/handleGetSheets.ts"
+   ],
+   "gold_functions": [
+    "handleGetSheets"
+   ],
+   "id": 161,
+   "kind": "symptom",
+   "question": "Can we make sure only members of a workspace can see the list of sheets, so outsiders can't access it?",
+   "prompt": "In this repo, where is the code I would change for this request: Can we make sure only members of a workspace can see the list of sheets, so outsiders can't access it? Answer with file paths and function names only."
+  },
+  {
+   "commit": "892870ff86",
+   "gold_files": [
+    "packages/lib/src/ssrf/createSafeDispatcher.ts"
+   ],
+   "gold_functions": [
+    "validatingLookup"
+   ],
+   "id": 162,
+   "kind": "symptom",
+   "question": "Why does the safety check on outgoing web requests sometimes fail when looking up website addresses, and can it be fixed?",
+   "prompt": "In this repo, where is the code I would change for this request: Why does the safety check on outgoing web requests sometimes fail when looking up website addresses, and can it be fixed? Answer with file paths and function names only."
+  },
+  {
+   "commit": "f9d2a75127",
+   "gold_files": [
+    "apps/landing-page/content/blog/best-ai-productivity-tools-2026.mdx",
+    "apps/landing-page/content/blog/collecting-customer-feedback-methods.mdx"
+   ],
+   "gold_functions": [],
+   "id": 163,
+   "kind": "symptom",
+   "question": "Can the links in our blog posts be updated so they point to the right pages?",
+   "prompt": "In this repo, where is the code I would change for this request: Can the links in our blog posts be updated so they point to the right pages? Answer with file paths and function names only."
+  },
+  {
+   "commit": "55b290043b",
+   "gold_files": [
+    "packages/telemetry/src/cookies/constants.ts"
+   ],
+   "gold_functions": [],
+   "id": 164,
+   "kind": "symptom",
+   "question": "Why isn't visitor tracking working on our website, and can it be fixed by using the correct main site domain?",
+   "prompt": "In this repo, where is the code I would change for this request: Why isn't visitor tracking working on our website, and can it be fixed by using the correct main site domain? Answer with file paths and function names only."
+  },
+  {
+   "commit": "d3c15f32c8",
+   "gold_files": [
+    "packages/embeds/js/src/lib/gtag.ts"
+   ],
+   "gold_functions": [
+    "initGoogleAnalytics"
+   ],
+   "id": 165,
+   "kind": "symptom",
+   "question": "Can the chatbot keep working instead of freezing when the analytics script fails to load for a visitor?",
+   "prompt": "In this repo, where is the code I would change for this request: Can the chatbot keep working instead of freezing when the analytics script fails to load for a visitor? Answer with file paths and function names only."
+  }
+ ],
+ "symptom_generation": {
+  "model": "sonnet",
+  "cost_usd": 0.03343,
+  "kept": 20,
+  "dropped_leaky": [
+   "Can you turn off the automatic daily check that analyzes customers who cancel their subscription?",
+   "Can you fix the links for audio files uploaded in WhatsApp conversations so they work properly?"
+  ]
+ },
+ "symptom_generation_b": {
+  "model": "sonnet",
+  "cost_usd": 0.047451999999999994,
+  "kept": 20,
+  "dropped_leaky": [
+   "Why does the system sometimes fail to find a saved WhatsApp contact's phone number, and can it fall back to another way of finding it?",
+   "Can the system stop reporting errors from WhatsApp messages that are normal and expected, so they don't look like real problems?",
+   "Why does previewing a WhatsApp bot fail with an authorization problem, and can it be fixed so the preview works?",
+   "Can we have a tool that updates the address where WhatsApp status notifications are forwarded?"
+  ]
+ }
+}

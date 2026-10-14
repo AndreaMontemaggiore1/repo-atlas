@@ -1,0 +1,33 @@
+name: It pointed at the wrong code
+description: The lookup (or Claude with the skill) named the wrong files, or missed the right ones
+labels: ["ranking"]
+body:
+  - type: textarea
+    id: question
+    attributes:
+      label: What you asked
+      description: The question or the search words, as you typed them.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Where the code actually is
+      description: The file(s) and function(s) you expected.
+    validations:
+      required: true
+  - type: textarea
+    id: got
+    attributes:
+      label: What it returned
+      description: The files it named. If you can, paste the output of `bash <skill dir>/scripts/atlas find "<your words>"`.
+  - type: input
+    id: repo
+    attributes:
+      label: Repo
+      description: A public repo URL and commit if possible, otherwise its size and languages (e.g. "Next.js, ~4k files").
+  - type: input
+    id: versions
+    attributes:
+      label: Versions
+      description: Claude Code version (`claude --version`), model, repo-atlas version, OS.

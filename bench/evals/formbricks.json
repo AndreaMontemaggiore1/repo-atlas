@@ -1,0 +1,693 @@
+{
+ "repo": "https://github.com/formbricks/formbricks",
+ "commit": "6fdf37a623020a348e8816964c1ffc4466d4537c",
+ "cases": [
+  {
+   "id": 1,
+   "commit": "68bff147bb",
+   "prompt": "In this repo, where is the code I would change to: fix(analysis): translate response filter criteria [ENG-645] (#9470)? Answer with file paths and function names only.",
+   "gold_files": [
+    "apps/web/app/(app)/workspaces/[workspaceId]/surveys/[surveyId]/components/ElementFilterComboBox.tsx",
+    "apps/web/app/(app)/workspaces/[workspaceId]/surveys/[surveyId]/components/ElementsComboBox.tsx",
+    "apps/web/app/lib/surveys/filter-labels.ts"
+   ],
+   "gold_functions": [
+    "getFilterValueLabel",
+    "getDisplayLabel",
+    "ElementFilterComboBox",
+    "renderFilterOptionsDropdown",
+    "getFilterOperatorLabel",
+    "SelectedCommandItem"
+   ]
+  },
+  {
+   "id": 2,
+   "commit": "492555b83c",
+   "prompt": "In this repo, where is the code I would change to: fix(survey-editor): stop recall tag edits hanging the editor in an update loop [ENG-2931] (#9447)? Answer with file paths and function names only.",
+   "gold_files": [
+    "apps/web/lib/utils/recall.ts",
+    "apps/web/modules/survey/components/element-form-input/components/recall-wrapper.tsx",
+    "apps/web/modules/survey/components/element-form-input/utils.ts"
+   ],
+   "gold_functions": [
+    "computeRecallItemRemoval",
+    "RecallWrapper",
+    "TRecallItemRemoval",
+    "extractCompleteRecallIds",
+    "getRecallItems"
+   ]
+  },
+  {
+   "id": 3,
+   "commit": "e8bef187c9",
+   "prompt": "In this repo, where is the code I would change to: fix(settings): keep a workspace-less organization active in account settings (#9465)? Answer with file paths and function names only.",
+   "gold_files": [
+    "apps/web/lib/localStorage.ts",
+    "apps/web/modules/settings/lib/navigation-data.ts",
+    "apps/web/proxy.ts"
+   ],
+   "gold_functions": [
+    "rememberActiveContext",
+    "getSettingsLayoutData",
+    "resolveActiveOrganizationId",
+    "proxy"
+   ]
+  },
+  {
+   "id": 4,
+   "commit": "8abe0b4276",
+   "prompt": "In this repo, where is the code I would change to: chore: align Node 24 across CI, engines and the devcontainer (#9474)? Answer with file paths and function names only.",
+   "gold_files": [
+    ".devcontainer/post-create.sh",
+    ".nvmrc",
+    ".prettierignore"
+   ],
+   "gold_functions": [
+    "-24.14.0",
+    "pnpm-lock.yaml"
+   ]
+  },
+  {
+   "id": 5,
+   "commit": "35bff0d77c",
+   "prompt": "In this repo, where is the code I would change to: fix(mcp): log JWKS load failures as jwks_fetch (#9382)? Answer with file paths and function names only.",
+   "gold_files": [
+    "apps/web/modules/mcp/auth.ts"
+   ],
+   "gold_functions": [
+    "loadMcpOAuthJwks",
+    "authenticateMcpOAuthBearer",
+    "hasDecodableProtectedHeader",
+    "getMcpOAuthFailureDetails"
+   ]
+  },
+  {
+   "id": 6,
+   "commit": "a70b5540b9",
+   "prompt": "In this repo, where is the code I would change to: fix(helm): harden the migration Job's containers [ENG-3480] (#9468)? Answer with file paths and function names only.",
+   "gold_files": [
+    "charts/formbricks/templates/_helpers.tpl"
+   ],
+   "gold_functions": [
+    "env"
+   ]
+  },
+  {
+   "id": 7,
+   "commit": "f1fc4adbc3",
+   "prompt": "In this repo, where is the code I would change to: fix(docker): rebuild the Cube image on the fixed distroless base (1.7.47-2) (#9492)? Answer with file paths and function names only.",
+   "gold_files": [
+    "docker/cube-image/Dockerfile",
+    "docker/cube-image/REVISION"
+   ],
+   "gold_functions": [
+    "-1"
+   ]
+  },
+  {
+   "id": 8,
+   "commit": "b48e006937",
+   "prompt": "In this repo, where is the code I would change to: perf(docker): shrink the build context and cache the install layer [ENG-587] (#9466)? Answer with file paths and function names only.",
+   "gold_files": [
+    ".dockerignore",
+    "apps/web/Dockerfile"
+   ],
+   "gold_functions": [
+    "-*.pem",
+    "Zone.Identifier",
+    "packages/database/generated",
+    "yarn-error.log*"
+   ]
+  },
+  {
+   "id": 9,
+   "commit": "13fa6bde5e",
+   "prompt": "In this repo, where is the code I would change to: test: run repo-level script tests as part of pnpm test (#9469)? Answer with file paths and function names only.",
+   "gold_files": [
+    "vitest.root.config.mts"
+   ],
+   "gold_functions": []
+  },
+  {
+   "id": 10,
+   "commit": "87012a2049",
+   "prompt": "In this repo, where is the code I would change to: fix(telemetry): send usage updates through the configured HTTPS_PROXY (#9414)? Answer with file paths and function names only.",
+   "gold_files": [
+    "apps/web/lib/proxy-dispatcher.ts",
+    "apps/web/lib/telemetry/usage-update.ts",
+    "apps/web/modules/ee/license-check/lib/license.ts"
+   ],
+   "gold_functions": [
+    "executeTelemetrySend",
+    "sendTelemetry",
+    "fetchLicenseFromServerInternal"
+   ]
+  },
+  {
+   "id": 11,
+   "commit": "e16bd36cf0",
+   "prompt": "In this repo, where is the code I would change to: fix(taxonomy): wire TAXONOMY_MAX_RECORDS in compose and fail fast on empty LLM base URL [ENG-1522] (#9463)? Answer with file paths and function names only.",
+   "gold_files": [
+    ".env.example",
+    "charts/formbricks/templates/_helpers.tpl"
+   ],
+   "gold_functions": []
+  },
+  {
+   "id": 12,
+   "commit": "2015497265",
+   "prompt": "In this repo, where is the code I would change to: feat(surveys): report the survey card's rect to native hosts (#9242)? Answer with file paths and function names only.",
+   "gold_files": [
+    "packages/surveys/src/components/general/render-survey.tsx",
+    "packages/surveys/src/components/wrappers/survey-container.tsx",
+    "packages/types/formbricks-surveys.ts"
+   ],
+   "gold_functions": [
+    "useCardRect",
+    "measure",
+    "SurveyContainerProps",
+    "SurveyContainer",
+    "TSurveyCardRect",
+    "restart"
+   ]
+  },
+  {
+   "id": 13,
+   "commit": "69019da6db",
+   "prompt": "In this repo, where is the code I would change to: fix(helm): run Cube with a read-only root filesystem and no capabilities (#9461)? Answer with file paths and function names only.",
+   "gold_files": [
+    "docker/cube-image/smoke-test.sh"
+   ],
+   "gold_functions": []
+  },
+  {
+   "id": 14,
+   "commit": "820083ec57",
+   "prompt": "In this repo, where is the code I would change to: fix(survey-editor): name the block, not its id, when a logic destination is gone [ENG-3443] (#9440)? Answer with file paths and function names only.",
+   "gold_files": [
+    "apps/web/modules/survey/editor/components/survey-menu-bar.tsx",
+    "apps/web/modules/survey/editor/lib/logic-destination-error.ts",
+    "packages/types/surveys/types.ts"
+   ],
+   "gold_functions": [
+    "getLogicDestinationErrorMessage",
+    "validateSurveyWithZod",
+    "validateBlockActions",
+    "getBlockLabel",
+    "validateBlockLogicFallback"
+   ]
+  },
+  {
+   "id": 15,
+   "commit": "04b329d435",
+   "prompt": "In this repo, where is the code I would change to: feat(helm): give the taxonomy pod its own ServiceAccount for workload identity (#9453)? Answer with file paths and function names only.",
+   "gold_files": [
+    "charts/formbricks/templates/_helpers.tpl"
+   ],
+   "gold_functions": []
+  },
+  {
+   "id": 16,
+   "commit": "dd1f825459",
+   "prompt": "In this repo, where is the code I would change to: fix(helm): render containerSecurityContext on the web container [ENG-2922] (#9450)? Answer with file paths and function names only.",
+   "gold_files": [
+    "packages/database/src/scripts/migration-runner.ts"
+   ],
+   "gold_functions": [
+    "runMigrations"
+   ]
+  },
+  {
+   "id": 17,
+   "commit": "8462cda687",
+   "prompt": "In this repo, where is the code I would change to: fix(survey-editor): name the field behind a blocked publish [ENG-2833] (#9138)? Answer with file paths and function names only.",
+   "gold_files": [
+    "apps/web/modules/survey/editor/components/survey-menu-bar.tsx",
+    "apps/web/modules/survey/editor/lib/validation.ts",
+    "packages/types/surveys/elements.ts"
+   ],
+   "gold_functions": [
+    "describeElementIssue",
+    "TDescribableIssue",
+    "isZodGeneratedMessage",
+    "validateSurveyWithZod",
+    "TElementIssueDescription",
+    "getElementFieldLabel"
+   ]
+  },
+  {
+   "id": 18,
+   "commit": "abc89196f9",
+   "prompt": "In this repo, where is the code I would change to: fix(surveys): settle navigation from an off-block blockId instead of throwing [ENG-2818] (#9149)? Answer with file paths and function names only.",
+   "gold_files": [
+    "packages/surveys/src/components/general/survey.tsx",
+    "packages/surveys/src/lib/survey-navigation.ts"
+   ],
+   "gold_functions": [
+    "evaluateLogicAndGetNextBlockId",
+    "getPreviousBlockId",
+    "onBack",
+    "onSubmit",
+    "restore",
+    "TNavigableSurvey"
+   ]
+  },
+  {
+   "id": 19,
+   "commit": "7f959c0e59",
+   "prompt": "In this repo, where is the code I would change to: fix(surveys): 44px close button touch area, inset from the card corner [ENG-3429] (a11y) (#9433)? Answer with file paths and function names only.",
+   "gold_files": [
+    "packages/surveys/src/components/general/survey-close-button.tsx",
+    "packages/surveys/src/components/general/survey.tsx"
+   ],
+   "gold_functions": [
+    "getCardContent",
+    "SurveyCloseButton"
+   ]
+  },
+  {
+   "id": 20,
+   "commit": "6fb5ce9c84",
+   "prompt": "In this repo, where is the code I would change to: fix(charts): scale the flipped category gutter with the chart width [ENG-3223] (#9418)? Answer with file paths and function names only.",
+   "gold_files": [
+    "apps/web/modules/ee/analysis/charts/components/cartesian-chart.tsx",
+    "apps/web/modules/ee/analysis/charts/lib/chart-utils.ts"
+   ],
+   "gold_functions": [
+    "CartesianChart",
+    "MeasuredChart",
+    "getCategoryAxisWidth",
+    "CartesianChartProps"
+   ]
+  },
+  {
+   "id": 21,
+   "commit": "a6e34d8690",
+   "prompt": "In this repo, where is the code I would change to: fix: block 10 personal email domains on Cloud (#9427)? Answer with file paths and function names only.",
+   "gold_files": [
+    "apps/web/modules/auth/lib/personal-email-domains.ts"
+   ],
+   "gold_functions": []
+  },
+  {
+   "id": 22,
+   "commit": "997a19a718",
+   "prompt": "In this repo, where is the code I would change to: fix(web): validate brandColor before it reaches the OG image SVG [ENG-2563] (#9425)? Answer with file paths and function names only.",
+   "gold_files": [
+    "apps/web/app/api/v1/client/og/route.tsx",
+    "packages/types/colors.ts"
+   ],
+   "gold_functions": [
+    "GET",
+    "normalizeHex"
+   ]
+  },
+  {
+   "id": 23,
+   "commit": "ca153d6598",
+   "prompt": "In this repo, where is the code I would change to: fix(analysis): reject nonsensical prompts in AI chart generation [ENG-3210] (#9406)? Answer with file paths and function names only.",
+   "gold_files": [
+    "apps/web/modules/ee/analysis/charts/lib/ai-chart-query.server.ts",
+    "apps/web/modules/ee/analysis/lib/ai-schema-context.ts"
+   ],
+   "gold_functions": [
+    "generateAIChartQuery",
+    "generateSchemaContext"
+   ]
+  },
+  {
+   "id": 24,
+   "commit": "9b7bfa0d83",
+   "prompt": "In this repo, where is the code I would change to: fix(surveys): drop image minimum height once media has loaded [ENG-3421] (#9420)? Answer with file paths and function names only.",
+   "gold_files": [
+    "packages/survey-ui/src/components/general/element-media.tsx",
+    "packages/surveys/src/components/general/element-media.tsx"
+   ],
+   "gold_functions": [
+    "ElementMedia"
+   ]
+  },
+  {
+   "id": 25,
+   "commit": "d0603a393f",
+   "prompt": "In this repo, where is the code I would change to: fix(surveys): pin --spacing inside #fbjs against host overrides [ENG-833] (#9405)? Answer with file paths and function names only.",
+   "gold_files": [
+    "packages/vite-plugins/postcss-scope-fbjs.cjs",
+    "packages/vite-plugins/postcss-scope-fbjs.d.cts"
+   ],
+   "gold_functions": []
+  },
+  {
+   "id": 26,
+   "commit": "80a0b82e4e",
+   "prompt": "In this repo, where is the code I would change to: fix(database): harden postgres connection reliability (#9407)? Answer with file paths and function names only.",
+   "gold_files": [
+    "packages/database/src/prisma-adapter.ts",
+    "patches/pg-pool@3.13.0.patch"
+   ],
+   "gold_functions": [
+    "logConnectionFailure",
+    "InstrumentedPool.connect",
+    "classifyConnectionFailure",
+    "createPrismaPgAdapter",
+    "getSafeErrorCode",
+    "InstrumentedPool.constructor"
+   ]
+  },
+  {
+   "id": 27,
+   "commit": "817a656a0e",
+   "prompt": "In this repo, where is the code I would change to: fix(surveys): require a valid web address for ending card button and redirect URLs [ENG-2585] (#9399)? Answer with file paths and function names only.",
+   "gold_files": [
+    "packages/types/common.ts"
+   ],
+   "gold_functions": [
+    "endingCardUrlRefinement",
+    "resolveRecallFallbacks",
+    "isValidHostname",
+    "isIPv4"
+   ]
+  },
+  {
+   "id": 28,
+   "commit": "4a88953f78",
+   "prompt": "In this repo, where is the code I would change to: fix(survey): reject JSON literals as numeric prefill values (ENG-1146) (#9410)? Answer with file paths and function names only.",
+   "gold_files": [
+    "apps/web/modules/survey/link/lib/prefill/parsers.ts",
+    "apps/web/modules/survey/link/lib/prefill/validators.ts"
+   ],
+   "gold_functions": [
+    "validateRating",
+    "parseNumber",
+    "validateNPS"
+   ]
+  },
+  {
+   "id": 29,
+   "commit": "c40632e6f7",
+   "prompt": "In this repo, where is the code I would change to: fix(survey-list): keep settings when a survey is duplicated [ENG-2144] (#9409)? Answer with file paths and function names only.",
+   "gold_files": [
+    "apps/web/modules/survey/list/lib/survey.ts"
+   ],
+   "gold_functions": [
+    "getExistingSurvey",
+    "copySurveyToOtherWorkspace"
+   ]
+  },
+  {
+   "id": 30,
+   "commit": "ba5ecdf9f0",
+   "prompt": "In this repo, where is the code I would change to: chore: dedupe lockfile and clean up stale repository configuration (#9400)? Answer with file paths and function names only.",
+   "gold_files": [
+    ".gitignore",
+    "sonar-project.properties"
+   ],
+   "gold_functions": [
+    "yarn-error.log*"
+   ]
+  },
+  {
+   "commit": "68bff147bb",
+   "gold_files": [
+    "apps/web/app/(app)/workspaces/[workspaceId]/surveys/[surveyId]/components/ElementFilterComboBox.tsx",
+    "apps/web/app/(app)/workspaces/[workspaceId]/surveys/[surveyId]/components/ElementsComboBox.tsx",
+    "apps/web/app/lib/surveys/filter-labels.ts"
+   ],
+   "gold_functions": [
+    "getFilterValueLabel",
+    "getDisplayLabel",
+    "ElementFilterComboBox",
+    "renderFilterOptionsDropdown",
+    "getFilterOperatorLabel",
+    "SelectedCommandItem"
+   ],
+   "id": 101,
+   "kind": "symptom",
+   "question": "Can you make sure the filters I choose when analysing survey responses are properly translated so the results match what I selected?",
+   "prompt": "In this repo, where is the code I would change for this request: Can you make sure the filters I choose when analysing survey responses are properly translated so the results match what I selected? Answer with file paths and function names only."
+  },
+  {
+   "commit": "e8bef187c9",
+   "gold_files": [
+    "apps/web/lib/localStorage.ts",
+    "apps/web/modules/settings/lib/navigation-data.ts",
+    "apps/web/proxy.ts"
+   ],
+   "gold_functions": [
+    "rememberActiveContext",
+    "getSettingsLayoutData",
+    "resolveActiveOrganizationId",
+    "proxy"
+   ],
+   "id": 103,
+   "kind": "symptom",
+   "question": "Can an organization that has no workspaces yet still stay selected as the active one when I open my account settings?",
+   "prompt": "In this repo, where is the code I would change for this request: Can an organization that has no workspaces yet still stay selected as the active one when I open my account settings? Answer with file paths and function names only."
+  },
+  {
+   "commit": "87012a2049",
+   "gold_files": [
+    "apps/web/lib/proxy-dispatcher.ts",
+    "apps/web/lib/telemetry/usage-update.ts",
+    "apps/web/modules/ee/license-check/lib/license.ts"
+   ],
+   "gold_functions": [
+    "executeTelemetrySend",
+    "sendTelemetry",
+    "fetchLicenseFromServerInternal"
+   ],
+   "id": 110,
+   "kind": "symptom",
+   "question": "Can usage updates be sent through our company's configured proxy so self-hosted installations behind a firewall can still report usage?",
+   "prompt": "In this repo, where is the code I would change for this request: Can usage updates be sent through our company's configured proxy so self-hosted installations behind a firewall can still report usage? Answer with file paths and function names only."
+  },
+  {
+   "commit": "e16bd36cf0",
+   "gold_files": [
+    ".env.example",
+    "charts/formbricks/templates/_helpers.tpl"
+   ],
+   "gold_functions": [],
+   "id": 111,
+   "kind": "symptom",
+   "question": "Can the setting for the maximum number of records in the topic grouping feature work in our standard deployment, and can it fail early with a clear error if the AI service address is empty?",
+   "prompt": "In this repo, where is the code I would change for this request: Can the setting for the maximum number of records in the topic grouping feature work in our standard deployment, and can it fail early with a clear error if the AI service address is empty? Answer with file paths and function names only."
+  },
+  {
+   "commit": "2015497265",
+   "gold_files": [
+    "packages/surveys/src/components/general/render-survey.tsx",
+    "packages/surveys/src/components/wrappers/survey-container.tsx",
+    "packages/types/formbricks-surveys.ts"
+   ],
+   "gold_functions": [
+    "useCardRect",
+    "measure",
+    "SurveyContainerProps",
+    "SurveyContainer",
+    "TSurveyCardRect",
+    "restart"
+   ],
+   "id": 112,
+   "kind": "symptom",
+   "question": "Can the survey card report its size and position to the native mobile or desktop app that displays it?",
+   "prompt": "In this repo, where is the code I would change for this request: Can the survey card report its size and position to the native mobile or desktop app that displays it? Answer with file paths and function names only."
+  },
+  {
+   "commit": "820083ec57",
+   "gold_files": [
+    "apps/web/modules/survey/editor/components/survey-menu-bar.tsx",
+    "apps/web/modules/survey/editor/lib/logic-destination-error.ts",
+    "packages/types/surveys/types.ts"
+   ],
+   "gold_functions": [
+    "getLogicDestinationErrorMessage",
+    "validateSurveyWithZod",
+    "validateBlockActions",
+    "getBlockLabel",
+    "validateBlockLogicFallback"
+   ],
+   "id": 114,
+   "kind": "symptom",
+   "question": "When a survey's logic points to a block that no longer exists, can the editor show the block's name instead of a confusing internal code?",
+   "prompt": "In this repo, where is the code I would change for this request: When a survey's logic points to a block that no longer exists, can the editor show the block's name instead of a confusing internal code? Answer with file paths and function names only."
+  },
+  {
+   "commit": "04b329d435",
+   "gold_files": [
+    "charts/formbricks/templates/_helpers.tpl"
+   ],
+   "gold_functions": [],
+   "id": 115,
+   "kind": "symptom",
+   "question": "Can the topic grouping service in our cloud deployment have its own separate identity so it can securely access other cloud resources?",
+   "prompt": "In this repo, where is the code I would change for this request: Can the topic grouping service in our cloud deployment have its own separate identity so it can securely access other cloud resources? Answer with file paths and function names only."
+  },
+  {
+   "commit": "8462cda687",
+   "gold_files": [
+    "apps/web/modules/survey/editor/components/survey-menu-bar.tsx",
+    "apps/web/modules/survey/editor/lib/validation.ts",
+    "packages/types/surveys/elements.ts"
+   ],
+   "gold_functions": [
+    "describeElementIssue",
+    "TDescribableIssue",
+    "isZodGeneratedMessage",
+    "validateSurveyWithZod",
+    "TElementIssueDescription",
+    "getElementFieldLabel"
+   ],
+   "id": 117,
+   "kind": "symptom",
+   "question": "When publishing a survey is blocked, can the editor tell me which specific field has the problem so I can fix it?",
+   "prompt": "In this repo, where is the code I would change for this request: When publishing a survey is blocked, can the editor tell me which specific field has the problem so I can fix it? Answer with file paths and function names only."
+  },
+  {
+   "commit": "6fb5ce9c84",
+   "gold_files": [
+    "apps/web/modules/ee/analysis/charts/components/cartesian-chart.tsx",
+    "apps/web/modules/ee/analysis/charts/lib/chart-utils.ts"
+   ],
+   "gold_functions": [
+    "CartesianChart",
+    "MeasuredChart",
+    "getCategoryAxisWidth",
+    "CartesianChartProps"
+   ],
+   "id": 120,
+   "kind": "symptom",
+   "question": "When a chart's categories are flipped, can the space reserved for the category labels grow or shrink with the chart's width?",
+   "prompt": "In this repo, where is the code I would change for this request: When a chart's categories are flipped, can the space reserved for the category labels grow or shrink with the chart's width? Answer with file paths and function names only."
+  },
+  {
+   "commit": "a6e34d8690",
+   "gold_files": [
+    "apps/web/modules/auth/lib/personal-email-domains.ts"
+   ],
+   "gold_functions": [],
+   "id": 121,
+   "kind": "symptom",
+   "question": "Can the cloud product block sign-ups from ten popular personal email domains so that only work email addresses are accepted?",
+   "prompt": "In this repo, where is the code I would change for this request: Can the cloud product block sign-ups from ten popular personal email domains so that only work email addresses are accepted? Answer with file paths and function names only."
+  },
+  {
+   "commit": "997a19a718",
+   "gold_files": [
+    "apps/web/app/api/v1/client/og/route.tsx",
+    "packages/types/colors.ts"
+   ],
+   "gold_functions": [
+    "GET",
+    "normalizeHex"
+   ],
+   "id": 122,
+   "kind": "symptom",
+   "question": "Can the brand color be checked for validity before it is used in the shared preview image, so a bad color doesn't break it?",
+   "prompt": "In this repo, where is the code I would change for this request: Can the brand color be checked for validity before it is used in the shared preview image, so a bad color doesn't break it? Answer with file paths and function names only."
+  },
+  {
+   "commit": "ca153d6598",
+   "gold_files": [
+    "apps/web/modules/ee/analysis/charts/lib/ai-chart-query.server.ts",
+    "apps/web/modules/ee/analysis/lib/ai-schema-context.ts"
+   ],
+   "gold_functions": [
+    "generateAIChartQuery",
+    "generateSchemaContext"
+   ],
+   "id": 123,
+   "kind": "symptom",
+   "question": "When someone types a meaningless or nonsensical request into the AI chart generator, can it reject it instead of producing a strange chart?",
+   "prompt": "In this repo, where is the code I would change for this request: When someone types a meaningless or nonsensical request into the AI chart generator, can it reject it instead of producing a strange chart? Answer with file paths and function names only."
+  },
+  {
+   "commit": "9b7bfa0d83",
+   "gold_files": [
+    "packages/survey-ui/src/components/general/element-media.tsx",
+    "packages/surveys/src/components/general/element-media.tsx"
+   ],
+   "gold_functions": [
+    "ElementMedia"
+   ],
+   "id": 124,
+   "kind": "symptom",
+   "question": "Once an image in a survey has loaded, can the extra reserved minimum height be removed so there's no leftover blank space?",
+   "prompt": "In this repo, where is the code I would change for this request: Once an image in a survey has loaded, can the extra reserved minimum height be removed so there's no leftover blank space? Answer with file paths and function names only."
+  },
+  {
+   "commit": "d0603a393f",
+   "gold_files": [
+    "packages/vite-plugins/postcss-scope-fbjs.cjs",
+    "packages/vite-plugins/postcss-scope-fbjs.d.cts"
+   ],
+   "gold_functions": [],
+   "id": 125,
+   "kind": "symptom",
+   "question": "Can the survey's spacing stay consistent and not be distorted by the styling of the website where it is embedded?",
+   "prompt": "In this repo, where is the code I would change for this request: Can the survey's spacing stay consistent and not be distorted by the styling of the website where it is embedded? Answer with file paths and function names only."
+  },
+  {
+   "commit": "80a0b82e4e",
+   "gold_files": [
+    "packages/database/src/prisma-adapter.ts",
+    "patches/pg-pool@3.13.0.patch"
+   ],
+   "gold_functions": [
+    "logConnectionFailure",
+    "InstrumentedPool.connect",
+    "classifyConnectionFailure",
+    "createPrismaPgAdapter",
+    "getSafeErrorCode",
+    "InstrumentedPool.constructor"
+   ],
+   "id": 126,
+   "kind": "symptom",
+   "question": "Can the database connection be made more reliable so the app doesn't fail or drop out when the connection has problems?",
+   "prompt": "In this repo, where is the code I would change for this request: Can the database connection be made more reliable so the app doesn't fail or drop out when the connection has problems? Answer with file paths and function names only."
+  },
+  {
+   "commit": "817a656a0e",
+   "gold_files": [
+    "packages/types/common.ts"
+   ],
+   "gold_functions": [
+    "endingCardUrlRefinement",
+    "resolveRecallFallbacks",
+    "isValidHostname",
+    "isIPv4"
+   ],
+   "id": 127,
+   "kind": "symptom",
+   "question": "Can the ending card's button link and redirect address be required to be a valid web address before I save the survey?",
+   "prompt": "In this repo, where is the code I would change for this request: Can the ending card's button link and redirect address be required to be a valid web address before I save the survey? Answer with file paths and function names only."
+  },
+  {
+   "commit": "4a88953f78",
+   "gold_files": [
+    "apps/web/modules/survey/link/lib/prefill/parsers.ts",
+    "apps/web/modules/survey/link/lib/prefill/validators.ts"
+   ],
+   "gold_functions": [
+    "validateRating",
+    "parseNumber",
+    "validateNPS"
+   ],
+   "id": 128,
+   "kind": "symptom",
+   "question": "Can the survey stop accepting odd values like true, false or null as numbers when pre-filling an answer through the link?",
+   "prompt": "In this repo, where is the code I would change for this request: Can the survey stop accepting odd values like true, false or null as numbers when pre-filling an answer through the link? Answer with file paths and function names only."
+  }
+ ],
+ "symptom_generation": {
+  "model": "sonnet",
+  "cost_usd": 0.042912000000000006,
+  "kept": 17,
+  "dropped_leaky": [
+   "Why does the survey editor freeze or hang when I edit the recall references inside a question, and can you stop that from happening?",
+   "Why does a survey break with an error when navigating from an unexpected block, and can it recover and continue smoothly instead?",
+   "Can the survey's close button have a bigger, easier-to-tap area of about 44 pixels, positioned slightly away from the card corner?",
+   "When I duplicate a survey from the list, can the copy keep all the original survey's settings?"
+  ]
+ }
+}

@@ -1,0 +1,12 @@
+{
+  "name": "repo-atlas",
+  "displayName": "Repo Atlas",
+  "version": "0.3.0",
+  "description": "Find code in large or messy repositories in one step: ranked functions with their code, copy-pasted duplicates and files that change together, from a local map built with zero model tokens.",
+  "author": {
+    "name": "AndreaMontemaggiore1"
+  },
+  "repository": "https://github.com/AndreaMontemaggiore1/repo-atlas",
+  "license": "MIT",
+  "keywords": ["code-search", "navigation", "large-repos", "monorepo", "tokens", "skill"]
+}

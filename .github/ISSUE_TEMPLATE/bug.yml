@@ -1,0 +1,28 @@
+name: Bug or install problem
+description: Something fails, errors out or does not install
+labels: ["bug"]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened
+      description: What you did, what you expected and what you got. Paste error messages as text.
+    validations:
+      required: true
+  - type: dropdown
+    id: install
+    attributes:
+      label: Installed as
+      options:
+        - Plugin (marketplace)
+        - Plain skill (copied into .claude/skills)
+        - Other agent
+    validations:
+      required: true
+  - type: input
+    id: versions
+    attributes:
+      label: Versions
+      description: Claude Code version (`claude --version`), OS, Python version (`python3 --version`), repo-atlas version.
+    validations:
+      required: true

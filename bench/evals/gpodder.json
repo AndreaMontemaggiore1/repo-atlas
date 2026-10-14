@@ -1,0 +1,646 @@
+{
+ "repo": "https://github.com/gpodder/gpodder",
+ "commit": "357161a6136585232fd47ae183ed22a9f342fc97",
+ "cases": [
+  {
+   "id": 1,
+   "commit": "bbeac749b3",
+   "prompt": "In this repo, where is the code I would change to: Adjust to container returned from Extensions.on_preferences()? Answer with file paths and function names only.",
+   "gold_files": [
+    "src/gpodder/gtkui/desktop/preferences.py"
+   ],
+   "gold_functions": [
+    "gPodderPreferences.inject_extensions_preferences"
+   ]
+  },
+  {
+   "id": 2,
+   "commit": "beb44247b5",
+   "prompt": "In this repo, where is the code I would change to: Modify @call_extensions decorator to take return_container param? Answer with file paths and function names only.",
+   "gold_files": [
+    "src/gpodder/extensions.py"
+   ],
+   "gold_functions": [
+    "call_extensions",
+    "ExtensionManager"
+   ]
+  },
+  {
+   "id": 3,
+   "commit": "1a7f52e1fc",
+   "prompt": "In this repo, where is the code I would change to: Fix ytdlp channel parsing.? Answer with file paths and function names only.",
+   "gold_files": [
+    "share/gpodder/extensions/10_youtube-dl.py",
+    "src/gpodder/youtube.py"
+   ],
+   "gold_functions": [
+    "get_timestamp_description",
+    "YoutubeFeed.get_new_episodes",
+    "get",
+    "get_initial_data"
+   ]
+  },
+  {
+   "id": 4,
+   "commit": "65fffd9613",
+   "prompt": "In this repo, where is the code I would change to: win_installer.nsi \"mingw32\" -> \"${ROOT}\"? Answer with file paths and function names only.",
+   "gold_files": [
+    "tools/win_installer/misc/win_installer.nsi"
+   ],
+   "gold_functions": []
+  },
+  {
+   "id": 5,
+   "commit": "7b40ca80ae",
+   "prompt": "In this repo, where is the code I would change to: Initial switch from mingw32 to ucrt64 windows build? Answer with file paths and function names only.",
+   "gold_files": [
+    "tools/win_installer/_base.sh",
+    "tools/win_installer/bootstrap.sh",
+    "tools/win_installer/misc/win_installer.nsi"
+   ],
+   "gold_functions": [
+    "install_deps",
+    "main"
+   ]
+  },
+  {
+   "id": 6,
+   "commit": "03b6116443",
+   "prompt": "In this repo, where is the code I would change to: safeguard against empty or nonexistent entries, use sys.executable instead of hardcoded executable name? Answer with file paths and function names only.",
+   "gold_files": [
+    "share/gpodder/extensions/10_youtube-dl.py"
+   ],
+   "gold_functions": [
+    "gPodderYoutubeDL.refresh_entries",
+    "gPodderExtension.check_for_update",
+    "gPodderExtension.do_update"
+   ]
+  },
+  {
+   "id": 7,
+   "commit": "350db65b8f",
+   "prompt": "In this repo, where is the code I would change to: Remove html5lib from Mac and Windows builds.? Answer with file paths and function names only.",
+   "gold_files": [
+    "tools/mac-osx/release_on_mac.sh",
+    "tools/win_installer/_base.sh",
+    "tools/win_installer/bootstrap.sh"
+   ],
+   "gold_functions": [
+    "main",
+    "git+https://github.com/jaraco/pywin32-ctypes.git@f27d6a0"
+   ]
+  },
+  {
+   "id": 8,
+   "commit": "de72836894",
+   "prompt": "In this repo, where is the code I would change to: mingw32/bin/python3-config was changed from a shell script to python.? Answer with file paths and function names only.",
+   "gold_files": [
+    "tools/win_installer/misc/create-launcher.py"
+   ],
+   "gold_functions": [
+    "get_build_args"
+   ]
+  },
+  {
+   "id": 9,
+   "commit": "f6cafa5585",
+   "prompt": "In this repo, where is the code I would change to: Scale small cover images up when creating thumbnails? Answer with file paths and function names only.",
+   "gold_files": [
+    "src/gpodder/gtkui/model.py"
+   ],
+   "gold_functions": [
+    "PodcastListModel._resize_pixbuf_keep_ratio"
+   ]
+  },
+  {
+   "id": 10,
+   "commit": "59dedb3f9b",
+   "prompt": "In this repo, where is the code I would change to: Double the image size in channel dialog to 240 px? Answer with file paths and function names only.",
+   "gold_files": [
+    "src/gpodder/gtkui/desktop/channel.py"
+   ],
+   "gold_functions": [
+    "gPodderChannel"
+   ]
+  },
+  {
+   "id": 11,
+   "commit": "faf084abb2",
+   "prompt": "In this repo, where is the code I would change to: youtube-dl: Get channel cover and description from ydl result? Answer with file paths and function names only.",
+   "gold_files": [
+    "share/gpodder/extensions/10_youtube-dl.py"
+   ],
+   "gold_functions": [
+    "gPodderYoutubeDL.refresh"
+   ]
+  },
+  {
+   "id": 12,
+   "commit": "65b64afc5a",
+   "prompt": "In this repo, where is the code I would change to: youtube-dl: Rework add_format() to get_ydl_format()? Answer with file paths and function names only.",
+   "gold_files": [
+    "share/gpodder/extensions/10_youtube-dl.py"
+   ],
+   "gold_functions": [
+    "gPodderYoutubeDL.get_ydl_format",
+    "gPodderYoutubeDL.refresh_entries",
+    "gPodderYoutubeDL.fetch_info"
+   ]
+  },
+  {
+   "id": 13,
+   "commit": "fffbd49511",
+   "prompt": "In this repo, where is the code I would change to: model: Fix docstring capitalization etc. Fixes flake8 D400 and D403? Answer with file paths and function names only.",
+   "gold_files": [
+    "src/gpodder/model.py"
+   ],
+   "gold_functions": [
+    "PodcastEpisode.pubdate_day",
+    "PodcastEpisode.pubdate_month",
+    "PodcastEpisode.pubdate_year"
+   ]
+  },
+  {
+   "id": 14,
+   "commit": "9eac8d709c",
+   "prompt": "In this repo, where is the code I would change to: youtube-dl: Ensure _ydl_opts has necessary keys? Answer with file paths and function names only.",
+   "gold_files": [
+    "share/gpodder/extensions/10_youtube-dl.py"
+   ],
+   "gold_functions": [
+    "gPodderYoutubeDL"
+   ]
+  },
+  {
+   "id": 15,
+   "commit": "2945f172dc",
+   "prompt": "In this repo, where is the code I would change to: two-way-sync: add note about quirk? Answer with file paths and function names only.",
+   "gold_files": [
+    "src/gpodder/syncui.py"
+   ],
+   "gold_functions": [
+    "gPodderSyncUI.on_synchronize_episodes"
+   ]
+  },
+  {
+   "id": 16,
+   "commit": "ad2522b0ea",
+   "prompt": "In this repo, where is the code I would change to: normalize plugin doesn't work in Fedora? Answer with file paths and function names only.",
+   "gold_files": [
+    "share/gpodder/extensions/30_normalize_audio.py"
+   ],
+   "gold_functions": [
+    "gPodderExtension",
+    "gPodderExtension._convert_episode"
+   ]
+  },
+  {
+   "id": 17,
+   "commit": "f24ab0b1d6",
+   "prompt": "In this repo, where is the code I would change to: 10_youtube-dl.py: change sys.executable to pythonw? Answer with file paths and function names only.",
+   "gold_files": [
+    "share/gpodder/extensions/10_youtube-dl.py"
+   ],
+   "gold_functions": [
+    "gPodderExtension.check_for_update",
+    "gPodderExtension.do_update"
+   ]
+  },
+  {
+   "id": 18,
+   "commit": "0e948e06ef",
+   "prompt": "In this repo, where is the code I would change to: youtube-dl: Add a config var and GUI to toggle config file reading? Answer with file paths and function names only.",
+   "gold_files": [
+    "share/gpodder/extensions/10_youtube-dl.py"
+   ],
+   "gold_functions": [
+    "gPodderYoutubeDL",
+    "gPodderExtension.show_preferences",
+    "gPodderExtension.toggle_read_config_file",
+    "gPodderExtension"
+   ]
+  },
+  {
+   "id": 19,
+   "commit": "a368187c84",
+   "prompt": "In this repo, where is the code I would change to: github_release.py: Rename var id to artifact_id, fixes flake8 A001? Answer with file paths and function names only.",
+   "gold_files": [
+    "tools/github_release.py"
+   ],
+   "gold_functions": [
+    "download_mac_github"
+   ]
+  },
+  {
+   "id": 20,
+   "commit": "077d540c4e",
+   "prompt": "In this repo, where is the code I would change to: Fix flake8 D403 'First word of the first line should be properly capitalized'? Answer with file paths and function names only.",
+   "gold_files": [
+    "src/gpodder/model.py",
+    "tools/win_installer/misc/depcheck.py"
+   ],
+   "gold_functions": [
+    "PodcastEpisode.published_formatted",
+    "_get_shared_libraries"
+   ]
+  },
+  {
+   "id": 21,
+   "commit": "ecc0bfe84c",
+   "prompt": "In this repo, where is the code I would change to: Fix flake8 D202 'No blank lines allowed after function docstring'? Answer with file paths and function names only.",
+   "gold_files": [
+    "src/gpodder/util.py"
+   ],
+   "gold_functions": [
+    "get_hostname",
+    "get_hostname_uid"
+   ]
+  },
+  {
+   "id": 22,
+   "commit": "1716d108af",
+   "prompt": "In this repo, where is the code I would change to: Fix flake8 D200 'One-line docstring should fit on one line'? Answer with file paths and function names only.",
+   "gold_files": [
+    "src/gpodder/deviceplaylist.py",
+    "src/gpodder/extensions.py",
+    "src/gpodder/util.py"
+   ],
+   "gold_functions": [
+    "gPodderDevicePlaylist.get_path_to_filename_for_playlist",
+    "ExtensionManager.on_all_episodes_synced",
+    "get_hostname"
+   ]
+  },
+  {
+   "id": 23,
+   "commit": "b2fd731b61",
+   "prompt": "In this repo, where is the code I would change to: depcheck.py: Remove unused exception vars, fixes flake8 F841? Answer with file paths and function names only.",
+   "gold_files": [
+    "tools/win_installer/misc/depcheck.py"
+   ],
+   "gold_functions": [
+    "try"
+   ]
+  },
+  {
+   "id": 24,
+   "commit": "93b46a0dba",
+   "prompt": "In this repo, where is the code I would change to: model.py: Rename arg format to fmt, fixes flake8 A002? Answer with file paths and function names only.",
+   "gold_files": [
+    "src/gpodder/model.py"
+   ],
+   "gold_functions": [
+    "PodcastEpisode.published_formatted"
+   ]
+  },
+  {
+   "id": 25,
+   "commit": "064e9b4717",
+   "prompt": "In this repo, where is the code I would change to: Remove unused GtkBuilderWidget.quit() method? Answer with file paths and function names only.",
+   "gold_files": [
+    "src/gpodder/gtkui/base.py"
+   ],
+   "gold_functions": [
+    "GtkBuilderWidget"
+   ]
+  },
+  {
+   "id": 26,
+   "commit": "8e6f577692",
+   "prompt": "In this repo, where is the code I would change to: Import AppIndicator3 with a version to avoid warning? Answer with file paths and function names only.",
+   "gold_files": [
+    "share/gpodder/extensions/ubuntu_appindicator.py"
+   ],
+   "gold_functions": []
+  },
+  {
+   "id": 27,
+   "commit": "c447c77bc3",
+   "prompt": "In this repo, where is the code I would change to: refactor add_password_reveal following review? Answer with file paths and function names only.",
+   "gold_files": [
+    "src/gpodder/gtkui/interface/common.py"
+   ],
+   "gold_functions": [
+    "BuilderWidget.add_password_reveal"
+   ]
+  },
+  {
+   "id": 28,
+   "commit": "c3ec9ffa70",
+   "prompt": "In this repo, where is the code I would change to: Remove payment field from extension info and prefs context menu? Answer with file paths and function names only.",
+   "gold_files": [
+    "src/gpodder/extensions.py",
+    "src/gpodder/gtkui/desktop/preferences.py"
+   ],
+   "gold_functions": [
+    "ExtensionMetadata",
+    "gPodderPreferences.on_treeview_extension_show_context_menu"
+   ]
+  },
+  {
+   "id": 29,
+   "commit": "f0969238d6",
+   "prompt": "In this repo, where is the code I would change to: proxy password: add reveal icon? Answer with file paths and function names only.",
+   "gold_files": [
+    "src/gpodder/gtkui/desktop/channel.py",
+    "src/gpodder/gtkui/desktop/preferences.py",
+    "src/gpodder/gtkui/interface/common.py"
+   ],
+   "gold_functions": [
+    "BuilderWidget.add_password_reveal",
+    "gPodderPreferences.new",
+    "BuilderWidget",
+    "gPodderChannel.new"
+   ]
+  },
+  {
+   "id": 30,
+   "commit": "07b3c644a7",
+   "prompt": "In this repo, where is the code I would change to: Hide proxy and channel passwords in preferences and channel settings? Answer with file paths and function names only.",
+   "gold_files": [
+    "share/gpodder/ui/gtk/gpodderchannel.ui",
+    "share/gpodder/ui/gtk/gpodderpreferences.ui"
+   ],
+   "gold_functions": []
+  },
+  {
+   "commit": "beb44247b5",
+   "gold_files": [
+    "src/gpodder/extensions.py"
+   ],
+   "gold_functions": [
+    "call_extensions",
+    "ExtensionManager"
+   ],
+   "id": 102,
+   "kind": "symptom",
+   "question": "Can you let the add-on hook mechanism optionally hand back a bundled set of results instead of just a single value?",
+   "prompt": "In this repo, where is the code I would change for this request: Can you let the add-on hook mechanism optionally hand back a bundled set of results instead of just a single value? Answer with file paths and function names only."
+  },
+  {
+   "commit": "1a7f52e1fc",
+   "gold_files": [
+    "share/gpodder/extensions/10_youtube-dl.py",
+    "src/gpodder/youtube.py"
+   ],
+   "gold_functions": [
+    "get_timestamp_description",
+    "YoutubeFeed.get_new_episodes",
+    "get",
+    "get_initial_data"
+   ],
+   "id": 103,
+   "kind": "symptom",
+   "question": "Channel information from the video download site isn't being read correctly when I add a channel. Can you fix that?",
+   "prompt": "In this repo, where is the code I would change for this request: Channel information from the video download site isn't being read correctly when I add a channel. Can you fix that? Answer with file paths and function names only."
+  },
+  {
+   "commit": "65fffd9613",
+   "gold_files": [
+    "tools/win_installer/misc/win_installer.nsi"
+   ],
+   "gold_functions": [],
+   "id": 104,
+   "kind": "symptom",
+   "question": "Can you update the Windows installer so it picks up files from the new general build folder instead of the old one?",
+   "prompt": "In this repo, where is the code I would change for this request: Can you update the Windows installer so it picks up files from the new general build folder instead of the old one? Answer with file paths and function names only."
+  },
+  {
+   "commit": "7b40ca80ae",
+   "gold_files": [
+    "tools/win_installer/_base.sh",
+    "tools/win_installer/bootstrap.sh",
+    "tools/win_installer/misc/win_installer.nsi"
+   ],
+   "gold_functions": [
+    "install_deps",
+    "main"
+   ],
+   "id": 105,
+   "kind": "symptom",
+   "question": "Can you start moving our Windows build over to the newer, more modern build environment from the old one?",
+   "prompt": "In this repo, where is the code I would change for this request: Can you start moving our Windows build over to the newer, more modern build environment from the old one? Answer with file paths and function names only."
+  },
+  {
+   "commit": "03b6116443",
+   "gold_files": [
+    "share/gpodder/extensions/10_youtube-dl.py"
+   ],
+   "gold_functions": [
+    "gPodderYoutubeDL.refresh_entries",
+    "gPodderExtension.check_for_update",
+    "gPodderExtension.do_update"
+   ],
+   "id": 106,
+   "kind": "symptom",
+   "question": "Can you make the app cope with empty or missing entries, and use the actually running program instead of a fixed program name?",
+   "prompt": "In this repo, where is the code I would change for this request: Can you make the app cope with empty or missing entries, and use the actually running program instead of a fixed program name? Answer with file paths and function names only."
+  },
+  {
+   "commit": "350db65b8f",
+   "gold_files": [
+    "tools/mac-osx/release_on_mac.sh",
+    "tools/win_installer/_base.sh",
+    "tools/win_installer/bootstrap.sh"
+   ],
+   "gold_functions": [
+    "main",
+    "git+https://github.com/jaraco/pywin32-ctypes.git@f27d6a0"
+   ],
+   "id": 107,
+   "kind": "symptom",
+   "question": "Can you leave out an unneeded component from the Mac and Windows downloads so the packages are smaller?",
+   "prompt": "In this repo, where is the code I would change for this request: Can you leave out an unneeded component from the Mac and Windows downloads so the packages are smaller? Answer with file paths and function names only."
+  },
+  {
+   "commit": "de72836894",
+   "gold_files": [
+    "tools/win_installer/misc/create-launcher.py"
+   ],
+   "gold_functions": [
+    "get_build_args"
+   ],
+   "id": 108,
+   "kind": "symptom",
+   "question": "After the Windows build change, a configuration helper tool became a different kind of script. Can you make sure everything still works with it?",
+   "prompt": "In this repo, where is the code I would change for this request: After the Windows build change, a configuration helper tool became a different kind of script. Can you make sure everything still works with it? Answer with file paths and function names only."
+  },
+  {
+   "commit": "f6cafa5585",
+   "gold_files": [
+    "src/gpodder/gtkui/model.py"
+   ],
+   "gold_functions": [
+    "PodcastListModel._resize_pixbuf_keep_ratio"
+   ],
+   "id": 109,
+   "kind": "symptom",
+   "question": "When a cover picture is very small, can you enlarge it so the thumbnail doesn't look tiny or blurry?",
+   "prompt": "In this repo, where is the code I would change for this request: When a cover picture is very small, can you enlarge it so the thumbnail doesn't look tiny or blurry? Answer with file paths and function names only."
+  },
+  {
+   "commit": "faf084abb2",
+   "gold_files": [
+    "share/gpodder/extensions/10_youtube-dl.py"
+   ],
+   "gold_functions": [
+    "gPodderYoutubeDL.refresh"
+   ],
+   "id": 111,
+   "kind": "symptom",
+   "question": "Can you make the video download add-on pick up the channel's cover picture and description directly from the information it retrieves?",
+   "prompt": "In this repo, where is the code I would change for this request: Can you make the video download add-on pick up the channel's cover picture and description directly from the information it retrieves? Answer with file paths and function names only."
+  },
+  {
+   "commit": "65b64afc5a",
+   "gold_files": [
+    "share/gpodder/extensions/10_youtube-dl.py"
+   ],
+   "gold_functions": [
+    "gPodderYoutubeDL.get_ydl_format",
+    "gPodderYoutubeDL.refresh_entries",
+    "gPodderYoutubeDL.fetch_info"
+   ],
+   "id": 112,
+   "kind": "symptom",
+   "question": "Can you rework how the video download add-on chooses and describes available video quality formats?",
+   "prompt": "In this repo, where is the code I would change for this request: Can you rework how the video download add-on chooses and describes available video quality formats? Answer with file paths and function names only."
+  },
+  {
+   "commit": "fffbd49511",
+   "gold_files": [
+    "src/gpodder/model.py"
+   ],
+   "gold_functions": [
+    "PodcastEpisode.pubdate_day",
+    "PodcastEpisode.pubdate_month",
+    "PodcastEpisode.pubdate_year"
+   ],
+   "id": 113,
+   "kind": "symptom",
+   "question": "Can you tidy up the wording and capitalization of the explanatory notes in the data part of the app?",
+   "prompt": "In this repo, where is the code I would change for this request: Can you tidy up the wording and capitalization of the explanatory notes in the data part of the app? Answer with file paths and function names only."
+  },
+  {
+   "commit": "9eac8d709c",
+   "gold_files": [
+    "share/gpodder/extensions/10_youtube-dl.py"
+   ],
+   "gold_functions": [
+    "gPodderYoutubeDL"
+   ],
+   "id": 114,
+   "kind": "symptom",
+   "question": "Can you make sure the video download add-on always has all the settings it needs so it doesn't break?",
+   "prompt": "In this repo, where is the code I would change for this request: Can you make sure the video download add-on always has all the settings it needs so it doesn't break? Answer with file paths and function names only."
+  },
+  {
+   "commit": "2945f172dc",
+   "gold_files": [
+    "src/gpodder/syncui.py"
+   ],
+   "gold_functions": [
+    "gPodderSyncUI.on_synchronize_episodes"
+   ],
+   "id": 115,
+   "kind": "symptom",
+   "question": "Can you add a note in the documentation about a strange behaviour of the two-way synchronization feature?",
+   "prompt": "In this repo, where is the code I would change for this request: Can you add a note in the documentation about a strange behaviour of the two-way synchronization feature? Answer with file paths and function names only."
+  },
+  {
+   "commit": "ad2522b0ea",
+   "gold_files": [
+    "share/gpodder/extensions/30_normalize_audio.py"
+   ],
+   "gold_functions": [
+    "gPodderExtension",
+    "gPodderExtension._convert_episode"
+   ],
+   "id": 116,
+   "kind": "symptom",
+   "question": "The volume normalizing add-on doesn't work on Fedora Linux. Can you fix it so it works there?",
+   "prompt": "In this repo, where is the code I would change for this request: The volume normalizing add-on doesn't work on Fedora Linux. Can you fix it so it works there? Answer with file paths and function names only."
+  },
+  {
+   "commit": "f24ab0b1d6",
+   "gold_files": [
+    "share/gpodder/extensions/10_youtube-dl.py"
+   ],
+   "gold_functions": [
+    "gPodderExtension.check_for_update",
+    "gPodderExtension.do_update"
+   ],
+   "id": 117,
+   "kind": "symptom",
+   "question": "Can you make the video download add-on on Windows run without popping up a console window?",
+   "prompt": "In this repo, where is the code I would change for this request: Can you make the video download add-on on Windows run without popping up a console window? Answer with file paths and function names only."
+  },
+  {
+   "commit": "0e948e06ef",
+   "gold_files": [
+    "share/gpodder/extensions/10_youtube-dl.py"
+   ],
+   "gold_functions": [
+    "gPodderYoutubeDL",
+    "gPodderExtension.show_preferences",
+    "gPodderExtension.toggle_read_config_file",
+    "gPodderExtension"
+   ],
+   "id": 118,
+   "kind": "symptom",
+   "question": "Can you add a setting and a checkbox in preferences to choose whether the video downloader reads its configuration file?",
+   "prompt": "In this repo, where is the code I would change for this request: Can you add a setting and a checkbox in preferences to choose whether the video downloader reads its configuration file? Answer with file paths and function names only."
+  },
+  {
+   "commit": "8e6f577692",
+   "gold_files": [
+    "share/gpodder/extensions/ubuntu_appindicator.py"
+   ],
+   "gold_functions": [],
+   "id": 126,
+   "kind": "symptom",
+   "question": "Can you stop the warning that appears about the system tray icon library when the app starts?",
+   "prompt": "In this repo, where is the code I would change for this request: Can you stop the warning that appears about the system tray icon library when the app starts? Answer with file paths and function names only."
+  },
+  {
+   "commit": "f0969238d6",
+   "gold_files": [
+    "src/gpodder/gtkui/desktop/channel.py",
+    "src/gpodder/gtkui/desktop/preferences.py",
+    "src/gpodder/gtkui/interface/common.py"
+   ],
+   "gold_functions": [
+    "BuilderWidget.add_password_reveal",
+    "gPodderPreferences.new",
+    "BuilderWidget",
+    "gPodderChannel.new"
+   ],
+   "id": 129,
+   "kind": "symptom",
+   "question": "Can you add an eye icon to the proxy password box so I can show the password when I want?",
+   "prompt": "In this repo, where is the code I would change for this request: Can you add an eye icon to the proxy password box so I can show the password when I want? Answer with file paths and function names only."
+  },
+  {
+   "commit": "07b3c644a7",
+   "gold_files": [
+    "share/gpodder/ui/gtk/gpodderchannel.ui",
+    "share/gpodder/ui/gtk/gpodderpreferences.ui"
+   ],
+   "gold_functions": [],
+   "id": 130,
+   "kind": "symptom",
+   "question": "Can you hide the proxy and channel passwords in preferences and channel settings so they aren't visible on screen?",
+   "prompt": "In this repo, where is the code I would change for this request: Can you hide the proxy and channel passwords in preferences and channel settings so they aren't visible on screen? Answer with file paths and function names only."
+  }
+ ],
+ "symptom_generation": {
+  "model": "sonnet",
+  "cost_usd": 0.028180000000000004,
+  "kept": 19,
+  "dropped_leaky": [
+   "Can you make the app handle the new kind of settings result that add-ons now return when the preferences screen opens?",
+   "Can you make the picture shown in the channel window twice as big, at 240 pixels?",
+   "Can you remove the payment field from the add-on information and from the right-click menu in preferences?"
+  ]
+ }
+}

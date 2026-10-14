@@ -1,0 +1,1493 @@
+{
+ "repo": "https://github.com/open-webui/open-webui",
+ "commit": "8bd8b4fac5e059578ac0c74b3c18d11139f88b7d",
+ "cases": [
+  {
+   "id": 1,
+   "commit": "46ea826e01",
+   "prompt": "In this repo, where is the code I would change to: refac: keep rendered diagrams and SVG on same-origin resources (#30271)? Answer with file paths and function names only.",
+   "gold_files": [
+    "src/lib/components/chat/FileNav/FilePreview.svelte",
+    "src/lib/components/common/SVGPanZoom.svelte",
+    "src/lib/utils/index.ts"
+   ],
+   "gold_functions": [
+    "sanitizeSvg",
+    "renderMermaidDiagram",
+    "dropExternalStyleRules",
+    "referencesExternalCss",
+    "dropExternalResourceRefs",
+    "dropExternalUseRefs"
+   ]
+  },
+  {
+   "id": 2,
+   "commit": "b988f06ce0",
+   "prompt": "In this repo, where is the code I would change to: fix: drop every local reference to a channel message that was deleted (#30314)? Answer with file paths and function names only.",
+   "gold_files": [
+    "src/lib/components/channel/Channel.svelte",
+    "src/lib/components/channel/Thread.svelte"
+   ],
+   "gold_functions": [
+    "channelEventHandler"
+   ]
+  },
+  {
+   "id": 3,
+   "commit": "4b61b86a83",
+   "prompt": "In this repo, where is the code I would change to: fix: apply the knowledge File content filter on the first click (#30211)? Answer with file paths and function names only.",
+   "gold_files": [
+    "src/lib/components/workspace/Knowledge/KnowledgeBase.svelte"
+   ],
+   "gold_functions": []
+  },
+  {
+   "id": 4,
+   "commit": "e8c26f8394",
+   "prompt": "In this repo, where is the code I would change to: fix: stop the background memory review when memory is switched off (#30309)? Answer with file paths and function names only.",
+   "gold_files": [
+    "backend/open_webui/utils/memory.py"
+   ],
+   "gold_functions": [
+    "review_memory_after_turn"
+   ]
+  },
+  {
+   "id": 5,
+   "commit": "419d248093",
+   "prompt": "In this repo, where is the code I would change to: refac: check the timer owner's role before running a due timer (#30220)? Answer with file paths and function names only.",
+   "gold_files": [
+    "backend/open_webui/utils/timers.py"
+   ],
+   "gold_functions": [
+    "execute_due_timer"
+   ]
+  },
+  {
+   "id": 6,
+   "commit": "94eea41a75",
+   "prompt": "In this repo, where is the code I would change to: fix: surface searchapi errors, news results and redirect links (#30308)? Answer with file paths and function names only.",
+   "gold_files": [
+    "backend/open_webui/retrieval/web/searchapi.py"
+   ],
+   "gold_functions": [
+    "search_searchapi"
+   ]
+  },
+  {
+   "id": 7,
+   "commit": "9688d32764",
+   "prompt": "In this repo, where is the code I would change to: fix: keep the background image chosen while creating a folder from the sidebar (#30218)? Answer with file paths and function names only.",
+   "gold_files": [
+    "src/lib/components/layout/Sidebar.svelte"
+   ],
+   "gold_functions": [
+    "createFolder"
+   ]
+  },
+  {
+   "id": 8,
+   "commit": "c864e3ae7c",
+   "prompt": "In this repo, where is the code I would change to: fix: stop asking for chat variables a model's system prompt no longer declares (#30173)? Answer with file paths and function names only.",
+   "gold_files": [
+    "backend/open_webui/routers/models.py",
+    "backend/open_webui/utils/models.py"
+   ],
+   "gold_functions": [
+    "get_all_models",
+    "add_chat_variables_schema"
+   ]
+  },
+  {
+   "id": 9,
+   "commit": "bc50026f7b",
+   "prompt": "In this repo, where is the code I would change to: fix: make the Delete Chat shortcut work whenever a chat is open, not only while its sidebar row is rendered (#30165)? Answer with file paths and function names only.",
+   "gold_files": [
+    "src/lib/components/chat/Navbar.svelte",
+    "src/lib/components/layout/Sidebar/ChatItem.svelte"
+   ],
+   "gold_functions": [
+    "+",
+    "-"
+   ]
+  },
+  {
+   "id": 10,
+   "commit": "aceda892bd",
+   "prompt": "In this repo, where is the code I would change to: perf: serve the shared model pool from a per-worker cache (#28176)? Answer with file paths and function names only.",
+   "gold_files": [
+    "backend/open_webui/socket/main.py",
+    "backend/open_webui/socket/utils.py"
+   ],
+   "gold_functions": [
+    "CachedRedisDict",
+    "RedisDict.set",
+    "CachedRedisDict._refresh_cache",
+    "RedisDict.delete_many",
+    "CachedRedisDict.keys",
+    "CachedRedisDict.values"
+   ]
+  },
+  {
+   "id": 11,
+   "commit": "49b25506dd",
+   "prompt": "In this repo, where is the code I would change to: perf: stop round-tripping the whole chat to read or write one message (#28184)? Answer with file paths and function names only.",
+   "gold_files": [
+    "backend/open_webui/models/chats.py"
+   ],
+   "gold_functions": [
+    "ChatTable.get_message_by_id_and_message_id",
+    "ChatTable.delete_message_from_chat_by_id_and_message_id",
+    "ChatTable.upsert_message_to_chat_by_id_and_message_id",
+    "ChatTable.add_message_status_to_chat_by_id_and_message_id",
+    "ChatTable._sanitize_chat_row"
+   ]
+  },
+  {
+   "id": 12,
+   "commit": "488b3c571c",
+   "prompt": "In this repo, where is the code I would change to: perf: stop note co-editing echoing every remote update back to the server (#28185)? Answer with file paths and function names only.",
+   "gold_files": [
+    "backend/open_webui/socket/main.py",
+    "src/lib/components/common/RichTextInput/Collaboration.ts"
+   ],
+   "gold_functions": [
+    "yjs_document_update",
+    "SocketIOCollaborationProvider.setupEventListeners",
+    "SocketIOCollaborationProvider.sendContentSnapshot",
+    "SocketIOCollaborationProvider.destroy",
+    "SocketIOCollaborationProvider"
+   ]
+  },
+  {
+   "id": 13,
+   "commit": "6fb68e43cb",
+   "prompt": "In this repo, where is the code I would change to: refac(images): request an unencoded body when fetching remote chat images (#29623)? Answer with file paths and function names only.",
+   "gold_files": [
+    "backend/open_webui/utils/files.py"
+   ],
+   "gold_functions": [
+    "get_image_base64_from_url"
+   ]
+  },
+  {
+   "id": 14,
+   "commit": "438d9db8db",
+   "prompt": "In this repo, where is the code I would change to: fix: correct recurrence rule parsing for schedules and calendar events (#29262)? Answer with file paths and function names only.",
+   "gold_files": [
+    "backend/open_webui/utils/automations.py",
+    "backend/open_webui/utils/calendar.py"
+   ],
+   "gold_functions": [
+    "_parse_rule",
+    "rrule_interval_seconds",
+    "expand_recurring_event"
+   ]
+  },
+  {
+   "id": 15,
+   "commit": "7fa8673296",
+   "prompt": "In this repo, where is the code I would change to: fix: resolve this instance's own file URLs in edit_image regardless of the URL host (#29691)? Answer with file paths and function names only.",
+   "gold_files": [
+    "backend/open_webui/routers/images.py"
+   ],
+   "gold_functions": [
+    "image_edits"
+   ]
+  },
+  {
+   "id": 16,
+   "commit": "d9ea46f92d",
+   "prompt": "In this repo, where is the code I would change to: fix: hide Insert into note on a note the viewer may only read (#30223)? Answer with file paths and function names only.",
+   "gold_files": [
+    "src/lib/components/notes/NoteEditor.svelte"
+   ],
+   "gold_functions": [
+    "${content}"
+   ]
+  },
+  {
+   "id": 17,
+   "commit": "f40318c1ff",
+   "prompt": "In this repo, where is the code I would change to: fix: keep the live prompt unchanged when a version is saved without Set as Production (#30231)? Answer with file paths and function names only.",
+   "gold_files": [
+    "backend/open_webui/models/prompts.py"
+   ],
+   "gold_functions": [
+    "PromptsTable.update_prompt_by_id"
+   ]
+  },
+  {
+   "id": 18,
+   "commit": "440d13e198",
+   "prompt": "In this repo, where is the code I would change to: fix: refresh the prompt editor after a version is set as production (#30233)? Answer with file paths and function names only.",
+   "gold_files": [
+    "src/lib/components/workspace/Prompts/PromptEditor.svelte"
+   ],
+   "gold_functions": [
+    "setAsProduction"
+   ]
+  },
+  {
+   "id": 19,
+   "commit": "c2f11edb2f",
+   "prompt": "In this repo, where is the code I would change to: fix: keep a workspace model's base model when cloning it from the admin Models settings and hide Clone for arena models (#30080)? Answer with file paths and function names only.",
+   "gold_files": [
+    "src/lib/components/admin/Settings/Models.svelte",
+    "src/lib/components/admin/Settings/Models/ModelMenu.svelte"
+   ],
+   "gold_functions": [
+    "cloneHandler"
+   ]
+  },
+  {
+   "id": 20,
+   "commit": "f5967aebd7",
+   "prompt": "In this repo, where is the code I would change to: fix: restore chat input draft after reload in chats started from the home page (#29762)? Answer with file paths and function names only.",
+   "gold_files": [
+    "src/lib/components/chat/Chat.svelte"
+   ],
+   "gold_functions": [
+    "getDraftChatId"
+   ]
+  },
+  {
+   "id": 21,
+   "commit": "f16e9eabe3",
+   "prompt": "In this repo, where is the code I would change to: feat: fall back to an available model when a chat's models are gone (#29757)? Answer with file paths and function names only.",
+   "gold_files": [
+    "src/lib/components/chat/Chat.svelte"
+   ],
+   "gold_functions": [
+    "loadChat"
+   ]
+  },
+  {
+   "id": 22,
+   "commit": "5399e3977d",
+   "prompt": "In this repo, where is the code I would change to: fix: enforce the account form's required fields the way the admin user dialog does (#30296)? Answer with file paths and function names only.",
+   "gold_files": [
+    "src/lib/components/chat/Settings/Account.svelte"
+   ],
+   "gold_functions": [
+    "-</div>"
+   ]
+  },
+  {
+   "id": 23,
+   "commit": "aa65f55692",
+   "prompt": "In this repo, where is the code I would change to: fix: insert the whole emoji when its shortcode is a codepoint sequence (#30213)? Answer with file paths and function names only.",
+   "gold_files": [
+    "src/lib/components/channel/MessageInput.svelte",
+    "src/lib/components/chat/MessageInput.svelte"
+   ],
+   "gold_functions": []
+  },
+  {
+   "id": 24,
+   "commit": "9012bd153d",
+   "prompt": "In this repo, where is the code I would change to: fix: stop sending count to the Staan search API (#30303)? Answer with file paths and function names only.",
+   "gold_files": [
+    "backend/open_webui/retrieval/web/staan.py"
+   ],
+   "gold_functions": [
+    "search_staan"
+   ]
+  },
+  {
+   "id": 25,
+   "commit": "7eebbbb891",
+   "prompt": "In this repo, where is the code I would change to: fix: stop the MinerU API key blocking a save in local mode (#30299)? Answer with file paths and function names only.",
+   "gold_files": [
+    "src/lib/components/admin/Settings/Documents.svelte"
+   ],
+   "gold_functions": []
+  },
+  {
+   "id": 26,
+   "commit": "702da1e471",
+   "prompt": "In this repo, where is the code I would change to: fix: stop injecting memories and memory tools when memory is switched off (#30228)? Answer with file paths and function names only.",
+   "gold_files": [
+    "backend/open_webui/utils/middleware.py",
+    "backend/open_webui/utils/tools.py"
+   ],
+   "gold_functions": [
+    "process_chat_payload",
+    "get_builtin_tools"
+   ]
+  },
+  {
+   "id": 27,
+   "commit": "14be67348a",
+   "prompt": "In this repo, where is the code I would change to: fix: open the new group dialog empty after a group is created (#30280)? Answer with file paths and function names only.",
+   "gold_files": [
+    "src/lib/components/admin/Users/Groups.svelte"
+   ],
+   "gold_functions": []
+  },
+  {
+   "id": 28,
+   "commit": "394fcc7e24",
+   "prompt": "In this repo, where is the code I would change to: fix: keep an unsaved code block edit visible after it is collapsed (#30284)? Answer with file paths and function names only.",
+   "gold_files": [
+    "src/lib/components/chat/Messages/CodeBlock.svelte"
+   ],
+   "gold_functions": []
+  },
+  {
+   "id": 29,
+   "commit": "9758f33b6c",
+   "prompt": "In this repo, where is the code I would change to: fix: save a model whose description is switched from default back to custom (#30249)? Answer with file paths and function names only.",
+   "gold_files": [
+    "src/lib/components/workspace/Models/ModelEditor.svelte"
+   ],
+   "gold_functions": [
+    "submitHandler"
+   ]
+  },
+  {
+   "id": 30,
+   "commit": "669d37bea1",
+   "prompt": "In this repo, where is the code I would change to: fix: stop offering reactions on a channel the viewer may only read (#30241)? Answer with file paths and function names only.",
+   "gold_files": [
+    "src/lib/components/channel/Messages/Message.svelte"
+   ],
+   "gold_functions": []
+  },
+  {
+   "id": 31,
+   "commit": "b256115fa2",
+   "prompt": "In this repo, where is the code I would change to: fix: save the context compaction threshold from general settings (#30270)? Answer with file paths and function names only.",
+   "gold_files": [
+    "src/lib/components/chat/Settings/General.svelte"
+   ],
+   "gold_functions": [
+    "saveHandler"
+   ]
+  },
+  {
+   "id": 32,
+   "commit": "402a187e82",
+   "prompt": "In this repo, where is the code I would change to: fix: return no chats when a folder search term matches no folder (#30273)? Answer with file paths and function names only.",
+   "gold_files": [
+    "backend/open_webui/models/chats.py"
+   ],
+   "gold_functions": [
+    "ChatTable.get_chats_by_user_id_and_search_text"
+   ]
+  },
+  {
+   "id": 33,
+   "commit": "f2220d2e40",
+   "prompt": "In this repo, where is the code I would change to: fix: keep citation chips inside bold, italic and linked text (#30278)? Answer with file paths and function names only.",
+   "gold_files": [
+    "src/lib/components/chat/Messages/Markdown/MarkdownInlineTokens.svelte"
+   ],
+   "gold_functions": []
+  },
+  {
+   "id": 34,
+   "commit": "4c00e08aa1",
+   "prompt": "In this repo, where is the code I would change to: fix: keep a message's attachments when its edit is cancelled (#30281)? Answer with file paths and function names only.",
+   "gold_files": [
+    "src/lib/components/chat/Messages/UserMessage.svelte"
+   ],
+   "gold_functions": [
+    "editMessageHandler"
+   ]
+  },
+  {
+   "id": 35,
+   "commit": "8e4cc946ce",
+   "prompt": "In this repo, where is the code I would change to: fix: emit the resolved file path in terminal file events (#30282)? Answer with file paths and function names only.",
+   "gold_files": [
+    "backend/open_webui/utils/middleware.py",
+    "src/routes/+layout.svelte"
+   ],
+   "gold_functions": [
+    "parse_terminal_tool_result",
+    "terminal_event_handler",
+    "executeTool"
+   ]
+  },
+  {
+   "id": 36,
+   "commit": "17e7e8f5e9",
+   "prompt": "In this repo, where is the code I would change to: fix: show a code run's error output alongside what it printed (#30286)? Answer with file paths and function names only.",
+   "gold_files": [
+    "src/lib/components/chat/Messages/CodeBlock.svelte"
+   ],
+   "gold_functions": []
+  },
+  {
+   "id": 37,
+   "commit": "f847c6a588",
+   "prompt": "In this repo, where is the code I would change to: fix: apply the new text to speech engine's default voice and model when the engine changes (#30289)? Answer with file paths and function names only.",
+   "gold_files": [
+    "src/lib/components/admin/Settings/Audio.svelte"
+   ],
+   "gold_functions": [
+    "+"
+   ]
+  },
+  {
+   "id": 38,
+   "commit": "043784c2d0",
+   "prompt": "In this repo, where is the code I would change to: fix: route external webhook avatar URLs through the profile image endpoint (#29892)? Answer with file paths and function names only.",
+   "gold_files": [
+    "src/lib/components/channel/WebhookItem.svelte"
+   ],
+   "gold_functions": []
+  },
+  {
+   "id": 39,
+   "commit": "65a3a115eb",
+   "prompt": "In this repo, where is the code I would change to: fix: keep the speech-to-text extension allowlist when the Audio settings are saved (#30208)? Answer with file paths and function names only.",
+   "gold_files": [
+    "backend/open_webui/routers/audio.py"
+   ],
+   "gold_functions": [
+    "update_audio_config"
+   ]
+  },
+  {
+   "id": 40,
+   "commit": "c1a35b4691",
+   "prompt": "In this repo, where is the code I would change to: fix: sort the feedback history by user when the User column is clicked (#30191)? Answer with file paths and function names only.",
+   "gold_files": [
+    "src/lib/components/admin/Evaluations/Feedbacks.svelte"
+   ],
+   "gold_functions": []
+  },
+  {
+   "commit": "46ea826e01",
+   "gold_files": [
+    "src/lib/components/chat/FileNav/FilePreview.svelte",
+    "src/lib/components/common/SVGPanZoom.svelte",
+    "src/lib/utils/index.ts"
+   ],
+   "gold_functions": [
+    "sanitizeSvg",
+    "renderMermaidDiagram",
+    "dropExternalStyleRules",
+    "referencesExternalCss",
+    "dropExternalResourceRefs",
+    "dropExternalUseRefs"
+   ],
+   "id": 101,
+   "kind": "symptom",
+   "question": "Can you make sure diagrams and vector images shown in chats only load resources from our own site, not from other websites?",
+   "prompt": "In this repo, where is the code I would change for this request: Can you make sure diagrams and vector images shown in chats only load resources from our own site, not from other websites? Answer with file paths and function names only."
+  },
+  {
+   "commit": "4b61b86a83",
+   "gold_files": [
+    "src/lib/components/workspace/Knowledge/KnowledgeBase.svelte"
+   ],
+   "gold_functions": [],
+   "id": 103,
+   "kind": "symptom",
+   "question": "Why do I have to click twice for the file content filter in the knowledge section to take effect, and can it work on the first click?",
+   "prompt": "In this repo, where is the code I would change for this request: Why do I have to click twice for the file content filter in the knowledge section to take effect, and can it work on the first click? Answer with file paths and function names only."
+  },
+  {
+   "commit": "419d248093",
+   "gold_files": [
+    "backend/open_webui/utils/timers.py"
+   ],
+   "gold_functions": [
+    "execute_due_timer"
+   ],
+   "id": 105,
+   "kind": "symptom",
+   "question": "Before a scheduled timer runs, can the system check that the person who created it still has the right role to run it?",
+   "prompt": "In this repo, where is the code I would change for this request: Before a scheduled timer runs, can the system check that the person who created it still has the right role to run it? Answer with file paths and function names only."
+  },
+  {
+   "commit": "94eea41a75",
+   "gold_files": [
+    "backend/open_webui/retrieval/web/searchapi.py"
+   ],
+   "gold_functions": [
+    "search_searchapi"
+   ],
+   "id": 106,
+   "kind": "symptom",
+   "question": "Can the web search feature show proper error messages, include news results, and give correct links that redirect to the real pages?",
+   "prompt": "In this repo, where is the code I would change for this request: Can the web search feature show proper error messages, include news results, and give correct links that redirect to the real pages? Answer with file paths and function names only."
+  },
+  {
+   "commit": "c864e3ae7c",
+   "gold_files": [
+    "backend/open_webui/routers/models.py",
+    "backend/open_webui/utils/models.py"
+   ],
+   "gold_functions": [
+    "get_all_models",
+    "add_chat_variables_schema"
+   ],
+   "id": 108,
+   "kind": "symptom",
+   "question": "Why does the chat still ask me to fill in variables that the model's instructions no longer use, and can that be stopped?",
+   "prompt": "In this repo, where is the code I would change for this request: Why does the chat still ask me to fill in variables that the model's instructions no longer use, and can that be stopped? Answer with file paths and function names only."
+  },
+  {
+   "commit": "bc50026f7b",
+   "gold_files": [
+    "src/lib/components/chat/Navbar.svelte",
+    "src/lib/components/layout/Sidebar/ChatItem.svelte"
+   ],
+   "gold_functions": [
+    "+",
+    "-"
+   ],
+   "id": 109,
+   "kind": "symptom",
+   "question": "Can the keyboard shortcut for deleting a chat work any time a chat is open, even if it isn't visible in the sidebar list?",
+   "prompt": "In this repo, where is the code I would change for this request: Can the keyboard shortcut for deleting a chat work any time a chat is open, even if it isn't visible in the sidebar list? Answer with file paths and function names only."
+  },
+  {
+   "commit": "aceda892bd",
+   "gold_files": [
+    "backend/open_webui/socket/main.py",
+    "backend/open_webui/socket/utils.py"
+   ],
+   "gold_functions": [
+    "CachedRedisDict",
+    "RedisDict.set",
+    "CachedRedisDict._refresh_cache",
+    "RedisDict.delete_many",
+    "CachedRedisDict.keys",
+    "CachedRedisDict.values"
+   ],
+   "id": 110,
+   "kind": "symptom",
+   "question": "Can the list of shared models load faster by keeping a ready copy on each server process instead of rebuilding it every time?",
+   "prompt": "In this repo, where is the code I would change for this request: Can the list of shared models load faster by keeping a ready copy on each server process instead of rebuilding it every time? Answer with file paths and function names only."
+  },
+  {
+   "commit": "488b3c571c",
+   "gold_files": [
+    "backend/open_webui/socket/main.py",
+    "src/lib/components/common/RichTextInput/Collaboration.ts"
+   ],
+   "gold_functions": [
+    "yjs_document_update",
+    "SocketIOCollaborationProvider.setupEventListeners",
+    "SocketIOCollaborationProvider.sendContentSnapshot",
+    "SocketIOCollaborationProvider.destroy",
+    "SocketIOCollaborationProvider"
+   ],
+   "id": 112,
+   "kind": "symptom",
+   "question": "When several people edit a note together, can we stop each change from being needlessly sent back to the server again?",
+   "prompt": "In this repo, where is the code I would change for this request: When several people edit a note together, can we stop each change from being needlessly sent back to the server again? Answer with file paths and function names only."
+  },
+  {
+   "commit": "7fa8673296",
+   "gold_files": [
+    "backend/open_webui/routers/images.py"
+   ],
+   "gold_functions": [
+    "image_edits"
+   ],
+   "id": 115,
+   "kind": "symptom",
+   "question": "Can the image editing feature recognize links to our own uploaded files no matter which web address is used to reach the site?",
+   "prompt": "In this repo, where is the code I would change for this request: Can the image editing feature recognize links to our own uploaded files no matter which web address is used to reach the site? Answer with file paths and function names only."
+  },
+  {
+   "commit": "d9ea46f92d",
+   "gold_files": [
+    "src/lib/components/notes/NoteEditor.svelte"
+   ],
+   "gold_functions": [
+    "${content}"
+   ],
+   "id": 116,
+   "kind": "symptom",
+   "question": "Can the option to insert into a note be hidden when I only have permission to read that note?",
+   "prompt": "In this repo, where is the code I would change for this request: Can the option to insert into a note be hidden when I only have permission to read that note? Answer with file paths and function names only."
+  },
+  {
+   "commit": "f40318c1ff",
+   "gold_files": [
+    "backend/open_webui/models/prompts.py"
+   ],
+   "gold_functions": [
+    "PromptsTable.update_prompt_by_id"
+   ],
+   "id": 117,
+   "kind": "symptom",
+   "question": "When I save a new prompt version without choosing to make it the live one, why does the live prompt change, and can that be fixed?",
+   "prompt": "In this repo, where is the code I would change for this request: When I save a new prompt version without choosing to make it the live one, why does the live prompt change, and can that be fixed? Answer with file paths and function names only."
+  },
+  {
+   "commit": "440d13e198",
+   "gold_files": [
+    "src/lib/components/workspace/Prompts/PromptEditor.svelte"
+   ],
+   "gold_functions": [
+    "setAsProduction"
+   ],
+   "id": 118,
+   "kind": "symptom",
+   "question": "After I set a prompt version as the live one, can the prompt editor refresh so it shows the up-to-date information?",
+   "prompt": "In this repo, where is the code I would change for this request: After I set a prompt version as the live one, can the prompt editor refresh so it shows the up-to-date information? Answer with file paths and function names only."
+  },
+  {
+   "commit": "aa65f55692",
+   "gold_files": [
+    "src/lib/components/channel/MessageInput.svelte",
+    "src/lib/components/chat/MessageInput.svelte"
+   ],
+   "gold_functions": [],
+   "id": 123,
+   "kind": "symptom",
+   "question": "When an emoji shortcode is made of several characters combined, can the whole emoji be inserted instead of just part of it?",
+   "prompt": "In this repo, where is the code I would change for this request: When an emoji shortcode is made of several characters combined, can the whole emoji be inserted instead of just part of it? Answer with file paths and function names only."
+  },
+  {
+   "commit": "702da1e471",
+   "gold_files": [
+    "backend/open_webui/utils/middleware.py",
+    "backend/open_webui/utils/tools.py"
+   ],
+   "gold_functions": [
+    "process_chat_payload",
+    "get_builtin_tools"
+   ],
+   "id": 126,
+   "kind": "symptom",
+   "question": "When memory is switched off, can the assistant stop using my saved memories and stop offering memory-related abilities in chats?",
+   "prompt": "In this repo, where is the code I would change for this request: When memory is switched off, can the assistant stop using my saved memories and stop offering memory-related abilities in chats? Answer with file paths and function names only."
+  },
+  {
+   "commit": "14be67348a",
+   "gold_files": [
+    "src/lib/components/admin/Users/Groups.svelte"
+   ],
+   "gold_functions": [],
+   "id": 127,
+   "kind": "symptom",
+   "question": "After I create a group, can the new group window open blank instead of still showing what I entered before?",
+   "prompt": "In this repo, where is the code I would change for this request: After I create a group, can the new group window open blank instead of still showing what I entered before? Answer with file paths and function names only."
+  },
+  {
+   "commit": "394fcc7e24",
+   "gold_files": [
+    "src/lib/components/chat/Messages/CodeBlock.svelte"
+   ],
+   "gold_functions": [],
+   "id": 128,
+   "kind": "symptom",
+   "question": "If I edit a code block without saving and then collapse it, can my unsaved changes still be visible?",
+   "prompt": "In this repo, where is the code I would change for this request: If I edit a code block without saving and then collapse it, can my unsaved changes still be visible? Answer with file paths and function names only."
+  },
+  {
+   "commit": "9758f33b6c",
+   "gold_files": [
+    "src/lib/components/workspace/Models/ModelEditor.svelte"
+   ],
+   "gold_functions": [
+    "submitHandler"
+   ],
+   "id": 129,
+   "kind": "symptom",
+   "question": "Why can't I save a model after changing its description from the default back to a custom one, and can that be fixed?",
+   "prompt": "In this repo, where is the code I would change for this request: Why can't I save a model after changing its description from the default back to a custom one, and can that be fixed? Answer with file paths and function names only."
+  },
+  {
+   "commit": "669d37bea1",
+   "gold_files": [
+    "src/lib/components/channel/Messages/Message.svelte"
+   ],
+   "gold_functions": [],
+   "id": 130,
+   "kind": "symptom",
+   "question": "Can emoji reactions be hidden in a channel where I only have permission to read messages?",
+   "prompt": "In this repo, where is the code I would change for this request: Can emoji reactions be hidden in a channel where I only have permission to read messages? Answer with file paths and function names only."
+  },
+  {
+   "commit": "f2220d2e40",
+   "gold_files": [
+    "src/lib/components/chat/Messages/Markdown/MarkdownInlineTokens.svelte"
+   ],
+   "gold_functions": [],
+   "id": 133,
+   "kind": "symptom",
+   "question": "Can source citation markers still appear properly when they're inside bold, italic or linked text in a response?",
+   "prompt": "In this repo, where is the code I would change for this request: Can source citation markers still appear properly when they're inside bold, italic or linked text in a response? Answer with file paths and function names only."
+  },
+  {
+   "commit": "4c00e08aa1",
+   "gold_files": [
+    "src/lib/components/chat/Messages/UserMessage.svelte"
+   ],
+   "gold_functions": [
+    "editMessageHandler"
+   ],
+   "id": 134,
+   "kind": "symptom",
+   "question": "If I cancel editing a message, can its attached files be kept instead of disappearing?",
+   "prompt": "In this repo, where is the code I would change for this request: If I cancel editing a message, can its attached files be kept instead of disappearing? Answer with file paths and function names only."
+  },
+  {
+   "id": 41,
+   "commit": "76bd90c832",
+   "prompt": "In this repo, where is the code I would change to: fix: discard unsaved edits when the admin Edit User dialog is closed (#30193)? Answer with file paths and function names only.",
+   "gold_files": [
+    "src/lib/components/admin/Users/UserList/EditUserModal.svelte"
+   ],
+   "gold_functions": [
+    "init"
+   ]
+  },
+  {
+   "id": 42,
+   "commit": "4922b91c07",
+   "prompt": "In this repo, where is the code I would change to: fix: stop the Model Defaults save from reverting the selected, pinned and ordered models (#30206)? Answer with file paths and function names only.",
+   "gold_files": [
+    "src/lib/components/admin/Settings/Models/ModelDefaultsPanel.svelte"
+   ],
+   "gold_functions": [
+    "save",
+    "init"
+   ]
+  },
+  {
+   "id": 43,
+   "commit": "27dd191332",
+   "prompt": "In this repo, where is the code I would change to: fix: let a calendar event's repeat, description and location be cleared again (#30204)? Answer with file paths and function names only.",
+   "gold_files": [
+    "src/lib/apis/calendar/index.ts",
+    "src/lib/components/calendar/CalendarEventModal.svelte"
+   ],
+   "gold_functions": [
+    "submitHandler"
+   ]
+  },
+  {
+   "id": 44,
+   "commit": "757ee8132e",
+   "prompt": "In this repo, where is the code I would change to: fix: stop collapsing the task list from sending the message being typed (#30202)? Answer with file paths and function names only.",
+   "gold_files": [
+    "src/lib/components/chat/Messages/ResponseMessage/TaskList.svelte"
+   ],
+   "gold_functions": []
+  },
+  {
+   "id": 45,
+   "commit": "5e1f995f01",
+   "prompt": "In this repo, where is the code I would change to: fix: show a custom gender back in the account form instead of an empty dropdown (#30215)? Answer with file paths and function names only.",
+   "gold_files": [
+    "src/lib/components/chat/Settings/Account.svelte"
+   ],
+   "gold_functions": []
+  },
+  {
+   "id": 46,
+   "commit": "b64cb06043",
+   "prompt": "In this repo, where is the code I would change to: fix: let a user without the chat delete permission delete a folder while keeping its chats (#30163)? Answer with file paths and function names only.",
+   "gold_files": [
+    "backend/open_webui/routers/folders.py"
+   ],
+   "gold_functions": [
+    "delete_folder_by_id"
+   ]
+  },
+  {
+   "id": 47,
+   "commit": "25948ea213",
+   "prompt": "In this repo, where is the code I would change to: fix: block saving a prompt's input form when a required dropdown has no option chosen (#30078)? Answer with file paths and function names only.",
+   "gold_files": [
+    "src/lib/components/chat/MessageInput/InputVariablesModal.svelte"
+   ],
+   "gold_functions": []
+  },
+  {
+   "id": 48,
+   "commit": "3fbc39a9dc",
+   "prompt": "In this repo, where is the code I would change to: fix: save a new feedback entry when rating a reply whose entry was deleted (#30077)? Answer with file paths and function names only.",
+   "gold_files": [
+    "src/lib/components/chat/Messages/ResponseMessage.svelte"
+   ],
+   "gold_functions": [
+    "feedbackHandler"
+   ]
+  },
+  {
+   "id": 49,
+   "commit": "a63ddb36d2",
+   "prompt": "In this repo, where is the code I would change to: fix: clear a reply's score and reason when its rating switches thumbs (#30075)? Answer with file paths and function names only.",
+   "gold_files": [
+    "src/lib/components/chat/Messages/ResponseMessage.svelte"
+   ],
+   "gold_functions": [
+    "feedbackHandler"
+   ]
+  },
+  {
+   "id": 50,
+   "commit": "57063aaad8",
+   "prompt": "In this repo, where is the code I would change to: fix: dropping a folder onto the folder it is already in no longer fails with Folder already exists (#30169)? Answer with file paths and function names only.",
+   "gold_files": [
+    "backend/open_webui/routers/folders.py"
+   ],
+   "gold_functions": [
+    "update_folder_parent_id_by_id"
+   ]
+  },
+  {
+   "id": 51,
+   "commit": "2690d04cac",
+   "prompt": "In this repo, where is the code I would change to: fix: clean up orphan tags for the chat's owner, not the admin, when an admin deletes another user's chat (#30171)? Answer with file paths and function names only.",
+   "gold_files": [
+    "backend/open_webui/routers/chats.py"
+   ],
+   "gold_functions": [
+    "delete_chat_by_id"
+   ]
+  },
+  {
+   "id": 52,
+   "commit": "621ed6de7f",
+   "prompt": "In this repo, where is the code I would change to: fix: export every prompt and model from the workspace, not only the page on screen (#30187)? Answer with file paths and function names only.",
+   "gold_files": [
+    "src/lib/apis/models/index.ts",
+    "src/lib/components/workspace/Models.svelte",
+    "src/lib/components/workspace/Prompts.svelte"
+   ],
+   "gold_functions": [
+    "exportModels",
+    "downloadModels"
+   ]
+  },
+  {
+   "id": 53,
+   "commit": "dbe538c033",
+   "prompt": "In this repo, where is the code I would change to: fix: keep a note's sharing when a collaborator saves it (#30175)? Answer with file paths and function names only.",
+   "gold_files": [
+    "backend/open_webui/routers/notes.py",
+    "src/lib/components/notes/NoteEditor.svelte"
+   ],
+   "gold_functions": [
+    "update_note_by_id",
+    "saveHandler"
+   ]
+  },
+  {
+   "id": 54,
+   "commit": "d16fad585d",
+   "prompt": "In this repo, where is the code I would change to: fix: keep a shortcut recording from firing the action already bound to the chord (#30160)? Answer with file paths and function names only.",
+   "gold_files": [
+    "src/lib/components/chat/Settings/Shortcuts.svelte"
+   ],
+   "gold_functions": []
+  },
+  {
+   "id": 55,
+   "commit": "2af297bfcd",
+   "prompt": "In this repo, where is the code I would change to: fix: keep the pinned flag when importing a chat export (#30151)? Answer with file paths and function names only.",
+   "gold_files": [
+    "src/lib/components/chat/Settings/DataControls.svelte"
+   ],
+   "gold_functions": [
+    "importChatsHandler"
+   ]
+  },
+  {
+   "id": 56,
+   "commit": "36276c9ead",
+   "prompt": "In this repo, where is the code I would change to: fix: keep a skill's translations and disabled state when saving it from the editor (#30185)? Answer with file paths and function names only.",
+   "gold_files": [
+    "src/lib/components/workspace/Skills/SkillEditor.svelte",
+    "src/routes/(app)/workspace/skills/create/+page.svelte",
+    "src/routes/(app)/workspace/skills/edit/+page.svelte"
+   ],
+   "gold_functions": [
+    "submitHandler",
+    "onSubmit"
+   ]
+  },
+  {
+   "id": 57,
+   "commit": "1f8f1f61bb",
+   "prompt": "In this repo, where is the code I would change to: fix: tell ask_user models that the first option is shown as Recommended (#30196)? Answer with file paths and function names only.",
+   "gold_files": [
+    "backend/open_webui/tools/builtin.py"
+   ],
+   "gold_functions": [
+    "ask_user"
+   ]
+  },
+  {
+   "id": 58,
+   "commit": "5d7c17f41a",
+   "prompt": "In this repo, where is the code I would change to: fix: stop the Generate Message Pair shortcut from also submitting the message input form (#30167)? Answer with file paths and function names only.",
+   "gold_files": [
+    "src/lib/components/chat/MessageInput.svelte"
+   ],
+   "gold_functions": []
+  },
+  {
+   "id": 59,
+   "commit": "3d29548716",
+   "prompt": "In this repo, where is the code I would change to: fix: pgvector reads leak their connection and lose most of their neighbours (#30142)? Answer with file paths and function names only.",
+   "gold_files": [
+    "backend/open_webui/config.py",
+    "backend/open_webui/retrieval/vector/dbs/pgvector.py"
+   ],
+   "gold_functions": [
+    "PgvectorClient._iterative_scan_setting",
+    "PgvectorClient.search",
+    "PgvectorClient",
+    "PgvectorClient.query",
+    "PgvectorClient.get"
+   ]
+  },
+  {
+   "id": 60,
+   "commit": "52cd298411",
+   "prompt": "In this repo, where is the code I would change to: fix: allow forking a chat that holds a stale unfinished message (#30131)? Answer with file paths and function names only.",
+   "gold_files": [
+    "backend/open_webui/routers/chats.py",
+    "src/lib/components/chat/Chat.svelte"
+   ],
+   "gold_functions": [
+    "fork_chat_by_id",
+    "handleForkChat"
+   ]
+  },
+  {
+   "id": 61,
+   "commit": "fffcb727d2",
+   "prompt": "In this repo, where is the code I would change to: fix: release the openGauss connection when a read returns no rows (#30144)? Answer with file paths and function names only.",
+   "gold_files": [
+    "backend/open_webui/retrieval/vector/dbs/opengauss.py"
+   ],
+   "gold_functions": [
+    "OpenGaussClient.query",
+    "OpenGaussClient.get"
+   ]
+  },
+  {
+   "id": 62,
+   "commit": "6d73780fd1",
+   "prompt": "In this repo, where is the code I would change to: fix: bundle seaborn and give black its dependencies in the Pyodide lock (#30148)? Answer with file paths and function names only.",
+   "gold_files": [
+    "scripts/prepare-pyodide.js",
+    "src/lib/components/common/CodeEditor.svelte"
+   ],
+   "gold_functions": [
+    "verifyBundledWheels",
+    "formatPythonCodePyodide"
+   ]
+  },
+  {
+   "id": 63,
+   "commit": "677341578d",
+   "prompt": "In this repo, where is the code I would change to: fix: stop the model editor's Builtin Tools section from reading its labels before they exist (#30153)? Answer with file paths and function names only.",
+   "gold_files": [
+    "src/lib/components/workspace/Models/BuiltinTools.svelte"
+   ],
+   "gold_functions": []
+  },
+  {
+   "id": 64,
+   "commit": "4d01f1ebed",
+   "prompt": "In this repo, where is the code I would change to: fix: keep the archived state and chat variables when importing a chat export (#30155)? Answer with file paths and function names only.",
+   "gold_files": [
+    "backend/open_webui/models/chats.py",
+    "src/lib/components/chat/Settings/DataControls.svelte"
+   ],
+   "gold_functions": [
+    "importChatsHandler",
+    "ChatImportForm",
+    "ChatTable._chat_import_form_to_chat_model"
+   ]
+  },
+  {
+   "id": 65,
+   "commit": "d5cacb3c0a",
+   "prompt": "In this repo, where is the code I would change to: fix: convert forced tool_choice and non-streaming tool calls for Responses API connections (#30095)? Answer with file paths and function names only.",
+   "gold_files": [
+    "backend/open_webui/routers/openai.py"
+   ],
+   "gold_functions": [
+    "convert_responses_result",
+    "convert_to_responses_payload"
+   ]
+  },
+  {
+   "id": 66,
+   "commit": "655337f7bf",
+   "prompt": "In this repo, where is the code I would change to: fix: vendor openpyxl so Excel I/O works in the Pyodide code interpreter (#30140)? Answer with file paths and function names only.",
+   "gold_files": [
+    "scripts/prepare-pyodide.js",
+    "src/lib/components/chat/Messages/CodeBlock.svelte",
+    "src/routes/+layout.svelte"
+   ],
+   "gold_functions": [
+    "downloadPyPIWheels",
+    "executePythonAsWorker"
+   ]
+  },
+  {
+   "id": 67,
+   "commit": "95406fd28d",
+   "prompt": "In this repo, where is the code I would change to: fix: build the pgvector ivfflat index once there are rows to cluster on (#30143)? Answer with file paths and function names only.",
+   "gold_files": [
+    "backend/open_webui/retrieval/vector/dbs/pgvector.py"
+   ],
+   "gold_functions": [
+    "PgvectorClient._has_enough_ivfflat_training_rows",
+    "PgvectorClient._ensure_vector_index",
+    "PgvectorClient"
+   ]
+  },
+  {
+   "id": 68,
+   "commit": "460f2e7634",
+   "prompt": "In this repo, where is the code I would change to: fix: surface initial chat title generation failures in the log (#30106)? Answer with file paths and function names only.",
+   "gold_files": [
+    "backend/open_webui/main.py"
+   ],
+   "gold_functions": [
+    "chat_completion"
+   ]
+  },
+  {
+   "id": 69,
+   "commit": "0837f310be",
+   "prompt": "In this repo, where is the code I would change to: fix: reject Docling conversions that failed inside an HTTP 200 response (#30107)? Answer with file paths and function names only.",
+   "gold_files": [
+    "backend/open_webui/retrieval/loaders/main.py"
+   ],
+   "gold_functions": [
+    "DoclingLoader.load"
+   ]
+  },
+  {
+   "id": 70,
+   "commit": "fbc4897269",
+   "prompt": "In this repo, where is the code I would change to: refac: resolve knowledge file access from the file association (#29937)? Answer with file paths and function names only.",
+   "gold_files": [
+    "backend/open_webui/utils/access_control/files.py"
+   ],
+   "gold_functions": [
+    "has_access_to_file"
+   ]
+  },
+  {
+   "id": 71,
+   "commit": "ff7f35a30d",
+   "prompt": "In this repo, where is the code I would change to: fix: stop logging a traceback twice per failed vector search (#29981)? Answer with file paths and function names only.",
+   "gold_files": [
+    "backend/open_webui/retrieval/utils.py"
+   ],
+   "gold_functions": [
+    "query_doc_with_hybrid_search",
+    "query_collection_with_hybrid_search",
+    "query_collection",
+    "query_doc"
+   ]
+  },
+  {
+   "id": 72,
+   "commit": "556e48e058",
+   "prompt": "In this repo, where is the code I would change to: fix: honor false defaults on checkbox prompt variables (#30037)? Answer with file paths and function names only.",
+   "gold_files": [
+    "src/lib/components/chat/MessageInput/InputVariablesModal.svelte"
+   ],
+   "gold_functions": []
+  },
+  {
+   "id": 73,
+   "commit": "48fb2b84ba",
+   "prompt": "In this repo, where is the code I would change to: refac: derive a forked chat's folder from the caller's write access (#30069)? Answer with file paths and function names only.",
+   "gold_files": [
+    "backend/open_webui/routers/chats.py"
+   ],
+   "gold_functions": [
+    "fork_chat_by_id"
+   ]
+  },
+  {
+   "id": 74,
+   "commit": "3348f68778",
+   "prompt": "In this repo, where is the code I would change to: fix: keep attachment-only messages intact when skills are bound (#30045)? Answer with file paths and function names only.",
+   "gold_files": [
+    "backend/open_webui/utils/middleware.py"
+   ],
+   "gold_functions": [
+    "process_chat_payload"
+   ]
+  },
+  {
+   "id": 75,
+   "commit": "82da9093aa",
+   "prompt": "In this repo, where is the code I would change to: fix: default converted Responses API function tools to strict=false (#30046)? Answer with file paths and function names only.",
+   "gold_files": [
+    "backend/open_webui/routers/openai.py"
+   ],
+   "gold_functions": [
+    "convert_to_responses_payload"
+   ]
+  },
+  {
+   "id": 76,
+   "commit": "4611394fa6",
+   "prompt": "In this repo, where is the code I would change to: refac: correct the ENABLE_CHAT_RESPONSE_STREAM_INPLACE_APPEND comments (#30066)? Answer with file paths and function names only.",
+   "gold_files": [
+    "backend/open_webui/env.py",
+    "backend/open_webui/utils/middleware.py"
+   ],
+   "gold_functions": [
+    "append_to_text_field"
+   ]
+  },
+  {
+   "id": 77,
+   "commit": "3d6598fccb",
+   "prompt": "In this repo, where is the code I would change to: fix: steer models to replace_range in the replace_note_content tool description (#30048)? Answer with file paths and function names only.",
+   "gold_files": [
+    "backend/open_webui/tools/builtin.py"
+   ],
+   "gold_functions": [
+    "replace_note_content"
+   ]
+  },
+  {
+   "id": 78,
+   "commit": "06d9d2e7c7",
+   "prompt": "In this repo, where is the code I would change to: fix: sync Playwright loader spins a CPU core when a page opens a WebSocket (#30050)? Answer with file paths and function names only.",
+   "gold_files": [
+    "backend/open_webui/retrieval/web/utils.py"
+   ],
+   "gold_functions": [
+    "SafePlaywrightURLLoader.lazy_load"
+   ]
+  },
+  {
+   "id": 79,
+   "commit": "55b7343be8",
+   "prompt": "In this repo, where is the code I would change to: fix: keep a failed lock release from masking cancellation (#29979)? Answer with file paths and function names only.",
+   "gold_files": [
+    "backend/open_webui/socket/utils.py"
+   ],
+   "gold_functions": [
+    "RedisLock.release_lock"
+   ]
+  },
+  {
+   "id": 80,
+   "commit": "601e0e4345",
+   "prompt": "In this repo, where is the code I would change to: fix: stop tracking tasks under an empty item id (#29980)? Answer with file paths and function names only.",
+   "gold_files": [
+    "backend/open_webui/tasks.py"
+   ],
+   "gold_functions": [
+    "create_task"
+   ]
+  },
+  {
+   "commit": "76bd90c832",
+   "gold_files": [
+    "src/lib/components/admin/Users/UserList/EditUserModal.svelte"
+   ],
+   "gold_functions": [
+    "init"
+   ],
+   "id": 141,
+   "kind": "symptom",
+   "question": "When I close the admin dialog for editing a user without saving, can the changes I typed be thrown away instead of staying there next time?",
+   "prompt": "In this repo, where is the code I would change for this request: When I close the admin dialog for editing a user without saving, can the changes I typed be thrown away instead of staying there next time? Answer with file paths and function names only."
+  },
+  {
+   "commit": "4922b91c07",
+   "gold_files": [
+    "src/lib/components/admin/Settings/Models/ModelDefaultsPanel.svelte"
+   ],
+   "gold_functions": [
+    "save",
+    "init"
+   ],
+   "id": 142,
+   "kind": "symptom",
+   "question": "Why does saving the default model settings undo my selected, pinned and ordered models, and can it keep my choices?",
+   "prompt": "In this repo, where is the code I would change for this request: Why does saving the default model settings undo my selected, pinned and ordered models, and can it keep my choices? Answer with file paths and function names only."
+  },
+  {
+   "commit": "27dd191332",
+   "gold_files": [
+    "src/lib/apis/calendar/index.ts",
+    "src/lib/components/calendar/CalendarEventModal.svelte"
+   ],
+   "gold_functions": [
+    "submitHandler"
+   ],
+   "id": 143,
+   "kind": "symptom",
+   "question": "Can I clear the repeat, description and location of a calendar event again, instead of the old values staying?",
+   "prompt": "In this repo, where is the code I would change for this request: Can I clear the repeat, description and location of a calendar event again, instead of the old values staying? Answer with file paths and function names only."
+  },
+  {
+   "commit": "757ee8132e",
+   "gold_files": [
+    "src/lib/components/chat/Messages/ResponseMessage/TaskList.svelte"
+   ],
+   "gold_functions": [],
+   "id": 144,
+   "kind": "symptom",
+   "question": "When I collapse the task list while typing a message, why does the message get sent, and can that be stopped?",
+   "prompt": "In this repo, where is the code I would change for this request: When I collapse the task list while typing a message, why does the message get sent, and can that be stopped? Answer with file paths and function names only."
+  },
+  {
+   "commit": "b64cb06043",
+   "gold_files": [
+    "backend/open_webui/routers/folders.py"
+   ],
+   "gold_functions": [
+    "delete_folder_by_id"
+   ],
+   "id": 146,
+   "kind": "symptom",
+   "question": "Can a user without permission to delete chats still delete a folder while keeping the chats inside it?",
+   "prompt": "In this repo, where is the code I would change for this request: Can a user without permission to delete chats still delete a folder while keeping the chats inside it? Answer with file paths and function names only."
+  },
+  {
+   "commit": "25948ea213",
+   "gold_files": [
+    "src/lib/components/chat/MessageInput/InputVariablesModal.svelte"
+   ],
+   "gold_functions": [],
+   "id": 147,
+   "kind": "symptom",
+   "question": "Can saving a prompt's input form be blocked when a required dropdown has no option chosen?",
+   "prompt": "In this repo, where is the code I would change for this request: Can saving a prompt's input form be blocked when a required dropdown has no option chosen? Answer with file paths and function names only."
+  },
+  {
+   "commit": "3fbc39a9dc",
+   "gold_files": [
+    "src/lib/components/chat/Messages/ResponseMessage.svelte"
+   ],
+   "gold_functions": [
+    "feedbackHandler"
+   ],
+   "id": 148,
+   "kind": "symptom",
+   "question": "When I rate a reply whose earlier feedback was deleted, can a new feedback entry be saved instead of failing?",
+   "prompt": "In this repo, where is the code I would change for this request: When I rate a reply whose earlier feedback was deleted, can a new feedback entry be saved instead of failing? Answer with file paths and function names only."
+  },
+  {
+   "commit": "a63ddb36d2",
+   "gold_files": [
+    "src/lib/components/chat/Messages/ResponseMessage.svelte"
+   ],
+   "gold_functions": [
+    "feedbackHandler"
+   ],
+   "id": 149,
+   "kind": "symptom",
+   "question": "When I switch a reply's rating from thumbs up to thumbs down, can the old score and reason be cleared?",
+   "prompt": "In this repo, where is the code I would change for this request: When I switch a reply's rating from thumbs up to thumbs down, can the old score and reason be cleared? Answer with file paths and function names only."
+  },
+  {
+   "commit": "57063aaad8",
+   "gold_files": [
+    "backend/open_webui/routers/folders.py"
+   ],
+   "gold_functions": [
+    "update_folder_parent_id_by_id"
+   ],
+   "id": 150,
+   "kind": "symptom",
+   "question": "Why does dragging a folder into the folder it already sits in show an error that it already exists, and can that stop?",
+   "prompt": "In this repo, where is the code I would change for this request: Why does dragging a folder into the folder it already sits in show an error that it already exists, and can that stop? Answer with file paths and function names only."
+  },
+  {
+   "commit": "2690d04cac",
+   "gold_files": [
+    "backend/open_webui/routers/chats.py"
+   ],
+   "gold_functions": [
+    "delete_chat_by_id"
+   ],
+   "id": 151,
+   "kind": "symptom",
+   "question": "When an admin deletes another person's chat, can leftover unused tags be cleaned up for the chat's owner rather than the admin?",
+   "prompt": "In this repo, where is the code I would change for this request: When an admin deletes another person's chat, can leftover unused tags be cleaned up for the chat's owner rather than the admin? Answer with file paths and function names only."
+  },
+  {
+   "commit": "dbe538c033",
+   "gold_files": [
+    "backend/open_webui/routers/notes.py",
+    "src/lib/components/notes/NoteEditor.svelte"
+   ],
+   "gold_functions": [
+    "update_note_by_id",
+    "saveHandler"
+   ],
+   "id": 153,
+   "kind": "symptom",
+   "question": "When a collaborator saves a shared note, can the note keep its sharing settings instead of losing them?",
+   "prompt": "In this repo, where is the code I would change for this request: When a collaborator saves a shared note, can the note keep its sharing settings instead of losing them? Answer with file paths and function names only."
+  },
+  {
+   "commit": "d16fad585d",
+   "gold_files": [
+    "src/lib/components/chat/Settings/Shortcuts.svelte"
+   ],
+   "gold_functions": [],
+   "id": 154,
+   "kind": "symptom",
+   "question": "When I record a new keyboard shortcut, can it avoid triggering the action already assigned to that key combination?",
+   "prompt": "In this repo, where is the code I would change for this request: When I record a new keyboard shortcut, can it avoid triggering the action already assigned to that key combination? Answer with file paths and function names only."
+  },
+  {
+   "commit": "2af297bfcd",
+   "gold_files": [
+    "src/lib/components/chat/Settings/DataControls.svelte"
+   ],
+   "gold_functions": [
+    "importChatsHandler"
+   ],
+   "id": 155,
+   "kind": "symptom",
+   "question": "When I import an exported chat, can it keep its pinned status instead of losing it?",
+   "prompt": "In this repo, where is the code I would change for this request: When I import an exported chat, can it keep its pinned status instead of losing it? Answer with file paths and function names only."
+  },
+  {
+   "commit": "36276c9ead",
+   "gold_files": [
+    "src/lib/components/workspace/Skills/SkillEditor.svelte",
+    "src/routes/(app)/workspace/skills/create/+page.svelte",
+    "src/routes/(app)/workspace/skills/edit/+page.svelte"
+   ],
+   "gold_functions": [
+    "submitHandler",
+    "onSubmit"
+   ],
+   "id": 156,
+   "kind": "symptom",
+   "question": "When I save a skill from the editor, can it keep its translations and its disabled setting?",
+   "prompt": "In this repo, where is the code I would change for this request: When I save a skill from the editor, can it keep its translations and its disabled setting? Answer with file paths and function names only."
+  },
+  {
+   "commit": "1f8f1f61bb",
+   "gold_files": [
+    "backend/open_webui/tools/builtin.py"
+   ],
+   "gold_functions": [
+    "ask_user"
+   ],
+   "id": 157,
+   "kind": "symptom",
+   "question": "Can the assistant models be told that the first option in a question they ask me is displayed as Recommended?",
+   "prompt": "In this repo, where is the code I would change for this request: Can the assistant models be told that the first option in a question they ask me is displayed as Recommended? Answer with file paths and function names only."
+  },
+  {
+   "commit": "5d7c17f41a",
+   "gold_files": [
+    "src/lib/components/chat/MessageInput.svelte"
+   ],
+   "gold_functions": [],
+   "id": 158,
+   "kind": "symptom",
+   "question": "When I use the shortcut to generate a message pair, why does it also send the message box, and can that stop?",
+   "prompt": "In this repo, where is the code I would change for this request: When I use the shortcut to generate a message pair, why does it also send the message box, and can that stop? Answer with file paths and function names only."
+  },
+  {
+   "commit": "3d29548716",
+   "gold_files": [
+    "backend/open_webui/config.py",
+    "backend/open_webui/retrieval/vector/dbs/pgvector.py"
+   ],
+   "gold_functions": [
+    "PgvectorClient._iterative_scan_setting",
+    "PgvectorClient.search",
+    "PgvectorClient",
+    "PgvectorClient.query",
+    "PgvectorClient.get"
+   ],
+   "id": 159,
+   "kind": "symptom",
+   "question": "Why do searches in the vector database leave connections open and return far fewer similar results than expected, and can that be fixed?",
+   "prompt": "In this repo, where is the code I would change for this request: Why do searches in the vector database leave connections open and return far fewer similar results than expected, and can that be fixed? Answer with file paths and function names only."
+  },
+  {
+   "commit": "fffcb727d2",
+   "gold_files": [
+    "backend/open_webui/retrieval/vector/dbs/opengauss.py"
+   ],
+   "gold_functions": [
+    "OpenGaussClient.query",
+    "OpenGaussClient.get"
+   ],
+   "id": 161,
+   "kind": "symptom",
+   "question": "Can the database connection be properly released when a lookup finds no results, so connections don't pile up?",
+   "prompt": "In this repo, where is the code I would change for this request: Can the database connection be properly released when a lookup finds no results, so connections don't pile up? Answer with file paths and function names only."
+  },
+  {
+   "commit": "6d73780fd1",
+   "gold_files": [
+    "scripts/prepare-pyodide.js",
+    "src/lib/components/common/CodeEditor.svelte"
+   ],
+   "gold_functions": [
+    "verifyBundledWheels",
+    "formatPythonCodePyodide"
+   ],
+   "id": 162,
+   "kind": "symptom",
+   "question": "Can the in-browser code runner include the seaborn charting tool and the dependencies the black code formatter needs?",
+   "prompt": "In this repo, where is the code I would change for this request: Can the in-browser code runner include the seaborn charting tool and the dependencies the black code formatter needs? Answer with file paths and function names only."
+  },
+  {
+   "commit": "677341578d",
+   "gold_files": [
+    "src/lib/components/workspace/Models/BuiltinTools.svelte"
+   ],
+   "gold_functions": [],
+   "id": 163,
+   "kind": "symptom",
+   "question": "Why does the built-in tools section of the model editor try to show its labels before they are ready, and can that be fixed?",
+   "prompt": "In this repo, where is the code I would change for this request: Why does the built-in tools section of the model editor try to show its labels before they are ready, and can that be fixed? Answer with file paths and function names only."
+  }
+ ],
+ "symptom_generation": {
+  "model": "sonnet",
+  "cost_usd": 0.037337999999999996,
+  "kept": 20,
+  "dropped_leaky": [
+   "When a message in a channel gets deleted, can you make sure no leftover trace of it remains anywhere on my screen?",
+   "When I turn memory off, can you make sure the automatic background review of my memories stops running?",
+   "When I create a folder from the sidebar, why does the background image I picked get lost, and can it be kept?",
+   "Can chats feel faster by not loading and saving the entire conversation each time just one message is read or changed?",
+   "Why are repeating schedules and calendar events sometimes interpreted wrongly, and can the repeat rules be read correctly?",
+   "When I clone a model from the admin settings, can it keep its original underlying model, and can cloning be hidden for arena models?",
+   "If I reload the page in a chat that started from the home page, can my unsent typed message be restored?",
+   "When the models used in an existing chat are no longer available, can the chat automatically switch to another model that works?",
+   "Can the account form insist on the same required fields as the admin dialog for editing users does?",
+   "Can we stop sending a result count to the Staan search service, since it shouldn't be part of the request?",
+   "Why does a missing MinerU access key stop me from saving settings in local mode, and can that be fixed?",
+   "Why doesn't the setting for when a long conversation gets condensed save from the general settings, and can that be fixed?",
+   "When I search for a folder name that doesn't exist, can the results show no chats instead of unrelated ones?",
+   "When I save the audio settings, why does the list of allowed speech-to-text file types get lost, and can it be kept?"
+  ]
+ },
+ "symptom_generation_b": {
+  "model": "sonnet",
+  "cost_usd": 0.049592,
+  "kept": 20,
+  "dropped_leaky": [
+   "If my account has a custom gender, can the account form show it instead of an empty dropdown?",
+   "Can exporting prompts and models from the workspace include all of them, not just the ones on the current page?",
+   "Can I copy a chat into a new branch even if it contains an old message that never finished?",
+   "Can access to a knowledge collection's files be decided from how each file is linked to the collection?",
+   "Can the system stop tracking background tasks that have an empty item identifier?"
+  ]
+ }
+}

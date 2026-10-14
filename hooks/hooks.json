@@ -1,0 +1,14 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash \"${CLAUDE_PLUGIN_ROOT}/skills/repo-atlas/scripts/atlas\" session-start --root \"${CLAUDE_PROJECT_DIR}\""
+          }
+        ]
+      }
+    ]
+  }
+}

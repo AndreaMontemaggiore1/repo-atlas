@@ -1,0 +1,9 @@
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+.atlas/
+# benchmark: cloned repos, cached maps and raw session logs stay local; bench/results/ holds the rows
+bench/repos/
+bench/work/
+bench/runs/

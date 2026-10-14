@@ -1,0 +1,31 @@
+name: Token report (with vs without)
+description: You ran the same task with and without repo-atlas and measured it, whether it helped or hurt
+labels: ["benchmark"]
+body:
+  - type: textarea
+    id: task
+    attributes:
+      label: The task
+      description: What you asked Claude to do (a search question, a bug fix, a feature).
+    validations:
+      required: true
+  - type: textarea
+    id: numbers
+    attributes:
+      label: With and without
+      description: Tokens or cost and tool calls for each, e.g. from `/cost` or the session usage, and whether the answer was right.
+      placeholder: |
+        without: 92k tokens, 7 tool calls, right file
+        with:    58k tokens, 3 tool calls, right file
+    validations:
+      required: true
+  - type: input
+    id: repo
+    attributes:
+      label: Repo
+      description: Public URL if possible, otherwise size and languages.
+  - type: input
+    id: versions
+    attributes:
+      label: Versions
+      description: Claude Code version, model, repo-atlas version, OS.

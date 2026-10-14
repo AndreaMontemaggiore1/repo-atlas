@@ -1,0 +1,793 @@
+{
+ "repo": "https://github.com/langgenius/dify",
+ "commit": "5fe7f018764e94aefa06f098a23e28a55d6b4e18",
+ "cases": [
+  {
+   "id": 1,
+   "commit": "7f7d8aa619",
+   "prompt": "In this repo, where is the code I would change to: fix(api): populate permission keys on the starred app list (#43870)? Answer with file paths and function names only.",
+   "gold_files": [
+    "api/services/app/console_service.py"
+   ],
+   "gold_functions": [
+    "ConsoleAppService.list_apps"
+   ]
+  },
+  {
+   "id": 2,
+   "commit": "4f1fe1127f",
+   "prompt": "In this repo, where is the code I would change to: fix: restore vectors when segments are re-enabled via API (#43865)? Answer with file paths and function names only.",
+   "gold_files": [
+    "api/services/knowledge/segments/application.py"
+   ],
+   "gold_functions": [
+    "SegmentMutationService.update_segment"
+   ]
+  },
+  {
+   "id": 3,
+   "commit": "5a8dd14762",
+   "prompt": "In this repo, where is the code I would change to: fix(web): remove copy action for masked Knowledge API keys (#43868)? Answer with file paths and function names only.",
+   "gold_files": [
+    "web/app/components/api-key/api-key-table.tsx"
+   ],
+   "gold_functions": [
+    "ApiKeyTable"
+   ]
+  },
+  {
+   "id": 4,
+   "commit": "4410f1f39f",
+   "prompt": "In this repo, where is the code I would change to: test(e2e): assert agent duplicate result instead of removed toast (#43834)? Answer with file paths and function names only.",
+   "gold_files": [
+    "e2e/features/step-definitions/agent-v2/agent-edit.steps.ts"
+   ],
+   "gold_functions": [
+    "When"
+   ]
+  },
+  {
+   "id": 5,
+   "commit": "093194376f",
+   "prompt": "In this repo, where is the code I would change to: refactor(web): use native WASM loading for Loro (#43786)? Answer with file paths and function names only.",
+   "gold_files": [
+    "web/vite.config.ts"
+   ],
+   "gold_functions": []
+  },
+  {
+   "id": 6,
+   "commit": "c60b3962df",
+   "prompt": "In this repo, where is the code I would change to: refactor(api): consolidate data migration CLI commands (#43483)? Answer with file paths and function names only.",
+   "gold_files": [
+    "api/commands/__init__.py",
+    "api/commands/data_migration.py"
+   ],
+   "gold_functions": [
+    "legacy_model_types",
+    "_normalize_multi_value_option",
+    "data_migrate"
+   ]
+  },
+  {
+   "id": 7,
+   "commit": "1a817b9972",
+   "prompt": "In this repo, where is the code I would change to: chore(lint): remove unused ESLint plugins (#43761)? Answer with file paths and function names only.",
+   "gold_files": [
+    "eslint.config.mjs",
+    "lint.config.ts",
+    "vite.config.ts"
+   ],
+   "gold_functions": []
+  },
+  {
+   "id": 8,
+   "commit": "f39832b7bc",
+   "prompt": "In this repo, where is the code I would change to: fix(web): remove duplicate tag create separator (#43759)? Answer with file paths and function names only.",
+   "gold_files": [
+    "web/features/tag-management/components/tag-search-content.tsx"
+   ],
+   "gold_functions": [
+    "TagSearchContentView"
+   ]
+  },
+  {
+   "id": 9,
+   "commit": "da5ce5e4f6",
+   "prompt": "In this repo, where is the code I would change to: perf(api): run controller unit tests in parallel (#43750)? Answer with file paths and function names only.",
+   "gold_files": [
+    "Makefile"
+   ],
+   "gold_functions": [
+    "test-all",
+    "test"
+   ]
+  },
+  {
+   "id": 10,
+   "commit": "39471347e9",
+   "prompt": "In this repo, where is the code I would change to: fix(dify-ui): stabilize breadcrumb story and retain failure artifacts (#43746)? Answer with file paths and function names only.",
+   "gold_files": [
+    "packages/dify-ui/src/breadcrumb/index.stories.tsx"
+   ],
+   "gold_functions": []
+  },
+  {
+   "id": 11,
+   "commit": "f9241b59fe",
+   "prompt": "In this repo, where is the code I would change to: chore(lint): prevent new legacy app store imports (#43729)? Answer with file paths and function names only.",
+   "gold_files": [
+    "lint.config.ts",
+    "web/plugins/eslint/index.js",
+    "web/plugins/eslint/rules/no-app-store-imports.js"
+   ],
+   "gold_functions": [
+    "isAppStore",
+    "isUnshadowedRequire"
+   ]
+  },
+  {
+   "id": 12,
+   "commit": "358ff78838",
+   "prompt": "In this repo, where is the code I would change to: fix(api): keep email-like text in Markdown link URLs when removing urls and emails (#43712)? Answer with file paths and function names only.",
+   "gold_files": [
+    "api/core/rag/cleaner/clean_processor.py"
+   ],
+   "gold_functions": [
+    "CleanProcessor.clean"
+   ]
+  },
+  {
+   "id": 13,
+   "commit": "bc47710c2a",
+   "prompt": "In this repo, where is the code I would change to: refactor(web): scope website embedding previews to their dialog (#43522)? Answer with file paths and function names only.",
+   "gold_files": [
+    "web/app/components/app/access-point/built-in-access-points/web-app-card.tsx",
+    "web/app/components/app/overview/embedded/index.tsx",
+    "web/features/agent-v2/agent-detail/access/components/web-app-access-card.tsx"
+   ],
+   "gold_functions": [
+    "EmbeddedDialogContent",
+    "WebAppAccessPointCard",
+    "WebAppAccessCard",
+    "EmbeddedContent"
+   ]
+  },
+  {
+   "id": 14,
+   "commit": "2108cac1d0",
+   "prompt": "In this repo, where is the code I would change to: fix(web): preserve chat feedback drafts until submission succeeds (#43520)? Answer with file paths and function names only.",
+   "gold_files": [
+    "web/app/components/app/log/list.tsx",
+    "web/app/components/base/chat/chat/answer/operation.tsx",
+    "web/app/components/base/chat/chat/type.ts"
+   ],
+   "gold_functions": [
+    "FeedbackForm",
+    "Operation",
+    "handleFeedback",
+    "handleFeedbackSubmit",
+    "DetailPanel"
+   ]
+  },
+  {
+   "id": 15,
+   "commit": "e5f9b47c62",
+   "prompt": "In this repo, where is the code I would change to: fix: route billing interval changes to checkout (#43669)? Answer with file paths and function names only.",
+   "gold_files": [
+    "web/app/components/billing/pricing/content.tsx",
+    "web/app/components/billing/pricing/plans/cloud-plan-item/index.tsx"
+   ],
+   "gold_functions": [
+    "CloudPlanItem",
+    "PricingContent",
+    "runPlanAction"
+   ]
+  },
+  {
+   "id": 16,
+   "commit": "c27ede8f5b",
+   "prompt": "In this repo, where is the code I would change to: fix(web): contain knowledge API key dataset picker scrolling (#43640)? Answer with file paths and function names only.",
+   "gold_files": [
+    "web/app/components/api-key/dataset-scope-dialog.tsx"
+   ],
+   "gold_functions": [
+    "DatasetScopeDialog"
+   ]
+  },
+  {
+   "id": 17,
+   "commit": "d96b261dca",
+   "prompt": "In this repo, where is the code I would change to: fix: send active education subscriptions directly to Team checkout (#43659)? Answer with file paths and function names only.",
+   "gold_files": [
+    "web/app/components/billing/pricing/content.tsx",
+    "web/app/components/billing/pricing/plans/cloud-plan-item/index.tsx"
+   ],
+   "gold_functions": [
+    "PricingContent",
+    "handlePlanButtonClick"
+   ]
+  },
+  {
+   "id": 18,
+   "commit": "725b8e36a4",
+   "prompt": "In this repo, where is the code I would change to: refactor(web): keep invitation requests in the dialog owner (#43515)? Answer with file paths and function names only.",
+   "gold_files": [
+    "web/app/components/header/account-setting/members-page/index.tsx",
+    "web/app/components/header/account-setting/members-page/invite-button.tsx",
+    "web/app/components/header/account-setting/members-page/invite-modal/index.tsx"
+   ],
+   "gold_functions": [
+    "InviteModal",
+    "InviteForm",
+    "handleSubmit",
+    "MembersPage",
+    "InviteButton",
+    "dismissEmailError"
+   ]
+  },
+  {
+   "id": 19,
+   "commit": "0db9c8f6f4",
+   "prompt": "In this repo, where is the code I would change to: fix(web): expose workflow image export in the toolbar (#43662)? Answer with file paths and function names only.",
+   "gold_files": [
+    "web/app/components/workflow/operator/control.tsx",
+    "web/app/components/workflow/operator/export-image.tsx"
+   ],
+   "gold_functions": [
+    "filter",
+    "Control"
+   ]
+  },
+  {
+   "id": 20,
+   "commit": "ab53c19145",
+   "prompt": "In this repo, where is the code I would change to: fix(home): describe template card actions for screen readers (#43660)? Answer with file paths and function names only.",
+   "gold_files": [
+    "web/features/home/template-card.tsx"
+   ],
+   "gold_functions": [
+    "TemplateCard"
+   ]
+  },
+  {
+   "id": 21,
+   "commit": "37a8168f28",
+   "prompt": "In this repo, where is the code I would change to: fix: show dataset card operations on hover (#43637)? Answer with file paths and function names only.",
+   "gold_files": [
+    "web/app/components/datasets/list/dataset-card/components/operations-dropdown.tsx"
+   ],
+   "gold_functions": [
+    "OperationsDropdown"
+   ]
+  },
+  {
+   "id": 22,
+   "commit": "99650364b1",
+   "prompt": "In this repo, where is the code I would change to: fix(api): validate member invitation email addresses (#43643)? Answer with file paths and function names only.",
+   "gold_files": [
+    "api/controllers/console/workspace/members.py"
+   ],
+   "gold_functions": [
+    "MemberInvitePayload",
+    "MemberInviteEmailApi"
+   ]
+  },
+  {
+   "id": 23,
+   "commit": "a854110010",
+   "prompt": "In this repo, where is the code I would change to: fix(api): bundle spaCy en_core_web_sm in the api image (#43601)? Answer with file paths and function names only.",
+   "gold_files": [
+    "api/Dockerfile"
+   ],
+   "gold_functions": []
+  },
+  {
+   "id": 24,
+   "commit": "f4a4e15a0b",
+   "prompt": "In this repo, where is the code I would change to: fix(web): clear conversation memory when pasting into Workflow (#43597)? Answer with file paths and function names only.",
+   "gold_files": [
+    "web/app/components/workflow/hooks/use-nodes-interactions.ts",
+    "web/app/components/workflow/hooks/use-workflow.ts"
+   ],
+   "gold_functions": [
+    "useNodesInteractions",
+    "useIsChatMode"
+   ]
+  },
+  {
+   "id": 25,
+   "commit": "519ef8b8c2",
+   "prompt": "In this repo, where is the code I would change to: fix(web): share query-core in vinext development (#43269)? Answer with file paths and function names only.",
+   "gold_files": [
+    "web/vite.config.ts"
+   ],
+   "gold_functions": []
+  },
+  {
+   "id": 26,
+   "commit": "0cd3824608",
+   "prompt": "In this repo, where is the code I would change to: fix(nodejs-client): avoid retrying write requests after transport failures (#43079)? Answer with file paths and function names only.",
+   "gold_files": [
+    "sdks/nodejs-client/src/http/client.ts"
+   ],
+   "gold_functions": [
+    "HttpClient.requestRaw"
+   ]
+  },
+  {
+   "id": 27,
+   "commit": "869c1dbf07",
+   "prompt": "In this repo, where is the code I would change to: fix(php-sdk): send conversation renames to the name endpoint (#43075)? Answer with file paths and function names only.",
+   "gold_files": [
+    "sdks/php-client/dify-client.php"
+   ],
+   "gold_functions": [
+    "ChatClient.rename_conversation"
+   ]
+  },
+  {
+   "id": 28,
+   "commit": "2738bad1fe",
+   "prompt": "In this repo, where is the code I would change to: fix(api): keep workflow log cleanup in one transaction (#37897)? Answer with file paths and function names only.",
+   "gold_files": [
+    "api/repositories/api_workflow_run_repository.py",
+    "api/repositories/sqlalchemy_api_workflow_run_repository.py",
+    "api/schedule/clean_workflow_runlogs_precise.py"
+   ],
+   "gold_functions": [
+    "DifyAPISQLAlchemyWorkflowRunRepository._delete_runs_with_related_by_ids_in_session",
+    "DifyAPISQLAlchemyWorkflowRunRepository.delete_runs_with_related_in_session",
+    "APIWorkflowRunRepository.delete_runs_with_related_in_session",
+    "DifyAPISQLAlchemyWorkflowRunRepository.delete_runs_with_related_by_ids",
+    "DifyAPISQLAlchemyWorkflowRunRepository.delete_runs_with_related",
+    "DifyAPISQLAlchemyWorkflowRunRepository"
+   ]
+  },
+  {
+   "id": 29,
+   "commit": "1cbb6dc385",
+   "prompt": "In this repo, where is the code I would change to: test: guard spec-based mock constructors with ast-grep (#43232)? Answer with file paths and function names only.",
+   "gold_files": [
+    "Makefile",
+    "scripts/check_no_spec_mock.py"
+   ],
+   "gold_functions": [
+    "main"
+   ]
+  },
+  {
+   "id": 30,
+   "commit": "baf6888007",
+   "prompt": "In this repo, where is the code I would change to: test(api): stabilize shared fixtures and type-check scopes (#42801)? Answer with file paths and function names only.",
+   "gold_files": [
+    "dev/pyrefly-check-local"
+   ],
+   "gold_functions": [
+    "if"
+   ]
+  },
+  {
+   "id": 31,
+   "commit": "4b89972f55",
+   "prompt": "In this repo, where is the code I would change to: fix(redis): reject subscription close signals when receiving (#42799)? Answer with file paths and function names only.",
+   "gold_files": [
+    "api/libs/broadcast_channel/redis/_subscription.py",
+    "api/services/workflow_event_snapshot_service.py"
+   ],
+   "gold_functions": [
+    "RedisSubscriptionBase.receive",
+    "_start_buffering"
+   ]
+  },
+  {
+   "id": 32,
+   "commit": "a2427050e1",
+   "prompt": "In this repo, where is the code I would change to: fix(api): survive DST transitions when computing the next cron run (#43357)? Answer with file paths and function names only.",
+   "gold_files": [
+    "api/libs/schedule_utils.py"
+   ],
+   "gold_functions": [
+    "calculate_next_run_at"
+   ]
+  },
+  {
+   "id": 33,
+   "commit": "30eadcc9e5",
+   "prompt": "In this repo, where is the code I would change to: refactor(api): adopt with_session in audio controllers (#37403) (#43322)? Answer with file paths and function names only.",
+   "gold_files": [
+    "api/controllers/service_api/app/audio.py",
+    "api/controllers/web/audio.py"
+   ],
+   "gold_functions": [
+    "AudioApi.post",
+    "TextApi.post",
+    "AudioApi",
+    "TextApi"
+   ]
+  },
+  {
+   "id": 34,
+   "commit": "ca27376211",
+   "prompt": "In this repo, where is the code I would change to: fix(agent): preserve prompt copy confirmation (#43327)? Answer with file paths and function names only.",
+   "gold_files": [
+    "web/features/agent-v2/agent-detail/configure/components/orchestrate/prompt-editor/index.tsx"
+   ],
+   "gold_functions": [
+    "AgentPromptEditor"
+   ]
+  },
+  {
+   "id": 35,
+   "commit": "5260f0eee6",
+   "prompt": "In this repo, where is the code I would change to: refactor(web): move monitoring date range picker to app components (#43295)? Answer with file paths and function names only.",
+   "gold_files": [
+    "web/app/(commonLayout)/app/(appDetailLayout)/[appId]/overview/time-range-picker/index.tsx",
+    "web/app/components/app/monitoring/date-range-picker.tsx",
+    "web/features/agent-v2/agent-detail/monitoring/time-range-picker.tsx"
+   ],
+   "gold_functions": [
+    "MonitoringDateRangePicker"
+   ]
+  },
+  {
+   "id": 36,
+   "commit": "9fa987a550",
+   "prompt": "In this repo, where is the code I would change to: fix: fix migrate permission not exclude admin and owner (#43311)? Answer with file paths and function names only.",
+   "gold_files": [
+    "api/commands/rbac.py"
+   ],
+   "gold_functions": [
+    "_workspace_non_admin_account_id_batches",
+    "_write_agent_access_rows",
+    "migrate_resource_whitelist_scopes_to_automatic_include",
+    "migrate_only_me_resource_whitelist_scopes_to_automatic_include"
+   ]
+  },
+  {
+   "id": 37,
+   "commit": "1a918ea407",
+   "prompt": "In this repo, where is the code I would change to: fix(dify-ui): use default cursor for form labels (#43287)? Answer with file paths and function names only.",
+   "gold_files": [
+    "packages/dify-ui/src/form-control-shared.ts"
+   ],
+   "gold_functions": []
+  },
+  {
+   "id": 38,
+   "commit": "fac6179309",
+   "prompt": "In this repo, where is the code I would change to: fix(workflow): restore compact node panel title alignment (#43286)? Answer with file paths and function names only.",
+   "gold_files": [
+    "web/app/components/workflow/nodes/_base/components/title-description-input.tsx"
+   ],
+   "gold_functions": []
+  },
+  {
+   "id": 39,
+   "commit": "9988dcc720",
+   "prompt": "In this repo, where is the code I would change to: chore(web): improve agent monitoring accessibility (SNP-897) (#43274)? Answer with file paths and function names only.",
+   "gold_files": [
+    "web/features/agent-v2/agent-detail/monitoring/chart.tsx",
+    "web/features/agent-v2/agent-detail/monitoring/page.tsx",
+    "web/i18n/resources.generated.d.ts"
+   ],
+   "gold_functions": [
+    "AgentMonitoringPage",
+    "AgentMonitoringChart",
+    "AgentMonitoringSourceFilter",
+    "Resources"
+   ]
+  },
+  {
+   "id": 40,
+   "commit": "bf41e733ba",
+   "prompt": "In this repo, where is the code I would change to: fix(workflow): preserve inline agent dialog during suspense (#43273)? Answer with file paths and function names only.",
+   "gold_files": [
+    "web/app/components/workflow/nodes/agent-v2/components/agent-orchestrate-panel-content.tsx",
+    "web/app/components/workflow/nodes/agent-v2/components/agent-roster-field.tsx",
+    "web/app/components/workflow/nodes/agent-v2/components/inline-agent-loading.tsx"
+   ],
+   "gold_functions": [
+    "InlineAgentLoading",
+    "AgentRosterInlineConfigureDialog",
+    "WorkflowInlineAgentConfigureWorkspace",
+    "WorkflowInlineAgentConfigureWorkspaceComposerScope"
+   ]
+  },
+  {
+   "commit": "7f7d8aa619",
+   "gold_files": [
+    "api/services/app/console_service.py"
+   ],
+   "gold_functions": [
+    "ConsoleAppService.list_apps"
+   ],
+   "id": 101,
+   "kind": "symptom",
+   "question": "Why don't the apps I've starred show the correct permissions for what I'm allowed to do with them in my list?",
+   "prompt": "In this repo, where is the code I would change for this request: Why don't the apps I've starred show the correct permissions for what I'm allowed to do with them in my list? Answer with file paths and function names only."
+  },
+  {
+   "commit": "4f1fe1127f",
+   "gold_files": [
+    "api/services/knowledge/segments/application.py"
+   ],
+   "gold_functions": [
+    "SegmentMutationService.update_segment"
+   ],
+   "id": 102,
+   "kind": "symptom",
+   "question": "When I turn document sections back on through the external interface, why aren't they searchable again until their search data is restored?",
+   "prompt": "In this repo, where is the code I would change for this request: When I turn document sections back on through the external interface, why aren't they searchable again until their search data is restored? Answer with file paths and function names only."
+  },
+  {
+   "commit": "5a8dd14762",
+   "gold_files": [
+    "web/app/components/api-key/api-key-table.tsx"
+   ],
+   "gold_functions": [
+    "ApiKeyTable"
+   ],
+   "id": 103,
+   "kind": "symptom",
+   "question": "Can the copy button be removed for hidden knowledge access keys, since the full key can't actually be copied anyway?",
+   "prompt": "In this repo, where is the code I would change for this request: Can the copy button be removed for hidden knowledge access keys, since the full key can't actually be copied anyway? Answer with file paths and function names only."
+  },
+  {
+   "commit": "f39832b7bc",
+   "gold_files": [
+    "web/features/tag-management/components/tag-search-content.tsx"
+   ],
+   "gold_functions": [
+    "TagSearchContentView"
+   ],
+   "id": 108,
+   "kind": "symptom",
+   "question": "Why does the tag creation menu show a duplicate dividing line, and can the extra separator be removed?",
+   "prompt": "In this repo, where is the code I would change for this request: Why does the tag creation menu show a duplicate dividing line, and can the extra separator be removed? Answer with file paths and function names only."
+  },
+  {
+   "commit": "358ff78838",
+   "gold_files": [
+    "api/core/rag/cleaner/clean_processor.py"
+   ],
+   "gold_functions": [
+    "CleanProcessor.clean"
+   ],
+   "id": 112,
+   "kind": "symptom",
+   "question": "When removing links and email addresses from text, why are email-like pieces inside formatted link addresses being stripped out, breaking those links?",
+   "prompt": "In this repo, where is the code I would change for this request: When removing links and email addresses from text, why are email-like pieces inside formatted link addresses being stripped out, breaking those links? Answer with file paths and function names only."
+  },
+  {
+   "commit": "2108cac1d0",
+   "gold_files": [
+    "web/app/components/app/log/list.tsx",
+    "web/app/components/base/chat/chat/answer/operation.tsx",
+    "web/app/components/base/chat/chat/type.ts"
+   ],
+   "gold_functions": [
+    "FeedbackForm",
+    "Operation",
+    "handleFeedback",
+    "handleFeedbackSubmit",
+    "DetailPanel"
+   ],
+   "id": 114,
+   "kind": "symptom",
+   "question": "Why is feedback I start typing on a chat reply lost before it's successfully submitted, and can drafts be kept?",
+   "prompt": "In this repo, where is the code I would change for this request: Why is feedback I start typing on a chat reply lost before it's successfully submitted, and can drafts be kept? Answer with file paths and function names only."
+  },
+  {
+   "commit": "e5f9b47c62",
+   "gold_files": [
+    "web/app/components/billing/pricing/content.tsx",
+    "web/app/components/billing/pricing/plans/cloud-plan-item/index.tsx"
+   ],
+   "gold_functions": [
+    "CloudPlanItem",
+    "PricingContent",
+    "runPlanAction"
+   ],
+   "id": 115,
+   "kind": "symptom",
+   "question": "When I change my billing period between monthly and yearly, why am I not taken to the checkout page?",
+   "prompt": "In this repo, where is the code I would change for this request: When I change my billing period between monthly and yearly, why am I not taken to the checkout page? Answer with file paths and function names only."
+  },
+  {
+   "commit": "c27ede8f5b",
+   "gold_files": [
+    "web/app/components/api-key/dataset-scope-dialog.tsx"
+   ],
+   "gold_functions": [
+    "DatasetScopeDialog"
+   ],
+   "id": 116,
+   "kind": "symptom",
+   "question": "Can the list for choosing datasets when creating a knowledge access key stay contained and scroll properly instead of spilling out of its box?",
+   "prompt": "In this repo, where is the code I would change for this request: Can the list for choosing datasets when creating a knowledge access key stay contained and scroll properly instead of spilling out of its box? Answer with file paths and function names only."
+  },
+  {
+   "commit": "d96b261dca",
+   "gold_files": [
+    "web/app/components/billing/pricing/content.tsx",
+    "web/app/components/billing/pricing/plans/cloud-plan-item/index.tsx"
+   ],
+   "gold_functions": [
+    "PricingContent",
+    "handlePlanButtonClick"
+   ],
+   "id": 117,
+   "kind": "symptom",
+   "question": "Why aren't users with an active education subscription sent straight to the Team plan checkout when upgrading?",
+   "prompt": "In this repo, where is the code I would change for this request: Why aren't users with an active education subscription sent straight to the Team plan checkout when upgrading? Answer with file paths and function names only."
+  },
+  {
+   "commit": "0db9c8f6f4",
+   "gold_files": [
+    "web/app/components/workflow/operator/control.tsx",
+    "web/app/components/workflow/operator/export-image.tsx"
+   ],
+   "gold_functions": [
+    "filter",
+    "Control"
+   ],
+   "id": 119,
+   "kind": "symptom",
+   "question": "Can the option to export a workflow as an image be made visible in the toolbar so I can find it easily?",
+   "prompt": "In this repo, where is the code I would change for this request: Can the option to export a workflow as an image be made visible in the toolbar so I can find it easily? Answer with file paths and function names only."
+  },
+  {
+   "commit": "ab53c19145",
+   "gold_files": [
+    "web/features/home/template-card.tsx"
+   ],
+   "gold_functions": [
+    "TemplateCard"
+   ],
+   "id": 120,
+   "kind": "symptom",
+   "question": "Can the action buttons on template cards on the home page be described clearly for people using screen readers?",
+   "prompt": "In this repo, where is the code I would change for this request: Can the action buttons on template cards on the home page be described clearly for people using screen readers? Answer with file paths and function names only."
+  },
+  {
+   "commit": "37a8168f28",
+   "gold_files": [
+    "web/app/components/datasets/list/dataset-card/components/operations-dropdown.tsx"
+   ],
+   "gold_functions": [
+    "OperationsDropdown"
+   ],
+   "id": 121,
+   "kind": "symptom",
+   "question": "Why don't the action options on a knowledge card appear when I hover over it, and can that be fixed?",
+   "prompt": "In this repo, where is the code I would change for this request: Why don't the action options on a knowledge card appear when I hover over it, and can that be fixed? Answer with file paths and function names only."
+  },
+  {
+   "commit": "a854110010",
+   "gold_files": [
+    "api/Dockerfile"
+   ],
+   "gold_functions": [],
+   "id": 123,
+   "kind": "symptom",
+   "question": "Why is the language model for text processing missing from the server install, and can it be included by default?",
+   "prompt": "In this repo, where is the code I would change for this request: Why is the language model for text processing missing from the server install, and can it be included by default? Answer with file paths and function names only."
+  },
+  {
+   "commit": "f4a4e15a0b",
+   "gold_files": [
+    "web/app/components/workflow/hooks/use-nodes-interactions.ts",
+    "web/app/components/workflow/hooks/use-workflow.ts"
+   ],
+   "gold_functions": [
+    "useNodesInteractions",
+    "useIsChatMode"
+   ],
+   "id": 124,
+   "kind": "symptom",
+   "question": "When I paste a copied item into a workflow, why does it keep old conversation memory, and can that be cleared?",
+   "prompt": "In this repo, where is the code I would change for this request: When I paste a copied item into a workflow, why does it keep old conversation memory, and can that be cleared? Answer with file paths and function names only."
+  },
+  {
+   "commit": "869c1dbf07",
+   "gold_files": [
+    "sdks/php-client/dify-client.php"
+   ],
+   "gold_functions": [
+    "ChatClient.rename_conversation"
+   ],
+   "id": 127,
+   "kind": "symptom",
+   "question": "When renaming a conversation through the PHP toolkit, why does the request go to the wrong place instead of the rename option?",
+   "prompt": "In this repo, where is the code I would change for this request: When renaming a conversation through the PHP toolkit, why does the request go to the wrong place instead of the rename option? Answer with file paths and function names only."
+  },
+  {
+   "commit": "2738bad1fe",
+   "gold_files": [
+    "api/repositories/api_workflow_run_repository.py",
+    "api/repositories/sqlalchemy_api_workflow_run_repository.py",
+    "api/schedule/clean_workflow_runlogs_precise.py"
+   ],
+   "gold_functions": [
+    "DifyAPISQLAlchemyWorkflowRunRepository._delete_runs_with_related_by_ids_in_session",
+    "DifyAPISQLAlchemyWorkflowRunRepository.delete_runs_with_related_in_session",
+    "APIWorkflowRunRepository.delete_runs_with_related_in_session",
+    "DifyAPISQLAlchemyWorkflowRunRepository.delete_runs_with_related_by_ids",
+    "DifyAPISQLAlchemyWorkflowRunRepository.delete_runs_with_related",
+    "DifyAPISQLAlchemyWorkflowRunRepository"
+   ],
+   "id": 128,
+   "kind": "symptom",
+   "question": "Can cleaning up old workflow logs be done as one all-or-nothing step so partial deletions don't leave data inconsistent?",
+   "prompt": "In this repo, where is the code I would change for this request: Can cleaning up old workflow logs be done as one all-or-nothing step so partial deletions don't leave data inconsistent? Answer with file paths and function names only."
+  },
+  {
+   "commit": "4b89972f55",
+   "gold_files": [
+    "api/libs/broadcast_channel/redis/_subscription.py",
+    "api/services/workflow_event_snapshot_service.py"
+   ],
+   "gold_functions": [
+    "RedisSubscriptionBase.receive",
+    "_start_buffering"
+   ],
+   "id": 131,
+   "kind": "symptom",
+   "question": "Why does the real-time messaging connection mishandle stop signals when receiving updates, and can they be rejected properly?",
+   "prompt": "In this repo, where is the code I would change for this request: Why does the real-time messaging connection mishandle stop signals when receiving updates, and can they be rejected properly? Answer with file paths and function names only."
+  },
+  {
+   "commit": "a2427050e1",
+   "gold_files": [
+    "api/libs/schedule_utils.py"
+   ],
+   "gold_functions": [
+    "calculate_next_run_at"
+   ],
+   "id": 132,
+   "kind": "symptom",
+   "question": "Why does a scheduled task calculate the wrong next run time around daylight saving time changes, and can that be fixed?",
+   "prompt": "In this repo, where is the code I would change for this request: Why does a scheduled task calculate the wrong next run time around daylight saving time changes, and can that be fixed? Answer with file paths and function names only."
+  },
+  {
+   "commit": "ca27376211",
+   "gold_files": [
+    "web/features/agent-v2/agent-detail/configure/components/orchestrate/prompt-editor/index.tsx"
+   ],
+   "gold_functions": [
+    "AgentPromptEditor"
+   ],
+   "id": 134,
+   "kind": "symptom",
+   "question": "Why does the confirmation message after copying an agent's prompt disappear or fail to show, and can it be preserved?",
+   "prompt": "In this repo, where is the code I would change for this request: Why does the confirmation message after copying an agent's prompt disappear or fail to show, and can it be preserved? Answer with file paths and function names only."
+  },
+  {
+   "commit": "9fa987a550",
+   "gold_files": [
+    "api/commands/rbac.py"
+   ],
+   "gold_functions": [
+    "_workspace_non_admin_account_id_batches",
+    "_write_agent_access_rows",
+    "migrate_resource_whitelist_scopes_to_automatic_include",
+    "migrate_only_me_resource_whitelist_scopes_to_automatic_include"
+   ],
+   "id": 136,
+   "kind": "symptom",
+   "question": "Why does the permission for migrating items not exclude administrators and owners, and can that be corrected?",
+   "prompt": "In this repo, where is the code I would change for this request: Why does the permission for migrating items not exclude administrators and owners, and can that be corrected? Answer with file paths and function names only."
+  }
+ ],
+ "symptom_generation": {
+  "model": "sonnet",
+  "cost_usd": 0.0333042,
+  "kept": 20,
+  "dropped_leaky": [
+   "Can the system check that email addresses entered when inviting team members are valid before sending the invitations?",
+   "Why does the Node.js client retry saving or changing requests after a network failure, risking duplicate actions, and can that be stopped?",
+   "Can the agent monitoring page be made easier to use for people relying on assistive technology like screen readers?"
+  ]
+ }
+}

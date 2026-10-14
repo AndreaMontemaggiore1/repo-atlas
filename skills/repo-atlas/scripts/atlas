@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+# repo-atlas launcher: run atlas.py with the first Python >= 3.9 that really works (on Windows,
+# python/python3 are often Microsoft Store stubs). Always exits 0: Claude Code aborts a skill
+# whose injected command fails, and a missing map must never block the task.
+here="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+export PYTHONUTF8=1 PYTHONIOENCODING=utf-8
+for py in python3 python python3.13 python3.12 python3.11 python3.10 python3.9 py; do
+  command -v "$py" >/dev/null 2>&1 || continue
+  flag=""; [ "$py" = py ] && flag="-3"
+  if "$py" $flag -c 'import sys; sys.exit(0 if sys.version_info >= (3, 9) else 1)' >/dev/null 2>&1; then
+    "$py" $flag "$here/atlas.py" "$@"
+    exit 0
+  fi
+done
+echo "repo-atlas: no Python 3.9+ found (tried python3, python, python3.x, py). Install Python 3.9+; meanwhile use Grep and ranged Reads."
+exit 0

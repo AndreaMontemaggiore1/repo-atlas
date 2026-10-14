@@ -1,0 +1,8 @@
+# dev/test only; the skill itself has no dependencies
+pytest
+tree-sitter
+tree-sitter-javascript
+tree-sitter-typescript
+tree-sitter-go
+tree-sitter-java
+tree-sitter-rust

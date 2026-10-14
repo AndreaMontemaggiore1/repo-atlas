@@ -1,0 +1,14 @@
+{
+  "name": "repo-atlas",
+  "description": "repo-atlas: a code-map skill for Claude Code",
+  "owner": {
+    "name": "AndreaMontemaggiore1"
+  },
+  "plugins": [
+    {
+      "name": "repo-atlas",
+      "source": "./",
+      "description": "Find code in large or messy repositories in one step, with fewer tool calls and tokens."
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+ "_note": "Triggering eval (arm S: v2 skill installed, no hint, no CLAUDE.md pointer). should=true: the skill should be invoked; false: it should not. Written for gpodder, before running anything.",
+ "gpodder": [
+  {"should": true, "prompt": "Where is the code that decides whether new episodes get downloaded automatically?"},
+  {"should": true, "prompt": "How does this app figure out the file name for a downloaded episode?"},
+  {"should": true, "prompt": "Episodes from YouTube channels show no cover art. Where should I look?"},
+  {"should": true, "prompt": "I want to add a setting to limit download speed per podcast. Which parts of the code would I need to change?"},
+  {"should": true, "prompt": "Map this codebase for me: what are the main parts and where do they live?"},
+  {"should": true, "prompt": "What would break if I changed how episodes are stored in the database?"},
+  {"should": true, "prompt": "Is there duplicated code around pausing downloads and device sync?"},
+  {"should": true, "prompt": "Where is importing a list of subscriptions from a file handled?"},
+  {"should": true, "prompt": "The app crashes when a feed has no title. Where would that be handled?"},
+  {"should": true, "prompt": "How do extensions hook into episode downloads?"},
+  {"should": false, "prompt": "What does this regular expression match: ^\\d{3}-\\d{4}$ ?"},
+  {"should": false, "prompt": "Write a Python one-liner that reverses a string."},
+  {"should": false, "prompt": "Explain the difference between a list and a tuple in Python."},
+  {"should": false, "prompt": "What license is this project released under?"},
+  {"should": false, "prompt": "Show me the first 10 lines of setup.py."},
+  {"should": false, "prompt": "Format this JSON nicely: {\"a\":1,\"b\":[2,3]}"},
+  {"should": false, "prompt": "Is there a typo in the first heading of README.md? Do not modify anything, just tell me."},
+  {"should": false, "prompt": "In src/gpodder/util.py, what does the function format_filesize return for 1536 bytes? Read only that function."},
+  {"should": false, "prompt": "What is the capital of Australia?"},
+  {"should": false, "prompt": "Summarize in one sentence what a podcast aggregator does, in general terms."}
+ ]
+}
