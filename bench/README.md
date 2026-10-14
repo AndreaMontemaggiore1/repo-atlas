@@ -60,6 +60,7 @@ usage windows. Re-running the same command resumes and skips finished runs. Raw 
 | re-check | 2026-10-14 | 2.1.295 (new build) | final Typebot + Open WebUI v2.2 sets; triggering prompts | A, H (S for triggering) | [report_recheck.md](report_recheck.md) |
 | H0 | 2026-10-14 | 2.1.295 (new build) | same sets: the plugin on a repo with no map yet | H0 (+ the re-check's A rows) | [report_h0.md](report_h0.md) |
 | re-check Haiku / Opus | 2026-10-14 | 2.1.295 (new build) | final Typebot set (Opus: 10 questions) | A, H | [Haiku](report_recheck_haiku.md), [Opus](report_recheck_opus.md) |
+| repetitions | 2026-10-14 | 2.1.300 | final Typebot set, 3 repetitions, answers graded by `judge.py` | A, H | [report_reps.md](report_reps.md) |
 
 Arm H is the plugin loaded with `--plugin-dir`: the skill plus the SessionStart hook. H0 is the same plugin on a
 copy with no map and a one-commit git snapshot (no history), so the first lookup builds the map. Model: Sonnet 5.5
@@ -68,5 +69,6 @@ copy with no map and a one-commit git snapshot (no history), so the first lookup
 `results/<round>/rows.jsonl` holds one row per run: answer, tokens, tools, cost and plan usage. Local paths are
 removed. `score.py --runs-dir results/v2 --out report_v2.md` regenerates a report from the rows.
 
-Known limits: 1 repetition per question, LLM-written symptom questions, and Opus not tested. A gold answer comes
+Known limits: 1 repetition per question except in the repetitions round, LLM-written symptom questions, and
+the end-result grader is itself a Sonnet session that favours short, committed answers. A gold answer comes
 from a single commit, so another valid place counts as a miss for every arm alike.
