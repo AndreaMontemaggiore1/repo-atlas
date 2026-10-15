@@ -83,6 +83,9 @@ the plain skill.
 Other agents that read Agent Skills can use `skills/repo-atlas/` as well. There the model runs the lookup command
 itself, because the automatic lookup is a Claude Code feature. This is untested.
 
+repo-atlas is built for Claude Code. In the claude.ai chat the plugin's hook and the injected lookup do not run,
+and there is no local repo to map, so it does nothing useful there.
+
 **Requirements**: Python 3.9+ on `PATH` and bash (Git Bash on Windows). git is optional (it adds churn and
 co-change data), and so is ripgrep (faster search). There are no dependencies and no network access, and the
 code and the map never leave your machine.
