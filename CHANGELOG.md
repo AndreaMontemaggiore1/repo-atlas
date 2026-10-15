@@ -1,5 +1,15 @@
 # Changelog
 
+## Unreleased
+
+- Benchmark: `--reps` is now scored. The report shows each metric per repetition, how many questions flip between
+  runs of the same arm, and bootstrap 95% intervals for the difference to A. New `hit_any` metric.
+- Benchmark: `bench/judge.py` grades the final answer against the commit that resolved the question (correct,
+  partial or wrong), blind to the arm.
+- Measured on CLI 2.1.300 with 3 repetitions (Typebot, Sonnet 5.5): hit@3 equal within noise, answers graded
+  correct 40% with the plugin vs 20% without, tokens 0.87× (95% interval 0.75–1.02). The 23–30% saving of 0.3.0
+  was measured on 2.1.295 and did not reproduce here.
+
 ## 0.3.0
 
 - Plugin: a `SessionStart` hook (`atlas session-start`) tells Claude that the map exists, in repos that already

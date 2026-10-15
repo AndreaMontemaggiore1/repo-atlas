@@ -9,8 +9,10 @@ symbols with line ranges, import-graph ranking, files that change together, copy
 files and generated noise. These are the things that waste turns in vibe-coded repos.
 
 **In short**: on vague questions in large open-source apps, Claude Code with the plugin used **21–37% fewer tokens**
-and made 35–60% fewer tool calls. It found the right file about as often as without it. With Haiku it lost 3 of
-20 questions, and it does not pay off in small repos. All the numbers, limits and raw data are below.
+and made 35–60% fewer tool calls on Claude Code 2.1.288–2.1.295. It found the right file about as often as without
+it. On 2.1.300 the baseline itself got cheaper and the saving shrank to **13%**, which is within the noise in a
+3-repetition check; there the plugin's final answers were graded correct about twice as often. With Haiku it lost
+3 of 20 questions, and it does not pay off in small repos. All the numbers, limits and raw data are below.
 
 ![Tokens per question with and without repo-atlas](docs/results.png)
 
@@ -128,13 +130,31 @@ H0 is the plugin on a repo it has never seen, with no map yet: the first lookup 
 [re-check](bench/report_recheck.md), [H0](bench/report_h0.md), [Haiku](bench/report_recheck_haiku.md),
 [Opus](bench/report_recheck_opus.md).
 
+**Repetitions and end result** (2026-10-14, CLI 2.1.300, Sonnet 5.5): the newer Typebot set again, each question
+run 3 times per arm. `bench/judge.py` also graded every final answer against the commit that resolved the
+question, without knowing the arm.
+
+| metric | A | H | H − A, bootstrap 95% interval |
+|---|---|---|---|
+| hit@3 per repetition (of 20) | 14, 14, 15 | 13, 14, 14 | −3 points [−17, +8] |
+| answer graded correct per repetition (of 20) | 4, 3, 5 | 8, 8, 8 | +20 points [+5, +35] |
+| answer graded correct or partial | 80% | 73% | |
+| tokens vs A | | 0.87 | [0.75, 1.02] |
+| tool calls per question | 3.8 | 2.4 | |
+
+The same arm moves by about one question between repetitions, so a one- or two-question gap in a single run is
+noise. A's tokens on these questions fell from 61k to 45k between CLI 2.1.295 and 2.1.300, and the plugin's
+saving fell with them. The grader favours short, committed answers, and the plugin's are shorter, so read the
+correct-answer gain as "no loss in answer quality", not proof of a gain. Report: [repetitions](bench/report_reps.md).
+
 What this means:
 
-- **With the plugin, Claude does the same job with less work.** It uses 23–37% fewer tokens with Sonnet 5.5 and
-  about half with Haiku 5.5, makes 2–5 fewer tool calls per question, and costs 18–35% less. Cost falls less than
+- **With the plugin, Claude does the same job with less work.** On CLI 2.1.288–2.1.295 it used 23–37% fewer
+  tokens with Sonnet 5.5 and about half with Haiku 5.5, makes 2–5 fewer tool calls per question, and costs 18–35% less. Cost falls less than
   tokens because most input tokens are cache reads, which are already cheap. On a Pro/Max plan the saving shows up
   as plan usage. Opus 5.5 saves less: 10–21% of tokens and 14–21% of cost in two 10-question checks, because it
-  keeps checking for itself even with the skill.
+  keeps checking for itself even with the skill. On CLI 2.1.300 the Sonnet saving was 13% and not significant
+  (3 repetitions, interval 0.75–1.02×), while tool calls still fell from 3.8 to 2.4 per question.
 - **The pointer is what makes it pay.** Alone (S), Claude decides from the description whether to use the skill.
   On Dify it saved nothing, and spontaneous use is falling: the same description fired on 10/10 relevant prompts
   with Claude Code 2.1.288, 8/10 with 2.1.293 and 6/10 with the latest build. With the hook or the CLAUDE.md
@@ -152,10 +172,11 @@ What this means:
   skill on Sonnet 5 (CLI 2.1.281). Turns dominate the cost, so the current design answers in the invocation turn.
   Two earlier rounds, [v2](bench/report_v2.md) on gPodder and Formbricks and [v2.1](bench/report_v21.md), show
   the path, including a round where the skill lost 2–4 of 20 questions before a ranking fix.
-- **Limits**: one repetition per question, and between rounds A itself moved by 6–11 points on the same
-  questions. The vague questions were written by an LLM, and the gold answer is the files of one commit. Opus ran
-  on 10 questions only. All benchmark sessions ran on Windows; the unit tests also run on Linux and macOS in CI.
-  The numbers come from Claude Code 2.1.288–2.1.295, and since every CLI release changes the cost of a turn,
+- **Limits**: one repetition per question except in the repetitions round, and between rounds A itself moved by
+  6–11 points on the same questions. The vague questions were written by an LLM, and the gold answer is the files of one commit. Opus ran
+  on 10 questions only. The end-result grader is itself a Sonnet session. The benchmark sessions ran on Windows,
+  except the repetitions round on Linux; the unit tests also run on Linux and macOS in CI.
+  The numbers come from Claude Code 2.1.288–2.1.300, and since every CLI release changes the cost of a turn,
   re-run [`bench/`](bench/README.md) before trusting them on a newer one.
 
 ## What it runs, writes and sends
